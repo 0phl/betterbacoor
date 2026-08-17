@@ -43,4 +43,14 @@ describe('ResourceExplorer', () => {
     expect(screen.getByRole('searchbox')).toHaveValue('');
     expect(screen.queryByText('No matching resource')).not.toBeInTheDocument();
   });
+
+  it('starts from a query supplied by the route', () => {
+    render(<ResourceExplorer initialQuery="hospital" />);
+
+    expect(screen.getByRole('searchbox')).toHaveValue('hospital');
+    expect(screen.getByText('1 resource found')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Hospital directory' })
+    ).toBeInTheDocument();
+  });
 });

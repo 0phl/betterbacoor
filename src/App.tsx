@@ -12,6 +12,17 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route
+            path="search"
+            element={
+              <ResourcesPage
+                eyebrow="Search the guide"
+                title="Search all verified Bacoor resources"
+                description="Search every checked BetterBacoor starting point across services, official systems, directories, and public records."
+                searchLabel="Search all verified Bacoor resources"
+              />
+            }
+          />
+          <Route
             path="services"
             element={
               <ResourcesPage

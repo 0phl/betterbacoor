@@ -1,4 +1,10 @@
-import { CalendarCheck, ExternalLink, ShieldCheck } from 'lucide-react';
+import {
+  ArrowUpRight,
+  CalendarCheck2,
+  ExternalLink,
+  ShieldCheck,
+  UserRoundCheck,
+} from 'lucide-react';
 import { categoryLabels } from '../data/resources';
 import type { CivicResource } from '../types';
 
@@ -30,66 +36,87 @@ export function ResourceCard({
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
 
   return (
-    <article className="h-full rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="flex h-full flex-col p-6">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-bold text-blue-800">
+    <article className="group flex h-full flex-col overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-civic-200 hover:shadow-lg hover:shadow-slate-200/70">
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <span className="rounded-full bg-civic-50 px-3 py-1 text-xs font-black uppercase tracking-[0.08em] text-civic-800">
             {categoryLabels[resource.category]}
           </span>
-          <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-800">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4" /> Source
-            checked
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800">
+            <ShieldCheck aria-hidden="true" className="h-4 w-4" /> Checked
           </span>
         </div>
 
-        <Heading className="mt-4 text-xl font-bold tracking-tight text-slate-950">
+        <Heading className="mt-5 text-2xl font-black leading-tight tracking-[-0.025em] text-slate-950">
           {resource.title}
         </Heading>
-        <p className="mt-3 flex-1 text-sm leading-6 text-slate-650">
+        <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">
           {resource.summary}
         </p>
 
-        <dl className="mt-5 border-t border-slate-100 pt-4 text-xs text-slate-600">
-          <div className="flex items-center gap-2">
-            <CalendarCheck aria-hidden="true" className="h-4 w-4" />
+        <dl className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs leading-5 text-slate-600">
+          <div className="flex items-start gap-2.5">
+            <CalendarCheck2
+              aria-hidden="true"
+              className="mt-0.5 h-4 w-4 shrink-0 text-civic-700"
+            />
             <dt className="sr-only">Last checked</dt>
-            <dd>Checked {formatDate(resource.last_verified)}</dd>
+            <dd>
+              Checked{' '}
+              <strong className="text-slate-800">
+                {formatDate(resource.last_verified)}
+              </strong>
+            </dd>
           </div>
-          <div className="mt-1">
-            <dt className="inline font-semibold">Source: </dt>
-            <dd className="inline">
+          <div className="mt-2 flex items-start gap-2.5">
+            <ArrowUpRight
+              aria-hidden="true"
+              className="mt-0.5 h-4 w-4 shrink-0 text-civic-700"
+            />
+            <dt className="sr-only">Source</dt>
+            <dd>
+              Source:{' '}
               <a
                 href={resource.source_url}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded underline decoration-slate-300 underline-offset-2 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                className="rounded font-bold text-slate-800 underline decoration-slate-300 underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
                 {resource.source_title}
               </a>{' '}
-              ({resource.source_page})
+              · {resource.source_page}
             </dd>
           </div>
-          <div className="mt-1">
-            <dt className="inline font-semibold">Reviewer: </dt>
-            <dd className="inline">@{resource.reviewer}</dd>
+          <div className="mt-2 flex items-start gap-2.5">
+            <UserRoundCheck
+              aria-hidden="true"
+              className="mt-0.5 h-4 w-4 shrink-0 text-civic-700"
+            />
+            <dt className="sr-only">Reviewer</dt>
+            <dd>
+              Reviewed by{' '}
+              <strong className="text-slate-800">@{resource.reviewer}</strong>
+            </dd>
           </div>
         </dl>
+      </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+      <div className="border-t border-slate-200 bg-slate-50 px-6 py-4 sm:px-7">
+        <div className="flex flex-col items-start gap-3">
           <a
             href={resource.official_url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-civic-700 px-4 py-2 text-sm font-black text-white transition-colors hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2"
           >
-            Open government source
+            Open official page
             <ExternalLink aria-hidden="true" className="h-4 w-4" />
           </a>
           <a
             href={getCorrectionUrl(resource)}
             target="_blank"
             rel="noreferrer"
-            className="rounded text-sm font-semibold text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="rounded text-xs font-bold leading-5 text-slate-600 underline decoration-slate-300 underline-offset-4 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
           >
             Suggest a correction on GitHub (account required)
           </a>

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BetterBacoor">
-  <rect width="64" height="64" rx="14" fill="#1d4ed8" />
-  <path d="M18 14h17c9 0 14 4 14 11 0 4-2 7-6 9 5 2 8 6 8 12 0 9-6 14-17 14H18V14Zm11 9v8h6c3 0 5-1 5-4s-2-4-5-4h-6Zm0 17v11h7c4 0 6-2 6-5s-2-6-6-6h-7Z" fill="white" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="18" fill="#1746b8" />
+  <path d="M18 13h17c8 0 13 4 13 11 0 4-2 7-5 9 4 2 7 5 7 10 0 7-6 11-14 11H18V13Zm10 8v8h6c3 0 5-1 5-4s-2-4-5-4h-6Zm0 16v9h7c3 0 5-2 5-5s-2-4-5-4h-7Z" fill="#fff" />
+  <circle cx="53" cy="13" r="5" fill="#74d4ff" />
 </svg>

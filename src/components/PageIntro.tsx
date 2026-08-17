@@ -6,14 +6,16 @@ interface PageIntroProps {
 
 export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
   return (
-    <header className="max-w-3xl">
-      <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-700">
+    <header className="max-w-4xl border-b border-slate-300 pb-9">
+      <p className="text-xs font-black uppercase tracking-[0.18em] text-civic-700">
         {eyebrow}
       </p>
-      <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
+      <h1 className="mt-4 text-4xl font-black leading-tight tracking-[-0.045em] text-slate-950 sm:text-6xl">
         {title}
       </h1>
-      <p className="mt-5 text-lg leading-8 text-slate-650">{description}</p>
+      <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+        {description}
+      </p>
     </header>
   );
 }
