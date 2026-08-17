@@ -17,7 +17,7 @@ The MVP publishes public navigation and explanation, not transactions. A static 
 
 ## Upstream lineage
 
-The canonical repository was transferred with a BetterLocalGov starter snapshot. Its history and CC0 dedication remain intact. The foundation selectively retains React, Vite, Tailwind, and Kapwa styling conventions while replacing inherited city content, routes, metadata, information architecture, and validation.
+The transferred repository started from [BetterLocalGov commit `b807a8b`](https://github.com/iyanski/betterlocalgov/commit/b807a8bee0a005049e3d3492413d1ab03be7cfa1). That snapshot was imported as a new root commit rather than through GitHub's fork mechanism. Its CC0 dedication remains in place. The current foundation retains parts of the React, Vite, Tailwind, Kapwa, and development-tooling setup while replacing the sample content, routes, metadata, information architecture, and validation.
 
 The unrelated admin/API branch is not part of the application architecture.
 

@@ -99,9 +99,30 @@ export function Layout() {
           <div>
             <p className="text-lg font-bold text-white">BetterBacoor</p>
             <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
-              A personal, open-source civic-information project maintained by
-              residents. Always complete applications and payments on the linked
-              government system.
+              An open-source civic-information project for Bacoor. Always
+              complete applications and payments on the linked government
+              system.
+            </p>
+            <p className="mt-4 text-xs leading-5 text-slate-400">
+              Based on the{' '}
+              <a
+                href="https://github.com/iyanski/betterlocalgov"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded underline underline-offset-2 hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+              >
+                BetterLocalGov starter
+              </a>{' '}
+              and inspired by the{' '}
+              <a
+                href="https://bettergov.ph/"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded underline underline-offset-2 hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+              >
+                BetterGov.ph community
+              </a>
+              .
             </p>
           </div>
           <div className="flex flex-col items-start gap-3 text-sm">

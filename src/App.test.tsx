@@ -19,6 +19,12 @@ describe('BetterBacoor application shell', () => {
         name: /Find the right Bacoor source/i,
       })
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'BetterLocalGov starter' })
+    ).toHaveAttribute('href', 'https://github.com/iyanski/betterlocalgov');
+    expect(
+      screen.getByRole('link', { name: 'BetterGov.ph community' })
+    ).toHaveAttribute('href', 'https://bettergov.ph/');
   });
 
   it('has no detectable axe violations on the home page', async () => {

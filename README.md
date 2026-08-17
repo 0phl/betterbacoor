@@ -14,7 +14,7 @@ The foundation currently provides a small set of checked links. Plain-language s
 
 - React and TypeScript
 - Vite static build
-- Tailwind CSS with selected BetterLocalGov/Kapwa lineage
+- Tailwind CSS and Kapwa, based on the BetterLocalGov starter
 - Source-controlled JSON civic records
 - JSON Schema validation with Ajv
 - Client-side search; no search server
@@ -60,11 +60,11 @@ Records live in [`content/resources.json`](content/resources.json) and must vali
 
 Do not silently choose between conflicting government sources. Document the conflict and seek confirmation before publishing a definitive statement.
 
-## Solo-maintainer Git workflow
+## Git workflow
 
 Small, reversible documentation fixes may be committed directly after checks pass. Foundation changes, dependencies, schemas, deployment configuration, and high-risk civic information use a short-lived branch and pull request.
 
-Pull requests are **squash merged**. Working commits can stay useful while developing, but `main` receives one coherent commit named after the completed change. No self-approval ritual is required.
+Pull requests are normally squash merged so `main` receives one commit for the completed change.
 
 ## Corrections and contributions
 
@@ -74,6 +74,10 @@ Use the [GitHub correction form](https://github.com/0phl/betterbacoor/issues/new
 
 Foundation work is in progress. The inherited starter is not deployed, the public domain is not connected, and builds default to `noindex` until launch review.
 
+## Credits
+
+BetterBacoor started from the [BetterLocalGov](https://github.com/iyanski/betterlocalgov) starter and is inspired by the [BetterGov.ph](https://bettergov.ph/) BetterLGU community. See [`ACKNOWLEDGMENTS.md`](ACKNOWLEDGMENTS.md) for the source snapshot and full project lineage.
+
 ## License and provenance
 
-The repository remains under the CC0 1.0 dedication in [`LICENSE`](LICENSE). The transferred repository history is preserved. See [`ACKNOWLEDGMENTS.md`](ACKNOWLEDGMENTS.md) for upstream lineage.
+The repository remains under the CC0 1.0 dedication in [`LICENSE`](LICENSE). The transferred repository history is preserved.
