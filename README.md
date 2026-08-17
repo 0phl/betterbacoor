@@ -64,7 +64,7 @@ Do not silently choose between conflicting government sources. Document the conf
 
 Small, reversible documentation fixes may be committed directly after checks pass. Foundation changes, dependencies, schemas, deployment configuration, and high-risk civic information use a short-lived branch and pull request.
 
-Pull requests are normally squash merged so `main` receives one commit for the completed change.
+Maintainer-authored pull requests are normally rebased and merged so their reviewed commits remain visible while `main` stays linear. Pull requests from other contributors may be squash merged when one coherent commit keeps the project history clearer.
 
 ## Corrections and contributions
 
