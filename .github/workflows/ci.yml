@@ -3,8 +3,6 @@ name: CI
 on:
   pull_request:
   push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -16,7 +14,7 @@ concurrency:
 
 jobs:
   verify:
-    name: Verify foundation
+    name: Verify branch
     runs-on: ubuntu-latest
     timeout-minutes: 10
 

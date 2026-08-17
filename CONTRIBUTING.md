@@ -23,9 +23,9 @@ npm ci
 npm run check
 ```
 
-Open a pull request with a focused scope and complete the source checklist. Maintainer-authored pull requests are normally rebased and merged, preserving their reviewed commits on a linear `main` history. Pull requests from other contributors may be squash merged when one coherent commit keeps the project history clearer.
+For solo maintainer work, push the feature branch and review it locally. A pull request is not required. After explicit approval, the verified branch is integrated into linear `main` and deleted.
 
-The maintainer may commit tiny, reversible documentation fixes directly after running the relevant checks. Pull requests are a risk-control tool, not a requirement for every typo.
+External contributors should open a focused pull request and complete the source checklist. Contributor pull requests may be squash merged when one coherent commit keeps the project history clearer. The maintainer may commit tiny, reversible documentation fixes directly after running the relevant checks.
 
 ## Pull-request expectations
 

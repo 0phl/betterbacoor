@@ -62,9 +62,9 @@ Do not silently choose between conflicting government sources. Document the conf
 
 ## Git workflow
 
-Small, reversible documentation fixes may be committed directly after checks pass. Foundation changes, dependencies, schemas, deployment configuration, and high-risk civic information use a short-lived branch and pull request.
+Small, reversible documentation fixes may be committed directly after checks pass. Meaningful maintainer work uses a short-lived feature branch. Pushes to every branch run CI; the maintainer reviews the branch locally and explicitly approves it before it is integrated into linear `main` and deleted.
 
-Maintainer-authored pull requests are normally rebased and merged so their reviewed commits remain visible while `main` stays linear. Pull requests from other contributors may be squash merged when one coherent commit keeps the project history clearer.
+A pull request is optional for solo maintainer work. It is normally reserved for external contributions or used when the maintainer specifically requests one. Contributor pull requests may be squash merged when one coherent commit keeps the project history clearer.
 
 ## Corrections and contributions
 
