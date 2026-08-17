@@ -14,6 +14,6 @@ BetterLocalGov is released under CC0. The original public-domain dedication rema
 - The [BetterLGU directory](https://lgu.bettergov.ph/) lists community projects and starter templates, including BetterBacoor.
 - [Kapwa](https://www.npmjs.com/package/@bettergov/kapwa) provides UI tooling used by this project.
 
-[BetterSolano](https://github.com/BetterSolano/bettersolano) was reviewed as a community reference. Its source code is not part of the current BetterBacoor foundation.
+[BetterSolano](https://github.com/BetterSolano/bettersolano) was reviewed as a design reference for service-first hierarchy and information density. It is not a BetterBacoor source ancestor, and no BetterSolano source code, municipal content, or branding was imported in this redesign.
 
 Bacoor records are checked separately against government sources. Content from a starter or another BetterLGU project is not used as evidence for Bacoor information.
