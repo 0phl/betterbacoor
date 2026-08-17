@@ -59,7 +59,11 @@ export function ResourceExplorer({
       {filteredResources.length > 0 ? (
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {filteredResources.map(resource => (
-            <ResourceCard key={resource.id} resource={resource} />
+            <ResourceCard
+              key={resource.id}
+              resource={resource}
+              headingLevel={2}
+            />
           ))}
         </div>
       ) : (

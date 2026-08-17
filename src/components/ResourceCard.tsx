@@ -11,9 +11,24 @@ function formatDate(date: string) {
 
 interface ResourceCardProps {
   resource: CivicResource;
+  headingLevel?: 2 | 3;
 }
 
-export function ResourceCard({ resource }: ResourceCardProps) {
+function getCorrectionUrl(resource: CivicResource) {
+  const url = new URL(resource.correction_url);
+  url.searchParams.set(
+    'title',
+    `Correction: ${resource.title} [${resource.id}]`
+  );
+  return url.toString();
+}
+
+export function ResourceCard({
+  resource,
+  headingLevel = 3,
+}: ResourceCardProps) {
+  const Heading = headingLevel === 2 ? 'h2' : 'h3';
+
   return (
     <article className="h-full rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="flex h-full flex-col p-6">
@@ -27,9 +42,9 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           </span>
         </div>
 
-        <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-950">
+        <Heading className="mt-4 text-xl font-bold tracking-tight text-slate-950">
           {resource.title}
-        </h3>
+        </Heading>
         <p className="mt-3 flex-1 text-sm leading-6 text-slate-650">
           {resource.summary}
         </p>
@@ -71,12 +86,12 @@ export function ResourceCard({ resource }: ResourceCardProps) {
             <ExternalLink aria-hidden="true" className="h-4 w-4" />
           </a>
           <a
-            href={resource.correction_url}
+            href={getCorrectionUrl(resource)}
             target="_blank"
             rel="noreferrer"
             className="rounded text-sm font-semibold text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
           >
-            Report a correction
+            Suggest a correction on GitHub (account required)
           </a>
         </div>
       </div>

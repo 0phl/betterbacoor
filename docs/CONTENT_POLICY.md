@@ -8,19 +8,17 @@ Required fields are enforced by [`schemas/resource.schema.json`](../schemas/reso
 
 ## Source priority
 
-Use the strongest available source:
+Published destination and source URLs must use an HTTPS Philippine government domain (`gov.ph` or a subdomain). Use the strongest available source:
 
 1. current City of Bacoor publication or transaction system;
 2. current national government publication that governs the service;
-3. signed or formally published document;
-4. an official government social post only when no durable page exists; or
-5. a secondary source clearly labeled as secondary.
+3. a signed or formally published document hosted on a government domain.
 
-A search-engine snippet is not a source.
+Official social posts and secondary sources may be used as research leads, but the current resource schema does not represent them as verified publication sources. Do not label a record “Source checked” from one of those sources. Extending this policy requires an explicit source type, conflict notes, and corresponding schema and UI changes. A search-engine snippet is never a source.
 
 ## Conflicts and missing links
 
-Never silently select between conflicting government sources. Record the conflict and seek confirmation before publishing a definitive instruction.
+Never silently select between conflicting government sources. Open a correction or research issue and seek confirmation before publishing a definitive instruction. The current schema has no conflict-note field, so unresolved records must not be published as verified.
 
 When a page does not link the expected information, write:
 
@@ -48,6 +46,8 @@ Each record links to a public correction form. A correction should include:
 - the date the source was checked.
 
 High-impact corrections receive priority. Preserve the reason for the change in Git history.
+
+The current prelaunch form is hosted on GitHub and requires an account. Resource links prefill the record title and ID. [A practical non-GitHub correction route](https://github.com/0phl/betterbacoor/issues/2) is required before removing `noindex` or launching publicly; until then, the account requirement must be disclosed wherever the form is linked.
 
 ## Privacy and safety
 

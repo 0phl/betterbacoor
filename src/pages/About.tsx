@@ -28,7 +28,9 @@ export function About() {
             <li>
               Explains services only when an authoritative source supports it.
             </li>
-            <li>Keeps corrections public and traceable through GitHub.</li>
+            <li>
+              Keeps prelaunch corrections public and traceable through GitHub.
+            </li>
           </ul>
         </section>
 
@@ -58,7 +60,9 @@ export function About() {
         <p className="mt-3 max-w-3xl leading-7 text-slate-700">
           Government pages and contact information change. If a record is stale,
           unclear, or points to the wrong destination, open a correction report
-          with the source that supports the change.
+          with the source that supports the change. The current prelaunch form
+          requires a GitHub account. A non-GitHub route must be available before
+          public launch.
         </p>
         <a
           href="https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
@@ -66,7 +70,7 @@ export function About() {
           rel="noreferrer"
           className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
         >
-          Open a correction report
+          Open GitHub correction form (account required)
           <ExternalLink aria-hidden="true" className="h-4 w-4" />
         </a>
       </section>

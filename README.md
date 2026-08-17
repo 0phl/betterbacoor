@@ -68,7 +68,7 @@ Pull requests are **squash merged**. Working commits can stay useful while devel
 
 ## Corrections and contributions
 
-Use the [correction form](https://github.com/0phl/betterbacoor/issues/new?template=correction.yml) for inaccurate or outdated information. Contributions must include an authoritative source and verification date. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting content.
+Use the [GitHub correction form](https://github.com/0phl/betterbacoor/issues/new?template=correction.yml) for inaccurate or outdated information. It currently requires a GitHub account; [a non-GitHub correction route is a launch requirement](https://github.com/0phl/betterbacoor/issues/2). Contributions must include an authoritative source and verification date. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting content.
 
 ## Status
 

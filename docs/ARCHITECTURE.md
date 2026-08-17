@@ -30,7 +30,7 @@ content/resources.json
   -> client-side search and resource cards
 ```
 
-The schema is [`schemas/resource.schema.json`](../schemas/resource.schema.json). CI rejects malformed, duplicate, future-dated, or stale records.
+The schema is [`schemas/resource.schema.json`](../schemas/resource.schema.json). CI rejects malformed, duplicate, future-dated, or stale records. A weekly scheduled workflow reruns freshness validation even when the repository is idle and opens or refreshes a correction issue when action is required.
 
 ## Boundaries
 
@@ -44,4 +44,4 @@ BetterBacoor may explain and link to a transaction. It must not:
 
 ## Routing and deployment
 
-The application uses browser routing. Static hosts must send unknown paths to `index.html`; `_redirects` and `vercel.json` provide the current host-neutral and Vercel fallbacks. The domain remains disconnected until preview review is complete. Builds include a `noindex` directive during this phase; launch requires deliberately removing it and publishing a sitemap.
+The application uses browser routing. `_redirects` and `vercel.json` rewrite only the four known client routes to `index.html`; unmatched URLs remain unmatched so the host can return HTTP 404 instead of a soft 404. The build also ships `404.html` for hosts that support static custom-error pages. The domain remains disconnected until preview review is complete. Builds include a `noindex` directive during this phase; launch requires deliberately removing it and publishing a sitemap.

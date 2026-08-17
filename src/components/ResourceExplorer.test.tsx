@@ -11,12 +11,22 @@ describe('ResourceExplorer', () => {
     });
 
     expect(screen.getByText('1 resource found')).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: 'Barangay hall directory' })
-    ).toBeInTheDocument();
+    const heading = screen.getByRole('heading', {
+      level: 2,
+      name: 'Barangay hall directory',
+    });
+    expect(heading).toBeInTheDocument();
     expect(
       screen.queryByRole('heading', { name: 'Bacoor One Stop Shop System' })
     ).not.toBeInTheDocument();
+
+    const correctionLink = screen.getByRole('link', {
+      name: 'Suggest a correction on GitHub (account required)',
+    });
+    const correctionUrl = new URL(correctionLink.getAttribute('href') ?? '');
+    expect(correctionUrl.searchParams.get('title')).toBe(
+      'Correction: Barangay hall directory [bacoor-barangay-directory]'
+    );
   });
 
   it('shows a useful empty state and can clear the search', () => {
