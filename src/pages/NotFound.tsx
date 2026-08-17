@@ -11,13 +11,13 @@ export function NotFound() {
         description="The requested BetterBacoor page could not be found."
       />
       <section aria-labelledby="not-found-title" className="max-w-2xl">
-        <BrandMark className="mx-auto h-16 w-16 text-civic-700" />
-        <p className="mt-6 text-xs font-black uppercase tracking-[0.18em] text-civic-700">
+        <BrandMark className="mx-auto h-14 w-14 text-civic-700" />
+        <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em] text-civic-700">
           Error 404 · Wrong turn
         </p>
         <h1
           id="not-found-title"
-          className="mt-4 text-4xl font-black tracking-[-0.045em] text-slate-950 sm:text-6xl"
+          className="mt-4 text-4xl font-bold tracking-[-0.045em] text-slate-950 sm:text-6xl"
         >
           This route is not in the guide.
         </h1>
@@ -27,7 +27,7 @@ export function NotFound() {
         </p>
         <Link
           to="/"
-          className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-xl bg-civic-700 px-5 py-3 font-black text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2"
+          className="mt-8 inline-flex min-h-11 items-center gap-2 rounded-full bg-civic-700 px-5 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2"
         >
           <ArrowLeft aria-hidden="true" className="h-4 w-4" /> Return home
         </Link>

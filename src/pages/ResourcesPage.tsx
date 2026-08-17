@@ -36,7 +36,7 @@ export function ResourcesPage({
     <div className="page-shell py-12 sm:py-16 lg:py-20">
       <PageMeta title={title} description={description} />
       <PageIntro eyebrow={eyebrow} title={title} description={description} />
-      <div className="mt-10">
+      <div className="mt-10 border-t border-slate-200 pt-8">
         <ResourceExplorer
           categories={categories}
           label={searchLabel}

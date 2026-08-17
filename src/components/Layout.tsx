@@ -1,8 +1,6 @@
 import {
   ArrowRight,
-  CalendarCheck2,
   ExternalLink,
-  FileCheck2,
   Github,
   Menu,
   Search,
@@ -47,58 +45,54 @@ export function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950">
+    <div className="min-h-screen bg-[#f7f9fa] text-slate-950">
       <a
         href="#main-content"
-        className="sr-only z-[100] rounded-md bg-white px-4 py-3 font-semibold text-civic-800 shadow focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        className="sr-only z-[100] rounded-lg bg-white px-4 py-3 font-semibold text-civic-800 shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
       >
         Skip to content
       </a>
 
       <header>
-        <div className="bg-civic-950 text-white">
-          <div className="page-shell flex min-h-10 items-center justify-between gap-5 py-2 text-xs leading-5 sm:text-sm">
-            <p>
-              <strong>Unofficial and community-run.</strong>{' '}
-              <span className="text-civic-100">
-                Not operated by or endorsed by the City Government of Bacoor.
+        <div className="border-b border-civic-100 bg-civic-50 text-civic-950">
+          <div className="page-shell flex min-h-9 items-center justify-between gap-5 py-1.5 text-[0.72rem] leading-5 sm:text-xs">
+            <p className="flex items-center gap-2">
+              <ShieldCheck
+                aria-hidden="true"
+                className="h-3.5 w-3.5 shrink-0 text-civic-600"
+              />
+              <span>
+                <strong>Unofficial and community-run.</strong>{' '}
+                <span className="hidden text-civic-800 sm:inline">
+                  Not operated by or endorsed by the City Government of Bacoor.
+                </span>
               </span>
             </p>
-            <div className="hidden shrink-0 items-center gap-5 lg:flex">
-              <a
-                href="https://bacoor.gov.ph/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded font-semibold text-white hover:text-sky-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
-              >
-                Official city portal
-                <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
-              </a>
-              <a
-                href="https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded font-semibold text-white hover:text-sky-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
-              >
-                Correction form (GitHub account required)
-              </a>
-            </div>
+            <a
+              href="https://bacoor.gov.ph/"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden shrink-0 items-center gap-1 font-semibold text-civic-800 hover:text-civic-950 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 sm:inline-flex"
+            >
+              Official city portal
+              <ExternalLink aria-hidden="true" className="h-3 w-3" />
+            </a>
           </div>
         </div>
 
-        <div className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-          <div className="page-shell flex min-h-[4.75rem] flex-wrap items-center justify-between gap-x-5 py-3">
+        <div className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
+          <div className="page-shell flex min-h-[4.5rem] flex-wrap items-center justify-between gap-x-5 py-2.5">
             <NavLink
               to="/"
-              className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-4"
+              className="inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-4"
             >
-              <BrandMark className="h-11 w-11 text-civic-700" />
+              <BrandMark className="h-9 w-9 text-civic-700" />
               <span>
-                <span className="block text-lg font-black tracking-[-0.025em] text-slate-950">
+                <span className="block text-base font-bold tracking-[-0.025em] text-slate-950">
                   BetterBacoor
                 </span>
-                <span className="block text-[0.68rem] font-bold uppercase tracking-[0.13em] text-slate-500">
-                  Civic wayfinding
+                <span className="block text-[0.61rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                  Civic guide
                 </span>
               </span>
             </NavLink>
@@ -109,7 +103,7 @@ export function Layout() {
               aria-expanded={menuOpen}
               aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
               onClick={() => setMenuOpen(open => !open)}
-              className="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-800 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 lg:hidden"
+              className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 lg:hidden"
             >
               {menuOpen ? (
                 <X aria-hidden="true" className="h-5 w-5" />
@@ -123,17 +117,17 @@ export function Layout() {
               aria-label="Primary navigation"
               className={`${menuOpen ? 'block' : 'hidden'} w-full border-t border-slate-200 pt-3 lg:block lg:w-auto lg:border-0 lg:pt-0`}
             >
-              <ul className="flex flex-col gap-1 lg:flex-row lg:items-center">
+              <ul className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-0.5">
                 {navigation.map(item => (
                   <li key={item.to}>
                     <NavLink
                       to={item.to}
                       end={item.end}
                       className={({ isActive }) =>
-                        `inline-flex min-h-11 w-full items-center rounded-lg px-3 py-2 text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 lg:w-auto ${
+                        `inline-flex min-h-10 w-full items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 lg:w-auto ${
                           isActive
                             ? 'bg-civic-50 text-civic-800'
-                            : 'text-slate-700 hover:bg-slate-100 hover:text-slate-950'
+                            : 'text-slate-600 hover:bg-slate-50 hover:text-slate-950'
                         }`
                       }
                     >
@@ -144,7 +138,7 @@ export function Layout() {
                 <li className="lg:ml-2">
                   <NavLink
                     to="/search"
-                    className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-civic-700 px-4 py-2 text-sm font-black text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2 lg:w-auto"
+                    className="inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full bg-civic-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2 lg:w-auto"
                   >
                     <Search aria-hidden="true" className="h-4 w-4" />
                     Search
@@ -161,60 +155,37 @@ export function Layout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-slate-800 bg-civic-950 text-slate-300">
-        <div className="page-shell grid gap-10 py-14 lg:grid-cols-[1.5fr_0.8fr_0.8fr]">
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="page-shell grid gap-10 py-12 lg:grid-cols-[1.5fr_0.75fr_0.75fr]">
           <div>
-            <div className="flex items-center gap-3 text-white">
-              <BrandMark className="h-11 w-11 text-civic-600" />
+            <div className="flex items-center gap-2.5">
+              <BrandMark className="h-9 w-9 text-civic-700" />
               <div>
-                <p className="text-lg font-black tracking-tight">
+                <p className="font-bold tracking-tight text-slate-950">
                   BetterBacoor
                 </p>
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-sky-200">
+                <p className="text-xs text-slate-500">
                   Find the right starting point
                 </p>
               </div>
             </div>
-            <p className="mt-5 max-w-xl text-sm leading-6 text-slate-400">
+            <p className="mt-5 max-w-lg text-sm leading-6 text-slate-600">
               An unofficial, open-source civic guide for Bacoor. Complete
               applications, submissions, and payments only on the linked
               government system.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs font-bold text-slate-300">
-              <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck
-                  aria-hidden="true"
-                  className="h-4 w-4 text-emerald-400"
-                />
-                Source linked
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <CalendarCheck2
-                  aria-hidden="true"
-                  className="h-4 w-4 text-sky-300"
-                />
-                Date checked
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <FileCheck2
-                  aria-hidden="true"
-                  className="h-4 w-4 text-sky-300"
-                />
-                Public corrections
-              </span>
-            </div>
           </div>
 
           <div>
-            <h2 className="text-sm font-black uppercase tracking-[0.12em] text-white">
+            <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
               Explore
             </h2>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-4 space-y-3 text-sm text-slate-600">
               {navigation.slice(1).map(item => (
                 <li key={item.to}>
                   <NavLink
                     to={item.to}
-                    className="rounded hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                    className="rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
                   >
                     {item.label}
                   </NavLink>
@@ -223,7 +194,7 @@ export function Layout() {
               <li>
                 <NavLink
                   to="/search"
-                  className="rounded hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                  className="rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
                 >
                   Search all resources
                 </NavLink>
@@ -232,15 +203,15 @@ export function Layout() {
           </div>
 
           <div>
-            <h2 className="text-sm font-black uppercase tracking-[0.12em] text-white">
+            <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
               Project
             </h2>
-            <div className="mt-4 flex flex-col items-start gap-3 text-sm">
+            <div className="mt-4 flex flex-col items-start gap-3 text-sm text-slate-600">
               <a
                 href="https://github.com/0phl/betterbacoor"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                className="inline-flex items-center gap-2 rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
                 <Github aria-hidden="true" className="h-4 w-4" /> Source on
                 GitHub
@@ -250,7 +221,7 @@ export function Layout() {
                 href="https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                className="rounded leading-6 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
                 Report incorrect or outdated information on GitHub (account
                 required)
@@ -259,15 +230,15 @@ export function Layout() {
           </div>
         </div>
 
-        <div className="border-t border-white/10">
-          <div className="page-shell flex flex-col gap-3 py-5 text-xs leading-5 text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="border-t border-slate-200">
+          <div className="page-shell flex flex-col gap-3 py-5 text-xs leading-5 text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
               Based on the{' '}
               <a
                 href="https://github.com/iyanski/betterlocalgov"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded underline underline-offset-2 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                className="rounded underline underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
                 BetterLocalGov starter
               </a>{' '}
@@ -276,7 +247,7 @@ export function Layout() {
                 href="https://bettergov.ph/"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded underline underline-offset-2 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                className="rounded underline underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
                 BetterGov.ph community
               </a>
@@ -284,7 +255,7 @@ export function Layout() {
             </p>
             <NavLink
               to="/about"
-              className="inline-flex items-center gap-1.5 rounded font-bold text-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+              className="inline-flex items-center gap-1.5 rounded font-semibold text-slate-700 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
             >
               How this guide works
               <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
