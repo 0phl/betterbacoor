@@ -1,0 +1,96 @@
+name: Content freshness
+
+on:
+  schedule:
+    - cron: '23 3 * * 1'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/content-freshness.yml'
+      - 'content/**'
+      - 'schemas/**'
+      - 'scripts/validate-content.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: content-freshness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Check record freshness
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install exact dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Validate civic records
+        id: freshness
+        shell: bash
+        run: |
+          set +e
+          npm run validate:content > freshness-output.txt 2>&1
+          status=$?
+          set -e
+          printf 'status=%s\n' "$status" >> "$GITHUB_OUTPUT"
+
+      - name: Open or refresh the freshness issue
+        if: steps.freshness.outputs.status != '0' && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          title='Content freshness review required'
+          issue_number="$(gh issue list --state open --label correction --search '"Content freshness review required" in:title' --json number,title --jq '.[] | select(.title == "Content freshness review required") | .number' | tr '\n' ' ' | cut -d' ' -f1)"
+          body_file="$(mktemp)"
+          {
+            printf '%s\n\n' 'The scheduled content validator found stale or invalid civic records.'
+            printf '%s\n\n' "Workflow run: $RUN_URL"
+            printf '%s\n' '```text'
+            printf '%s\n' "$(< freshness-output.txt)"
+            printf '%s\n\n' '```'
+            printf '%s\n' 'Update the affected record from an authoritative government source, record the reviewer and verification date, and close this issue only after validation passes.'
+          } > "$body_file"
+
+          if [ -n "$issue_number" ]; then
+            gh issue comment "$issue_number" --body-file "$body_file"
+          else
+            gh issue create --title "$title" --label correction --body-file "$body_file"
+          fi
+
+      - name: Close a resolved freshness issue
+        if: steps.freshness.outputs.status == '0' && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          issue_number="$(gh issue list --state open --label correction --search '"Content freshness review required" in:title' --json number,title --jq '.[] | select(.title == "Content freshness review required") | .number' | tr '\n' ' ' | cut -d' ' -f1)"
+          if [ -n "$issue_number" ]; then
+            gh issue close "$issue_number" --comment 'The scheduled content validator passes again. Closing this automated freshness alert.'
+          fi
+
+      - name: Fail on stale or invalid records
+        if: steps.freshness.outputs.status != '0'
+        shell: bash
+        run: |
+          printf '%s\n' "$(< freshness-output.txt)"
+          exit 1

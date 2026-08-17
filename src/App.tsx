@@ -1,45 +1,53 @@
-import { NuqsAdapter } from 'nuqs/adapters/react';
-import { HelmetProvider } from 'react-helmet-async';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import Home from './pages/Home';
-import ScrollToTop from './components/ui/ScrollToTop';
-import Services from './pages/Services';
-import Document from './pages/Document';
-import Government from './pages/Government';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { About } from './pages/About';
+import { Home } from './pages/Home';
+import { NotFound } from './pages/NotFound';
+import { ResourcesPage } from './pages/ResourcesPage';
 
-function App() {
+export default function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <NuqsAdapter>
-          <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services/:category" element={<Services />} />
-              <Route path="/services" element={<Services />} />
-              <Route
-                path="/services/:category/:documentSlug"
-                element={<Document categoryType="service" />}
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route
+            path="services"
+            element={
+              <ResourcesPage
+                eyebrow="Services and online systems"
+                title="Start with a verified government source"
+                description="BetterBacoor currently points to the City of Bacoor’s published charter and transaction systems. Plain-language service guides will be added only after page-level verification."
+                categories={['service', 'official-system']}
               />
-              <Route path="/government/:category" element={<Government />} />
-              <Route path="/government" element={<Government />} />
-              <Route
-                path="/government/:category/:documentSlug"
-                element={<Document categoryType="government" />}
+            }
+          />
+          <Route
+            path="directories"
+            element={
+              <ResourcesPage
+                eyebrow="Directories"
+                title="Find the office or local directory you need"
+                description="These links go to directories published by the City of Bacoor. Contact details can change, so each record carries a visible verification date and correction route."
+                categories={['directory']}
               />
-              <Route path="/:lang/:documentSlug" element={<Document />} />
-              <Route path="/:documentSlug" element={<Document />} />
-            </Routes>
-            <Footer />
-          </div>
-        </NuqsAdapter>
-      </Router>
-    </HelmetProvider>
+            }
+          />
+          <Route
+            path="transparency"
+            element={
+              <ResourcesPage
+                eyebrow="Transparency"
+                title="Go directly to Bacoor public records"
+                description="Browse the City of Bacoor’s procurement and disclosure pages without presenting copied documents as the current source of truth."
+                categories={['transparency']}
+              />
+            }
+          />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

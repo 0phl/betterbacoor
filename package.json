@@ -1,70 +1,62 @@
 {
-  "name": "betterlocalgov",
+  "name": "betterbacoor",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run validate:content && npm run check:language && tsc -b && vite build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate:content": "node scripts/validate-content.mjs",
+    "check:language": "node scripts/check-language.mjs",
+    "check": "npm run format:check && npm run lint && npm run test && npm run build",
     "preview": "vite preview",
-    "prepare": "husky",
-    "convert-yaml": "node scripts/yaml-to-json.js",
-    "dev:yaml": "npm run convert-yaml && npm run dev",
-    "setup": "node scripts/setup-starter-kit.js"
+    "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,mjs,ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,css,md}": [
+    "*.{json,css,md,yaml,yml,html}": [
       "prettier --write"
     ]
   },
   "dependencies": {
     "@bettergov/kapwa": "^1.2.4",
-    "@tailwindcss/typography": "^0.5.18",
-    "@types/js-yaml": "^4.0.9",
-    "clsx": "^2.1.1",
-    "dotenv": "^17.2.2",
-    "i18next": "^25.5.2",
-    "i18next-browser-languagedetector": "^8.2.0",
-    "i18next-http-backend": "^3.0.2",
-    "js-yaml": "^4.1.0",
     "lucide-react": "^0.575.0",
-    "nuqs": "^2.6.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-helmet-async": "^3.0.0",
-    "react-i18next": "^15.7.3",
-    "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.9.2",
-    "remark-gfm": "^4.0.1",
-    "tailwind-merge": "^3.3.1"
+    "react-router-dom": "^7.9.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@tailwindcss/vite": "^4.0.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "axe-core": "^4.10.3",
     "eslint": "^9.35.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.4.0",
     "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
     "lint-staged": "^16.1.6",
-    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.0.0",
-    "tw-animate-css": "^1.4.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.43.0",
-    "vite": "^7.1.6"
+    "vite": "^7.1.6",
+    "vitest": "^3.2.4"
   }
 }
