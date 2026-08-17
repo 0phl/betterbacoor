@@ -305,7 +305,7 @@ export function Home() {
               rel="noreferrer"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-black text-civic-900 transition hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-civic-800"
             >
-              Suggest a correction
+              Suggest a correction on GitHub (account required)
               <ExternalLink aria-hidden="true" className="h-4 w-4" />
             </a>
           </div>

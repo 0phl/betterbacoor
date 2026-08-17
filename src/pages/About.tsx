@@ -101,7 +101,7 @@ export function About() {
             rel="noreferrer"
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-civic-700 px-5 py-3 text-sm font-black text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2"
           >
-            Open correction form
+            Open correction form (GitHub account required)
             <ExternalLink aria-hidden="true" className="h-4 w-4" />
           </a>
         </div>

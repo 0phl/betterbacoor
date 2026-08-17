@@ -3,7 +3,7 @@ import { type FormEvent, useId, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { resources } from '../data/resources';
 
-const popularSearches = [
+const searchShortcuts = [
   { label: 'Citizen’s Charter', query: 'requirements' },
   { label: 'Business permits', query: 'business' },
   { label: 'Barangay directory', query: 'barangay' },
@@ -71,10 +71,10 @@ export function HomeSearch() {
 
       <div className="mt-5 border-t border-slate-200 pt-4">
         <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
-          Popular starting points
+          Search shortcuts
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
-          {popularSearches.map(item => (
+          {searchShortcuts.map(item => (
             <Link
               key={item.query}
               to={`/search?q=${encodeURIComponent(item.query)}`}

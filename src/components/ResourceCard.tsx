@@ -3,9 +3,10 @@ import {
   CalendarCheck2,
   ExternalLink,
   ShieldCheck,
+  TriangleAlert,
   UserRoundCheck,
 } from 'lucide-react';
-import { categoryLabels } from '../data/resources';
+import { categoryLabels, getReviewStatus } from '../data/resources';
 import type { CivicResource } from '../types';
 
 function formatDate(date: string) {
@@ -34,6 +35,7 @@ export function ResourceCard({
   headingLevel = 3,
 }: ResourceCardProps) {
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
+  const reviewStatus = getReviewStatus(resource);
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-civic-200 hover:shadow-lg hover:shadow-slate-200/70">
@@ -42,8 +44,17 @@ export function ResourceCard({
           <span className="rounded-full bg-civic-50 px-3 py-1 text-xs font-black uppercase tracking-[0.08em] text-civic-800">
             {categoryLabels[resource.category]}
           </span>
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4" /> Checked
+          <span
+            className={`inline-flex items-center gap-1.5 text-xs font-bold ${
+              reviewStatus.overdue ? 'text-amber-800' : 'text-emerald-800'
+            }`}
+          >
+            {reviewStatus.overdue ? (
+              <TriangleAlert aria-hidden="true" className="h-4 w-4" />
+            ) : (
+              <ShieldCheck aria-hidden="true" className="h-4 w-4" />
+            )}
+            {reviewStatus.overdue ? 'Review overdue' : 'Checked'}
           </span>
         </div>
 
@@ -55,6 +66,19 @@ export function ResourceCard({
         </p>
 
         <dl className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs leading-5 text-slate-600">
+          {reviewStatus.overdue ? (
+            <div className="mb-3 flex items-start gap-2.5 rounded-lg border border-amber-200 bg-amber-50 p-3 text-amber-900">
+              <TriangleAlert
+                aria-hidden="true"
+                className="mt-0.5 h-4 w-4 shrink-0"
+              />
+              <dt className="sr-only">Review status</dt>
+              <dd>
+                <strong>Review overdue—confirm on the government page.</strong>{' '}
+                Review was due {formatDate(reviewStatus.dueDate)}.
+              </dd>
+            </div>
+          ) : null}
           <div className="flex items-start gap-2.5">
             <CalendarCheck2
               aria-hidden="true"

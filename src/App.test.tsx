@@ -20,8 +20,10 @@ describe('BetterBacoor application shell', () => {
 
   it('makes the unofficial status visible', () => {
     render(<App />);
+
+    const banner = screen.getByRole('banner');
     expect(
-      screen.getByText(/Unofficial and community-run/i)
+      within(banner).getByText(/Unofficial and community-run/i)
     ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
@@ -35,6 +37,19 @@ describe('BetterBacoor application shell', () => {
     expect(
       screen.getByRole('link', { name: 'BetterGov.ph community' })
     ).toHaveAttribute('href', 'https://bettergov.ph/');
+    expect(
+      within(screen.getByRole('contentinfo')).getByRole('link', {
+        name: /Report incorrect or outdated information on GitHub \(account required\)/i,
+      })
+    ).toBeInTheDocument();
+
+    const correctionLinks = screen
+      .getAllByRole('link')
+      .filter(link => link.getAttribute('href')?.includes('correction.yml'));
+    expect(correctionLinks.length).toBeGreaterThan(0);
+    correctionLinks.forEach(link => {
+      expect(link).toHaveAccessibleName(/account required/i);
+    });
   });
 
   it('searches every verified resource from the homepage', async () => {
