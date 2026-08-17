@@ -8,7 +8,7 @@ The primary surface is **Explore**: residents search, scan, compare, and leave f
 
 ## Visual direction
 
-- **Identity:** a custom blue `B` waypoint mark and the label “Civic wayfinding.” It is not the Bacoor city seal and does not imply government ownership.
+- **Identity:** a custom cobalt `B` wayfinding tile. A navy route connects two aqua destination nodes inside the letter, representing a resident's starting point and the verified official destination. It is not the Bacoor city seal and does not imply government ownership.
 - **Palette:** deep civic navy, clear service blue, slate text, white surfaces, and sky accents. Status green is reserved for checked-source signals.
 - **Typography:** Inter with compact, heavy editorial headings and restrained supporting text.
 - **Motif:** orthogonal route lines and waypoints communicate finding a path through civic information. They are decorative and hidden from assistive technology.

@@ -7,15 +7,26 @@ export function BrandMark({ className = 'h-11 w-11' }: BrandMarkProps) {
     <svg
       aria-hidden="true"
       className={className}
-      viewBox="0 0 56 56"
+      viewBox="0 0 64 64"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="56" height="56" rx="16" fill="currentColor" />
+      <rect x="2" y="2" width="60" height="60" rx="16" fill="#1746B8" />
       <path
-        d="M17 13.5h15.2c7.2 0 11.5 3.7 11.5 9.4 0 3.4-1.7 6.1-4.7 7.6 3.8 1.4 6 4.6 6 8.7 0 6.5-4.9 10.3-12.5 10.3H17v-36Zm9.1 7.3v6.9h5.1c2.3 0 3.7-1.3 3.7-3.5s-1.4-3.4-3.7-3.4h-5.1Zm0 13.8v7.6h5.8c2.7 0 4.2-1.4 4.2-3.8s-1.5-3.8-4.2-3.8h-5.8Z"
-        fill="white"
+        fill="#FFFFFF"
+        d="M15 10h18.2C43.1 10 49 14.6 49 22.2c0 4.6-2.4 8-6.7 10 5.2 1.9 8.2 6 8.2 11.8 0 8-6.8 12-16.9 12H15V10Z"
       />
-      <circle cx="47" cy="13" r="4" fill="#74d4ff" />
+      <path
+        d="M27 21.5h9M27 21.5v22h9"
+        fill="none"
+        stroke="#102A56"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4.5"
+      />
+      <circle cx="37" cy="21.5" r="5.25" fill="#102A56" />
+      <circle cx="37" cy="21.5" r="2.5" fill="#62D0FF" />
+      <circle cx="37" cy="43.5" r="5.25" fill="#102A56" />
+      <circle cx="37" cy="43.5" r="2.5" fill="#62D0FF" />
     </svg>
   );
 }

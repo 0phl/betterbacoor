@@ -21,7 +21,7 @@ The foundation currently provides a small set of checked links. Plain-language s
 - No resident accounts, payments, uploads, or private complaint intake
 - No application database or CMS
 
-See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/CONTENT_POLICY.md`](docs/CONTENT_POLICY.md), and [`docs/DESIGN.md`](docs/DESIGN.md).
+See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/CONTENT_POLICY.md`](docs/CONTENT_POLICY.md), [`docs/DESIGN.md`](docs/DESIGN.md), and [`docs/BRAND.md`](docs/BRAND.md).
 
 ## Run locally
 
