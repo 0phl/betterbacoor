@@ -2,63 +2,75 @@
 
 ## Brand boundary
 
-BetterGov describes itself as a community-led initiative and publishes its repository under CC0.[1] The CC0 legal text expressly leaves trademark rights unaffected, so BetterGov logo files are references, not BetterBacoor source assets.[2]
+BetterBacoor is an independent, community-run civic-information project. It is not operated by or endorsed by the City Government of Bacoor.
 
-The BetterLGU guide defines portals as independently maintained civic projects and recommends the `better[lguname]` repository and `better[lguname].org` domain patterns.[3]
+BetterGov describes itself as a community-led initiative and publishes its repository under CC0.[1] The CC0 legal text leaves trademark rights unaffected, so BetterGov artwork remains a family reference rather than a BetterBacoor source asset.[2]
 
-No shared logo, palette, seal, or emblem requirement appears in the published guide or directory material reviewed for this identity.[3][5]
+The BetterLGU guide describes independently maintained local portals and recommends the `better[lguname]` repository and `better[lguname].org` domain patterns.[3] The directory displays varied local identities rather than one mandatory portal mark.[4][5]
 
-The directory's CC BY 4.0 license does not authorize implied endorsement or license trademark rights.[6]
+The directory's CC BY 4.0 license does not authorize implied endorsement or grant trademark rights.[6]
 
-The BetterLGU directory generates its logo band from live portal icon metadata rather than requiring a standardized mark.[4] The generated inventory reviewed for BetterBacoor contained 24 accepted portal icons.[5]
+## Identity direction
 
-## Ecosystem findings
+The approved identity uses the blue, yellow, and white visual grammar common across BetterGov and BetterLGU projects while remaining an original BetterBacoor composition. It intentionally includes documented Bacoor symbols rather than the rejected route-and-waypoint `B`.
 
-The favicon inventory shows several recurring approaches:
+Bacoor's seal ordinance documents the sun, Zapote Bridge, bamboo, mussel shells, water, and marching-band imagery among the city's symbols.[7]
 
-- an LGU map silhouette combined with Philippine sun rays;
-- detailed local landmarks or monuments;
-- official or official-looking seals;
-- full wordmarks reduced into favicon space;
-- blue-and-yellow palettes borrowed from national symbolism.
+The official city portal describes Bacoor's history.[8]
 
-These patterns establish a loose civic family resemblance, but the detailed and text-heavy marks lose clarity at small sizes. BetterBacoor therefore uses a product-centered symbol instead of another map, sun, landmark, or seal.
+Separate official pages cover the Zapote Bridge and Bacoor's marching-band tradition.[9][10]
+
+The emblem does not reproduce the City Government of Bacoor seal. It rearranges individual local symbols into a distinct community-project mark and must always appear with the site's unofficial-status disclosure.
 
 ## Primary mark
 
-The BetterBacoor mark is a cobalt tile containing:
+The primary BetterBacoor emblem combines:
 
-- a bold white `B` for Bacoor and BetterBacoor;
-- one navy route connecting two destinations;
-- two aqua waypoints representing the resident's starting point and the verified official destination.
+- a proper Philippine flag-style yellow sun;
+- a circular frame of jointed bamboo and leaves;
+- a marching-band drum with **two drumsticks**;
+- a trumpet;
+- a two-arch interpretation of Zapote Bridge;
+- a mussel or bivalve shell; and
+- water lines.
 
-The symbol communicates civic wayfinding without implying that BetterBacoor is an official city service.
+The arrangement follows Ronan's approved Round 2, Concept 2 composition. The bridge creates the civic foundation, the marching-band instruments occupy the center, the bamboo forms the frame, and the mussel and water anchor the mark to Bacoor's coastal identity.
 
 ## Colors
 
-| Role                | Value     |
-| ------------------- | --------- |
-| BetterBacoor cobalt | `#1746B8` |
-| Route navy          | `#102A56` |
-| Waypoint aqua       | `#62D0FF` |
-| Mark white          | `#FFFFFF` |
+| Role                  | Value     |
+| --------------------- | --------- |
+| Philippine royal blue | `#0038A8` |
+| Golden yellow         | `#FCD116` |
+| Supporting white      | `#FFFFFF` |
 
-Do not add gradients, shadows, flag colors, sun rays, map silhouettes, or government-seal elements to the primary mark.
+The primary artwork uses flat fills only. Do not add gradients, shadows, extra colors, photographic textures, or unofficial text inside the emblem.
+
+## Navbar lockup
+
+In the application navbar, pair the primary mark with the plain-text name `BetterBacoor.org` and the existing `Civic guide` descriptor. Do not typeset the domain inside the emblem.
+
+## Favicon
+
+`public/favicon.svg` is a deliberately simplified derivative for browser-tab scale. It keeps the white tile, proper yellow sun, two drumsticks and drum, bridge arches, water, and blue outline while omitting details that collapse below 24 pixels.
+
+The favicon is not a replacement for the primary emblem on larger surfaces.
 
 ## Usage
 
-- Use `public/logo-mark.svg` for standalone brand applications.
-- Use `public/favicon.svg` for browser and directory favicon discovery.
-- Keep the mark square; do not stretch, rotate, outline, or rearrange it.
-- Preserve clear space equal to at least one waypoint diameter around the tile.
-- Use the full-color mark at 16 CSS pixels or larger.
-- Pair the mark with the plain-text name `BetterBacoor`; do not typeset a new wordmark inside the symbol.
-- Do not combine the mark with the BetterGov emblem, a BetterLGU logo, or the City Government of Bacoor seal.
-- Keep the visible community-run and unofficial disclosure wherever the identity could otherwise imply government ownership.
+- Use `public/logo-mark.svg` for the navbar, footer, 404 page, directory listing, and other standalone brand applications.
+- Use `public/favicon.svg` only for browser or operating-system icon discovery.
+- Keep the mark's aspect ratio; do not stretch, rotate, recolor, outline, or rearrange it.
+- Preserve clear space around the full emblem.
+- Prefer the primary mark at 36 CSS pixels or larger.
+- Keep the community-run and non-endorsement disclosure visible wherever the identity could imply government ownership.
+- Do not combine the emblem with the BetterGov emblem, another BetterLGU logo, or the City Government of Bacoor seal.
 
-## Provenance
+## Production provenance
 
-Codex image generation was used to explore three original route-and-waypoint directions and one refinement. The selected direction was manually rebuilt as deterministic SVG geometry. The shipped logo contains no generated raster pixels and does not reuse BetterGov, BetterLGU, City Government of Bacoor, or third-party logo artwork.
+Image generation was used only to explore and approve the composition. The selected concept was reduced to exact blue and yellow masks and reconstructed as deterministic spline-based SVG paths. The shipped primary mark contains no raster data, embedded image, gradient, filter, or third-party logo artwork.
+
+The simplified favicon was separately rebuilt as compact SVG geometry for legibility at small sizes.
 
 ## Sources
 
@@ -68,3 +80,7 @@ Codex image generation was used to explore three original route-and-waypoint dir
 [4] https://raw.githubusercontent.com/jmacj/better-lgu-directory/main/CONTEXT.md
 [5] https://lgu.bettergov.ph
 [6] https://raw.githubusercontent.com/jmacj/better-lgu-directory/main/LICENSE
+[7] https://bacoor.gov.ph/downloads/city-ordinances/2012/ORD-29A-2012%20(%20BACOOR%20SEAL%20).pdf
+[8] https://bacoor.gov.ph/historical-background-of-bacoor
+[9] https://bacoor.gov.ph/tourism/tulay-ng-zapote
+[10] https://bacoor.gov.ph/the-grandest-marching-band-festival-in-the-philippines

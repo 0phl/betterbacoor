@@ -52,6 +52,19 @@ describe('BetterBacoor application shell', () => {
     });
   });
 
+  it('uses the approved logo and domain lockup in the navbar', () => {
+    render(<App />);
+
+    const brandLink = screen.getByRole('link', {
+      name: /BetterBacoor\.org Civic guide/i,
+    });
+    expect(brandLink).toHaveAttribute('href', '/');
+    expect(brandLink.querySelector('img')).toHaveAttribute(
+      'src',
+      '/logo-mark.svg'
+    );
+  });
+
   it('searches every verified resource from the homepage', async () => {
     render(<App />);
 

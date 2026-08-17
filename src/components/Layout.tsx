@@ -89,7 +89,7 @@ export function Layout() {
               <BrandMark className="h-9 w-9 text-civic-700" />
               <span>
                 <span className="block text-base font-bold tracking-[-0.025em] text-slate-950">
-                  BetterBacoor
+                  BetterBacoor.org
                 </span>
                 <span className="block text-[0.61rem] font-bold uppercase tracking-[0.14em] text-slate-500">
                   Civic guide

@@ -178,7 +178,7 @@ export function Home() {
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-civic-50 text-civic-700">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
-                  <span className="text-xs font-semibold text-slate-400">
+                  <span className="text-xs font-semibold text-slate-600">
                     {pathway.number}
                   </span>
                 </div>
