@@ -66,7 +66,7 @@ export function HomeSearch() {
 
       <div className="mt-4 flex flex-col items-center justify-between gap-3 text-sm sm:flex-row">
         <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-          <span className="text-slate-500">Popular:</span>
+          <span className="text-slate-500">Quick searches:</span>
           {searchShortcuts.map(item => (
             <Link
               key={item.query}
