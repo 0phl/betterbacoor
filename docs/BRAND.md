@@ -52,11 +52,14 @@ In the application navbar, pair the primary mark with the plain-text name `Bette
 
 ## Favicon
 
-The browser favicon uses `public/logo-mark.svg`, the same approved emblem used throughout the site. There is no separate simplified derivative, so browser tabs and application surfaces always share one canonical mark.
+`public/favicon.svg` contains the exact approved emblem from `public/logo-mark.svg` on a white rounded-square background. Its 94 logo paths are copied unchanged; only the background and square padding are added so the mark remains visible against light and dark browser chrome.
+
+The favicon is generated and validated by `scripts/validate-brand-assets.mjs`. Run `npm run generate:favicon` after an approved primary-logo change; do not redraw or simplify the favicon independently.
 
 ## Usage
 
-- Use `public/logo-mark.svg` for the navbar, footer, favicon, 404 page, directory listing, and other standalone brand applications.
+- Use `public/logo-mark.svg` for the navbar, footer, 404 page, directory listing, and other standalone brand applications.
+- Use `public/favicon.svg` for browser icon discovery. It may add its white background plate but must preserve the primary emblem geometry exactly.
 - Keep the mark's aspect ratio; do not stretch, rotate, recolor, outline, or rearrange it.
 - Preserve clear space around the full emblem.
 - On controlled application surfaces, prefer the mark at 36 CSS pixels or larger. Browser chrome may rasterize the same SVG at smaller favicon sizes.
@@ -65,7 +68,7 @@ The browser favicon uses `public/logo-mark.svg`, the same approved emblem used t
 
 ## Production provenance
 
-Image generation was used only to explore and approve the composition. The selected concept was reduced to exact blue and yellow masks and reconstructed as deterministic spline-based SVG paths. The shipped mark contains no raster data, embedded image, gradient, filter, or third-party logo artwork.
+Image generation was used only to explore and approve the composition. The selected concept was reduced to exact blue and yellow masks and reconstructed as deterministic spline-based SVG paths. The shipped primary mark and generated favicon contain no raster data, embedded image, gradient, filter, or third-party logo artwork.
 
 ## Sources
 
