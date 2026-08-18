@@ -52,25 +52,20 @@ In the application navbar, pair the primary mark with the plain-text name `Bette
 
 ## Favicon
 
-`public/favicon.svg` is a deliberately simplified derivative for browser-tab scale. It keeps the white tile, proper yellow sun, two drumsticks and drum, bridge arches, water, and blue outline while omitting details that collapse below 24 pixels.
-
-The favicon is not a replacement for the primary emblem on larger surfaces.
+The browser favicon uses `public/logo-mark.svg`, the same approved emblem used throughout the site. There is no separate simplified derivative, so browser tabs and application surfaces always share one canonical mark.
 
 ## Usage
 
-- Use `public/logo-mark.svg` for the navbar, footer, 404 page, directory listing, and other standalone brand applications.
-- Use `public/favicon.svg` only for browser or operating-system icon discovery.
+- Use `public/logo-mark.svg` for the navbar, footer, favicon, 404 page, directory listing, and other standalone brand applications.
 - Keep the mark's aspect ratio; do not stretch, rotate, recolor, outline, or rearrange it.
 - Preserve clear space around the full emblem.
-- Prefer the primary mark at 36 CSS pixels or larger.
+- On controlled application surfaces, prefer the mark at 36 CSS pixels or larger. Browser chrome may rasterize the same SVG at smaller favicon sizes.
 - Keep the community-run and non-endorsement disclosure visible wherever the identity could imply government ownership.
 - Do not combine the emblem with the BetterGov emblem, another BetterLGU logo, or the City Government of Bacoor seal.
 
 ## Production provenance
 
-Image generation was used only to explore and approve the composition. The selected concept was reduced to exact blue and yellow masks and reconstructed as deterministic spline-based SVG paths. The shipped primary mark contains no raster data, embedded image, gradient, filter, or third-party logo artwork.
-
-The simplified favicon was separately rebuilt as compact SVG geometry for legibility at small sizes.
+Image generation was used only to explore and approve the composition. The selected concept was reduced to exact blue and yellow masks and reconstructed as deterministic spline-based SVG paths. The shipped mark contains no raster data, embedded image, gradient, filter, or third-party logo artwork.
 
 ## Sources
 
