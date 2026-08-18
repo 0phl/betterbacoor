@@ -10,7 +10,7 @@ const defaultDescription =
 
 export function PageMeta({ title, description }: PageMetaProps) {
   useEffect(() => {
-    document.title = `${title} | BetterBacoor`;
+    document.title = `${title} | Community-civic Guide to Bacoor`;
 
     let meta = document.querySelector<HTMLMetaElement>(
       'meta[name="description"]'

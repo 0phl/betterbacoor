@@ -63,7 +63,7 @@ export function Home() {
   return (
     <>
       <PageMeta
-        title="Community civic wayfinding"
+        title="BetterBacoor"
         description="Search checked links to Bacoor services, offices, directories, systems, and public records."
       />
 
