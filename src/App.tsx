@@ -44,8 +44,8 @@ export default function App() {
             element={
               <ResourcesPage
                 eyebrow="Directories"
-                title="Find the office or local directory you need"
-                description="Find barangay halls, hospitals, city departments, and national government offices. Each directory links directly to the City of Bacoor’s published information."
+                title="Your local connections, closer."
+                description="Find barangays, hospitals, health centers, and city offices. Search published contacts here, with the city source beside every listing."
                 categories={['directory']}
               />
             }

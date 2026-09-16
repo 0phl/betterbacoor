@@ -4,6 +4,8 @@ import { PageMeta } from '../components/PageMeta';
 import { ResourceExplorer } from '../components/ResourceExplorer';
 import { CommunityTools } from '../components/CommunityTools';
 import { OfficeContacts } from '../components/OfficeContacts';
+import { LocalDirectory } from '../components/LocalDirectory';
+import { findDirectoryEntries } from '../data/directory';
 import { GuideCards } from '../components/GuideCards';
 import { findGuides } from '../data/guides';
 import type { ResourceCategory } from '../types';
@@ -69,13 +71,35 @@ export function ResourcesPage({
             <GuideCards query={query} />
           </section>
         )}
-      {categories?.includes('directory') && <OfficeContacts />}
+      {!categories &&
+        query.trim() &&
+        findDirectoryEntries(query).length > 0 && (
+          <Link
+            to={`/directories?q=${encodeURIComponent(query)}`}
+            className="search-emergency-result"
+          >
+            <span className="eyebrow">ON BETTERBACOOR</span>
+            <strong>Local places matching “{query}”</strong>
+            <span>
+              {findDirectoryEntries(query).length} barangay, hospital, or health
+              center matches. Read contact details here.
+            </span>
+          </Link>
+        )}
+      {categories?.includes('directory') && (
+        <>
+          <LocalDirectory />
+          <OfficeContacts />
+        </>
+      )}
       <div className="mt-10 border-t border-slate-200 pt-8">
         <ResourceExplorer
           categories={categories}
           label={searchLabel}
-          initialQuery={query}
-          onQueryChange={updateRouteQuery}
+          initialQuery={categories?.includes('directory') ? '' : query}
+          onQueryChange={
+            categories?.includes('directory') ? undefined : updateRouteQuery
+          }
         />
       </div>
       {categories?.includes('transparency') && (

@@ -203,6 +203,68 @@ for (const situation of emergency.situations) {
     errors.push(`Invalid emergency guidance: ${situation.id}`);
 }
 
+const directory = JSON.parse(
+  fs.readFileSync(path.join(root, 'content/local-directory.json'), 'utf8')
+);
+const directoryIds = new Set();
+const directorySourceIds = new Set();
+for (const source of directory.sources) {
+  const age =
+    (today.getTime() -
+      new Date(`${source.last_verified}T00:00:00Z`).getTime()) /
+    86400000;
+  let approved = false;
+  try {
+    const url = new URL(source.url);
+    approved = url.protocol === 'https:' && url.hostname.endsWith('.gov.ph');
+  } catch {
+    /* Report malformed source below. */
+  }
+  if (
+    directorySourceIds.has(source.id) ||
+    !source.id ||
+    !source.title ||
+    !source.source_location ||
+    !approved ||
+    !Number.isFinite(age) ||
+    age < 0 ||
+    age > source.review_interval_days ||
+    !Number.isInteger(source.review_interval_days) ||
+    source.review_interval_days < 1 ||
+    source.review_interval_days > 90
+  )
+    errors.push(`Invalid or overdue local directory source: ${source.id}`);
+  directorySourceIds.add(source.id);
+}
+for (const entry of directory.entries) {
+  if (
+    directoryIds.has(entry.id) ||
+    !entry.id ||
+    !entry.name ||
+    !['barangay', 'hospital', 'health'].includes(entry.category) ||
+    !directorySourceIds.has(entry.source_id) ||
+    typeof entry.address !== 'string' ||
+    !Array.isArray(entry.includes) ||
+    entry.includes.some(name => typeof name !== 'string' || !name.trim()) ||
+    !Array.isArray(entry.phones)
+  )
+    errors.push(`Invalid local directory entry: ${entry.id}`);
+  directoryIds.add(entry.id);
+  for (const phone of entry.phones ?? []) {
+    const digits = phone.number.replace(/\D/g, '');
+    if (
+      phone.dial
+        ? !/^\+63\d{9,10}$/.test(phone.dial) ||
+          !digits.startsWith('0') ||
+          phone.dial !== `+63${digits.slice(1)}`
+        : !/^\d{3}-\d{4}$/.test(phone.number)
+    )
+      errors.push(`Invalid directory phone display/dial: ${entry.id}`);
+  }
+}
+if (directory.entries.length === 0)
+  errors.push('Local directory must not be empty.');
+
 if (errors.length > 0) {
   console.error('Content validation failed:\n');
   for (const error of errors) console.error(`- ${error}`);

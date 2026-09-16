@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "npm run validate:content && npm run validate:brand && npm run check:language && tsc -b && vite build",
+    "dev": "node scripts/build-offline.mjs && vite",
+    "build": "npm run validate:content && npm run validate:brand && npm run check:language && node scripts/build-offline.mjs && tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

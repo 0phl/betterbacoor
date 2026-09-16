@@ -60,7 +60,7 @@ const topics = [
   {
     title: 'Health & care',
     description: 'Hospitals and city health contacts',
-    query: 'health',
+    to: '/directories?type=hospital',
     icon: HeartPulse,
   },
   {

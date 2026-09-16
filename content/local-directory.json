@@ -1,0 +1,789 @@
+{
+  "sources": [
+    {
+      "id": "barangays",
+      "title": "City of Bacoor barangay hall directory",
+      "url": "https://bacoor.gov.ph/barangay-hall-directory/",
+      "source_location": "Barangay / Contact Number table; parenthetical groupings retained",
+      "last_verified": "2026-09-16",
+      "review_interval_days": 90
+    },
+    {
+      "id": "hospitals",
+      "title": "City of Bacoor hospital directory",
+      "url": "https://bacoor.gov.ph/bacoor-hospital-directory/",
+      "source_location": "Hospital / Address / Landline table",
+      "last_verified": "2026-09-16",
+      "review_interval_days": 90
+    },
+    {
+      "id": "health",
+      "title": "City of Bacoor local government directory",
+      "url": "https://bacoor.gov.ph/local-directory-of-bacoor-government-center/",
+      "source_location": "Other Offices: health centers and Social Hygiene Clinic",
+      "last_verified": "2026-09-16",
+      "review_interval_days": 90
+    }
+  ],
+  "entries": [
+    {
+      "id": "aniban-i",
+      "category": "barangay",
+      "name": "Aniban I",
+      "includes": ["Aniban I", "Aniban III", "Aniban V"],
+      "address": "",
+      "phones": [
+        {
+          "number": "417-7024",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "aniban-ii",
+      "category": "barangay",
+      "name": "Aniban II",
+      "includes": ["Aniban II", "Aniban IV"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "bayanan",
+      "category": "barangay",
+      "name": "Bayanan",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "424-9453",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "dulong-bayan",
+      "category": "barangay",
+      "name": "Dulong Bayan",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "habay-i",
+      "category": "barangay",
+      "name": "Habay I",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "519-0223",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "habay-ii",
+      "category": "barangay",
+      "name": "Habay II",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "kaingin-digman",
+      "category": "barangay",
+      "name": "Kaingin Digman",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "ligas-i",
+      "category": "barangay",
+      "name": "Ligas I",
+      "includes": ["Ligas I", "Ligas II"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "ligas-ii",
+      "category": "barangay",
+      "name": "Ligas II",
+      "includes": ["Ligas III"],
+      "address": "",
+      "phones": [
+        {
+          "number": "417-7787",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "mabolo",
+      "category": "barangay",
+      "name": "Mabolo",
+      "includes": ["Mabolo I", "Mabolo II", "Mabolo III"],
+      "address": "",
+      "phones": [
+        {
+          "number": "436-0036",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "maliksi-i",
+      "category": "barangay",
+      "name": "Maliksi I",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "417-8754",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "maliksi-ii",
+      "category": "barangay",
+      "name": "Maliksi II",
+      "includes": ["Maliksi II", "Maliksi III"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "mambog-i",
+      "category": "barangay",
+      "name": "Mambog I",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "mambog-ii",
+      "category": "barangay",
+      "name": "Mambog II",
+      "includes": ["Mambog II", "Mambog V"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "mambog-iii",
+      "category": "barangay",
+      "name": "Mambog III",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "472-2726",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "mambog-iv",
+      "category": "barangay",
+      "name": "Mambog IV",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-i",
+      "category": "barangay",
+      "name": "Molino I",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "424-2559",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-ii",
+      "category": "barangay",
+      "name": "Molino II",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "477-1539",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-iii",
+      "category": "barangay",
+      "name": "Molino III",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "454-4667",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-iv",
+      "category": "barangay",
+      "name": "Molino IV",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "477-1533",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-v",
+      "category": "barangay",
+      "name": "Molino V",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-vi",
+      "category": "barangay",
+      "name": "Molino VI",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "476-0461",
+          "dial": ""
+        },
+        {
+          "number": "572-0455",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "molino-vii",
+      "category": "barangay",
+      "name": "Molino VII",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "niog",
+      "category": "barangay",
+      "name": "Niog",
+      "includes": ["Niog 1", "Niog 2", "Niog 3"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "pf-espiritu-i",
+      "category": "barangay",
+      "name": "P.F. Espiritu I",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "pf-espiritu-ii",
+      "category": "barangay",
+      "name": "P.F. Espiritu II",
+      "includes": ["PF Espiritu II", "PF Espiritu III"],
+      "address": "",
+      "phones": [
+        {
+          "number": "417-4140",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "pf-espiritu-iii",
+      "category": "barangay",
+      "name": "P.F. Espiritu III",
+      "includes": ["PF Espiritu IV"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "pf-espiritu-iv",
+      "category": "barangay",
+      "name": "P.F. Espiritu IV",
+      "includes": ["PF Espiritu V", "PF Espiritu VI"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "pf-espiritu-v",
+      "category": "barangay",
+      "name": "P.F. Espiritu V",
+      "includes": ["PF Espiritu VII"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "pf-espiritu-vi",
+      "category": "barangay",
+      "name": "P.F. Espiritu VI",
+      "includes": ["PF Espiritu VIII"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "poblacion",
+      "category": "barangay",
+      "name": "Poblacion",
+      "includes": ["Tabing Dagat", "Daang Bukid", "Campo Santo"],
+      "address": "",
+      "phones": [
+        {
+          "number": "571-5114",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "queens-row-central",
+      "category": "barangay",
+      "name": "Queens Row Central",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "queens-row-east",
+      "category": "barangay",
+      "name": "Queens Row East",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "queens-row-west",
+      "category": "barangay",
+      "name": "Queens Row West",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "real",
+      "category": "barangay",
+      "name": "Real",
+      "includes": ["Real I", "Real II"],
+      "address": "",
+      "phones": [
+        {
+          "number": "471-2116",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "salinas-i",
+      "category": "barangay",
+      "name": "Salinas I",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "salinas-ii",
+      "category": "barangay",
+      "name": "Salinas II",
+      "includes": ["Salinas II", "Salinas III", "Salinas IV"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "san-nicolas-i",
+      "category": "barangay",
+      "name": "San Nicolas I",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "san-nicolas-ii",
+      "category": "barangay",
+      "name": "San Nicolas II",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "san-nicolas-iii",
+      "category": "barangay",
+      "name": "San Nicolas III",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "417-5001",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "sinbanali",
+      "category": "barangay",
+      "name": "Sinbanali",
+      "includes": ["Sineguelasan", "Banalo", "Alima"],
+      "address": "",
+      "phones": [
+        {
+          "number": "431-2569",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "talaba-i",
+      "category": "barangay",
+      "name": "Talaba I",
+      "includes": ["Talaba I", "Talaba III", "Talaba VII"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "talaba-ii",
+      "category": "barangay",
+      "name": "Talaba II",
+      "includes": [],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "talaba-iii",
+      "category": "barangay",
+      "name": "Talaba III",
+      "includes": ["Talaba IV", "Talaba V", "Talaba VI"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "zapote-i",
+      "category": "barangay",
+      "name": "Zapote I",
+      "includes": ["Zapote I", "Zapote II"],
+      "address": "",
+      "phones": [
+        {
+          "number": "519-3452",
+          "dial": ""
+        }
+      ],
+      "source_id": "barangays"
+    },
+    {
+      "id": "zapote-ii",
+      "category": "barangay",
+      "name": "Zapote II",
+      "includes": ["Zapote III", "Zapote IV"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "zapote-iii",
+      "category": "barangay",
+      "name": "Zapote III",
+      "includes": ["Zapote V"],
+      "address": "",
+      "phones": [],
+      "source_id": "barangays"
+    },
+    {
+      "id": "hospital-1",
+      "category": "hospital",
+      "name": "Bacoor Doctors Medical Center",
+      "includes": [],
+      "address": "Bacoor Doctors Medical Center, Bacoor Boulevard",
+      "phones": [
+        {
+          "number": "(046) 416 6275",
+          "dial": "+63464166275"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-2",
+      "category": "hospital",
+      "name": "Crisostomo General Hospital",
+      "includes": [],
+      "address": "General Tirona Highway, Bacoor, 4102 Cavite",
+      "phones": [
+        {
+          "number": "(046) 434 8239",
+          "dial": "+63464348239"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-3",
+      "category": "hospital",
+      "name": "Metro South Medical Center",
+      "includes": [],
+      "address": "1 Molino – Paliparan Rd, Molino IV, Cavite",
+      "phones": [
+        {
+          "number": "(046) 477 3087",
+          "dial": "+63464773087"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-4",
+      "category": "hospital",
+      "name": "Molino Doctors Hospital",
+      "includes": [],
+      "address": "201 Molino Rd, Bacoor, Cavite",
+      "phones": [
+        {
+          "number": "(046) 477 0830",
+          "dial": "+63464770830"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-5",
+      "category": "hospital",
+      "name": "Prime Global Care Medical Center, Inc.",
+      "includes": [],
+      "address": "Avenida Rizal, Molino, Bacoor, 4102 Cavite",
+      "phones": [
+        {
+          "number": "(046) 970 5314",
+          "dial": "+63469705314"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-6",
+      "category": "hospital",
+      "name": "South City Hospital and Medical Center",
+      "includes": [],
+      "address": "115 Daang Hari Road, Molino, Bacoor, 4102 Cavite",
+      "phones": [
+        {
+          "number": "(02) 8249 9100",
+          "dial": "+63282499100"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-7",
+      "category": "hospital",
+      "name": "Southeast Asian Medical Center",
+      "includes": [],
+      "address": "Molino Road, Brgy, Molino III, Bacoor, 4102 Cavite",
+      "phones": [
+        {
+          "number": "(046) 431 0000",
+          "dial": "+63464310000"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-8",
+      "category": "hospital",
+      "name": "Southern Tagalog Regional Hospital",
+      "includes": [],
+      "address": "Bacoor, Cavite",
+      "phones": [
+        {
+          "number": "(046) 418 3644",
+          "dial": "+63464183644"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-9",
+      "category": "hospital",
+      "name": "St. Dominic Medical Center",
+      "includes": [],
+      "address": "Emilio Aguinaldo Hwy, Bacoor, 4102 Cavite",
+      "phones": [
+        {
+          "number": "(046) 417 2520",
+          "dial": "+63464172520"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "hospital-10",
+      "category": "hospital",
+      "name": "St. Michael Medical Hospital",
+      "includes": [],
+      "address": "Molino 2, Bacoor, Cavite",
+      "phones": [
+        {
+          "number": "(046) 477 1707",
+          "dial": "+63464771707"
+        }
+      ],
+      "source_id": "hospitals"
+    },
+    {
+      "id": "health-1",
+      "category": "health",
+      "name": "Health Center – BGC",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "886-7046",
+          "dial": ""
+        },
+        {
+          "number": "437-1560",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    },
+    {
+      "id": "health-2",
+      "category": "health",
+      "name": "Health Center – Poblacion",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "454-3311",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    },
+    {
+      "id": "health-3",
+      "category": "health",
+      "name": "Health Center – Floraville",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "436-1948",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    },
+    {
+      "id": "health-4",
+      "category": "health",
+      "name": "Health Center – Molino III",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "450-0470",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    },
+    {
+      "id": "health-5",
+      "category": "health",
+      "name": "Health Center – Queens Row",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "436-1626",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    },
+    {
+      "id": "health-6",
+      "category": "health",
+      "name": "Health Center – Talaba Lying In",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "472-7884",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    },
+    {
+      "id": "health-7",
+      "category": "health",
+      "name": "Bacoor Social Hygiene Clinic",
+      "includes": [],
+      "address": "",
+      "phones": [
+        {
+          "number": "432-3326",
+          "dial": ""
+        }
+      ],
+      "source_id": "health"
+    }
+  ]
+}

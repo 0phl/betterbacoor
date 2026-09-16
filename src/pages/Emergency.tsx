@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageMeta } from '../components/PageMeta';
+import { OfflineEmergency } from '../components/OfflineEmergency';
 import {
   emergency,
   emergencyCardText,
@@ -102,6 +103,7 @@ export function Emergency() {
         </div>
       </section>
       <div className="page-shell emergency-content">
+        <OfflineEmergency />
         {emergencyNeedsReview() && (
           <p className="emergency-review" role="status">
             These published contacts are due for another source review. Consult

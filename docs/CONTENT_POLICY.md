@@ -42,6 +42,10 @@ For this collection, explicitly labeled humanitarian sources from the Philippine
 
 ## Content maintenance
 
+The onsite local-place collection lives in `content/local-directory.json`. It uses government-only sources, per-source table locations and review dates, and a maximum 90-day review interval. Its validator checks unique IDs, source references, and phone display/dial agreement. Missing area codes remain unspecified and are not turned into call links. See [offline and directory notes](OFFLINE_AND_DIRECTORY.md) for transcription evidence and limitations.
+
+Offline emergency copies retain the original source snapshot date even when saved again. A saved date is a device-storage timestamp, not evidence of a newer source review. Both dates are shown where they help residents assess an offline copy; reviewer attribution remains absent.
+
 A content change should record:
 
 - the affected record;
