@@ -14,8 +14,6 @@ export interface CivicResource {
   source_url: string;
   source_page: string;
   last_verified: string;
-  reviewer: string;
   risk_level: RiskLevel;
   review_interval_days: number;
-  correction_url: string;
 }

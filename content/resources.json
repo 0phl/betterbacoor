@@ -11,10 +11,8 @@
       "source_url": "https://bacoor.gov.ph/",
       "source_page": "Home page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "ordinary",
-      "review_interval_days": 180,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 180
     },
     {
       "id": "citizens-charter-2026",
@@ -27,10 +25,8 @@
       "source_url": "https://bacoor.gov.ph/downloads/arta/CitizensCharter2026.pdf",
       "source_page": "2026, 1st Edition",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "high",
-      "review_interval_days": 90,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 90
     },
     {
       "id": "bacoor-one-stop-shop",
@@ -43,10 +39,8 @@
       "source_url": "https://boss.bacoor.gov.ph/",
       "source_page": "Login page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "high",
-      "review_interval_days": 90,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 90
     },
     {
       "id": "bacoor-office-directory",
@@ -59,10 +53,8 @@
       "source_url": "https://bacoor.gov.ph/local-directory-of-bacoor-government-center/",
       "source_page": "Web page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "ordinary",
-      "review_interval_days": 180,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 180
     },
     {
       "id": "bacoor-barangay-directory",
@@ -75,10 +67,8 @@
       "source_url": "https://bacoor.gov.ph/barangay-hall-directory/",
       "source_page": "Web page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "ordinary",
-      "review_interval_days": 180,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 180
     },
     {
       "id": "bacoor-hospital-directory",
@@ -91,10 +81,8 @@
       "source_url": "https://bacoor.gov.ph/bacoor-hospital-directory/",
       "source_page": "Web page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "high",
-      "review_interval_days": 90,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 90
     },
     {
       "id": "bacoor-procurement",
@@ -107,10 +95,8 @@
       "source_url": "https://bacoor.gov.ph/procurement/",
       "source_page": "Web page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "ordinary",
-      "review_interval_days": 180,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 180
     },
     {
       "id": "full-disclosure-2026",
@@ -123,10 +109,134 @@
       "source_url": "https://bacoor.gov.ph/dilg/dilg-full-disclosure-policy-2026/",
       "source_page": "2026 web page",
       "last_verified": "2026-08-17",
-      "reviewer": "0phl",
       "risk_level": "ordinary",
-      "review_interval_days": 180,
-      "correction_url": "https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+      "review_interval_days": 180
+    },
+    {
+      "id": "bacoor-department-directory",
+      "title": "City departments & service contacts",
+      "summary": "Find published contact details for city departments, including civil registry, business permits, employment, social welfare, and health services.",
+      "category": "directory",
+      "tags": [
+        "city offices",
+        "employment",
+        "PESO",
+        "health",
+        "senior citizen",
+        "civil registry",
+        "social welfare"
+      ],
+      "official_url": "https://bacoor.gov.ph/city-and-units-heads/",
+      "source_title": "City Department and Unit Heads",
+      "source_url": "https://bacoor.gov.ph/city-and-units-heads/",
+      "source_page": "Published department directory",
+      "last_verified": "2026-09-16",
+      "risk_level": "ordinary",
+      "review_interval_days": 180
+    },
+    {
+      "id": "bacoor-national-offices",
+      "title": "National government offices in Bacoor",
+      "summary": "Find the city-published directory of national government offices, including DTI, DILG, the post office, and the Public Attorney’s Office.",
+      "category": "directory",
+      "tags": ["national offices", "DTI", "DILG", "post office", "PAO"],
+      "official_url": "https://bacoor.gov.ph/national-government-agenciesoffices/",
+      "source_title": "National Government Agencies/Offices",
+      "source_url": "https://bacoor.gov.ph/national-government-agenciesoffices/",
+      "source_page": "Published agency directory",
+      "last_verified": "2026-09-16",
+      "risk_level": "ordinary",
+      "review_interval_days": 180
+    },
+    {
+      "id": "bacoor-working-permit",
+      "title": "Mayor’s working permit",
+      "summary": "Go to Bacoor’s official working-permit system to view the application options and instructions. Submit personal documents only on the government website.",
+      "category": "official-system",
+      "tags": ["working permit", "employment", "employee", "work permit"],
+      "official_url": "https://strikeas1.bacoor.gov.ph/",
+      "source_title": "Bacoor City eGov — Online Mayor’s Working Permit",
+      "source_url": "https://strikeas1.bacoor.gov.ph/",
+      "source_page": "Working-permit application landing page",
+      "last_verified": "2026-09-16",
+      "risk_level": "high",
+      "review_interval_days": 90
+    },
+    {
+      "id": "bacoor-solidarity-pass",
+      "title": "Solidarity Route Pass",
+      "summary": "Access the city’s Solidarity Route Pass system for vehicle-pass applications, renewals, and application-status checks.",
+      "category": "official-system",
+      "tags": ["solidarity", "route", "vehicle", "transport", "everyday"],
+      "official_url": "https://solidarity.bacoor.gov.ph/",
+      "source_title": "Bacoor City SPass",
+      "source_url": "https://solidarity.bacoor.gov.ph/",
+      "source_page": "SPass application and verification landing page",
+      "last_verified": "2026-09-16",
+      "risk_level": "high",
+      "review_interval_days": 90
+    },
+    {
+      "id": "bacoor-development-plan",
+      "title": "City development plan 2026–2031",
+      "summary": "Read the city’s published Comprehensive Development Plan for 2026–2031 through its official document page.",
+      "category": "transparency",
+      "tags": [
+        "development",
+        "city plan",
+        "planning",
+        "CDP",
+        "public documents"
+      ],
+      "official_url": "https://bacoor.gov.ph/city-bulletin/comprehensive-development-plan-cdp-2026-2031-of-the-city-of-bacoor/",
+      "source_title": "Comprehensive Development Plan (CDP) 2026–2031",
+      "source_url": "https://bacoor.gov.ph/city-bulletin/comprehensive-development-plan-cdp-2026-2031-of-the-city-of-bacoor/",
+      "source_page": "City Bulletin publication, September 14, 2026",
+      "last_verified": "2026-09-16",
+      "risk_level": "ordinary",
+      "review_interval_days": 180
+    },
+    {
+      "id": "philjobnet-employment",
+      "title": "Jobs & career opportunities",
+      "summary": "Search DOLE’s national job portal for vacancies, job fairs, and training opportunities. Use its location search to find work in Bacoor or nearby areas.",
+      "category": "official-system",
+      "tags": ["jobs", "employment", "work", "career", "trabaho", "DOLE"],
+      "official_url": "https://philjobnet.gov.ph/",
+      "source_title": "PhilJobNet — Department of Labor and Employment",
+      "source_url": "https://philjobnet.gov.ph/",
+      "source_page": "National jobs and labor market information portal",
+      "last_verified": "2026-09-16",
+      "risk_level": "ordinary",
+      "review_interval_days": 180
+    },
+    {
+      "id": "pagasa-weather",
+      "title": "Weather forecasts & advisories",
+      "summary": "Open PAGASA for official forecasts, rainfall information, and tropical cyclone advisories. Check the bulletin’s coverage and issue time for Cavite.",
+      "category": "official-system",
+      "tags": ["weather", "rain", "PAGASA", "Cavite", "everyday"],
+      "official_url": "https://www.pagasa.dost.gov.ph/",
+      "source_title": "DOST-PAGASA",
+      "source_url": "https://www.pagasa.dost.gov.ph/",
+      "source_page": "Official weather portal; linked forecasts and advisories",
+      "last_verified": "2026-09-16",
+      "risk_level": "high",
+      "review_interval_days": 90
+    },
+    {
+      "id": "bacoor-announcements",
+      "title": "City announcements & advisories",
+      "summary": "Read announcements published by the City of Bacoor. Check each post’s date and coverage before making plans.",
+      "category": "service",
+      "tags": ["announcements", "advisories", "city updates", "everyday"],
+      "official_url": "https://bacoor.gov.ph/category/announcement/",
+      "source_title": "City of Bacoor — Announcements",
+      "source_url": "https://bacoor.gov.ph/category/announcement/",
+      "source_page": "Official announcement archive",
+      "last_verified": "2026-09-16",
+      "risk_level": "ordinary",
+      "review_interval_days": 180
     }
   ]
 }

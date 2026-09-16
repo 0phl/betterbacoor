@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
@@ -67,16 +68,139 @@ for (const [index, resource] of collection.resources.entries()) {
     );
   }
 
-  if (resource.risk_level === 'high' && !resource.correction_url) {
-    errors.push(`${resource.id}: high-risk records require a correction URL`);
-  }
-
   const maximumInterval = resource.risk_level === 'high' ? 90 : 180;
   if (resource.review_interval_days > maximumInterval) {
     errors.push(
       `${resource.id}: ${resource.risk_level} records must be reviewed within ${maximumInterval} days`
     );
   }
+}
+
+const contacts = JSON.parse(
+  fs.readFileSync(path.join(root, 'content/office-contacts.json'), 'utf8')
+);
+if (
+  !collection.resources.some(
+    resource =>
+      resource.id === contacts.source_resource_id &&
+      resource.category === 'directory'
+  )
+) {
+  errors.push('Office contacts must reference a validated directory resource.');
+}
+if (!Array.isArray(contacts.offices) || contacts.offices.length === 0) {
+  errors.push('Office contacts must contain at least one office.');
+} else {
+  const emails = new Set();
+  for (const office of contacts.offices) {
+    if (
+      !office.name ||
+      !office.description ||
+      !/^[a-z0-9._-]+@bacoor\.gov\.ph$/i.test(office.email)
+    )
+      errors.push('Invalid office name, description, or official email.');
+    if (emails.has(office.email))
+      errors.push(`Duplicate office contact: ${office.email}`);
+    emails.add(office.email);
+    if (office.phone && !/^\+63\d{9,10}$/.test(office.phone))
+      errors.push(`Invalid telephone: ${office.name}`);
+    if (
+      office.extension &&
+      (!office.phone || !/^\d{2,5}$/.test(office.extension))
+    )
+      errors.push(`Invalid telephone extension: ${office.name}`);
+  }
+}
+
+const documents = JSON.parse(
+  fs.readFileSync(path.join(root, 'content/documents.json'), 'utf8')
+).documents;
+for (const document of documents) {
+  const source = collection.resources.find(
+    resource => resource.id === document.id
+  );
+  if (!source || source.source_url !== document.source_url)
+    errors.push(`Document source does not match the resource: ${document.id}`);
+  const file = path.resolve(root, document.path);
+  if (!file.startsWith(path.join(root, 'public', 'documents') + path.sep)) {
+    errors.push(`Document path must be under public/documents: ${document.id}`);
+    continue;
+  }
+  if (!fs.existsSync(file)) {
+    errors.push(`Missing document: ${document.path}`);
+    continue;
+  }
+  const bytes = fs.readFileSync(file);
+  if (
+    bytes.length !== document.bytes ||
+    createHash('sha256').update(bytes).digest('hex') !== document.sha256
+  )
+    errors.push(`Document integrity mismatch: ${document.id}`);
+}
+
+const emergency = JSON.parse(
+  fs.readFileSync(path.join(root, 'content/emergency.json'), 'utf8')
+);
+const emergencyAge =
+  (today.getTime() -
+    new Date(`${emergency.last_verified}T00:00:00Z`).getTime()) /
+  86_400_000;
+if (
+  !Number.isFinite(emergencyAge) ||
+  emergencyAge < 0 ||
+  emergencyAge > 30 ||
+  emergency.review_interval_days !== 30
+)
+  errors.push(
+    'Emergency content requires a valid source review within 30 days.'
+  );
+const emergencySourceIds = new Set(emergency.sources.map(source => source.id));
+const emergencyContactIds = new Set(
+  emergency.contacts.map(contact => contact.id)
+);
+if (
+  emergencySourceIds.size !== emergency.sources.length ||
+  emergencyContactIds.size !== emergency.contacts.length
+)
+  errors.push('Emergency source and contact IDs must be unique.');
+for (const source of emergency.sources) {
+  const url = new URL(source.url);
+  const approved =
+    source.type === 'government'
+      ? url.hostname.endsWith('.gov.ph')
+      : source.type === 'humanitarian' &&
+        ['redcross.org.ph', 'www.redcross.org'].includes(url.hostname);
+  if (!approved || url.protocol !== 'https:' || !source.name)
+    errors.push(`Invalid emergency source: ${source.id}`);
+}
+for (const contact of emergency.contacts) {
+  const printedDigits = contact.number.replace(/\D/g, '');
+  const expectedDial = printedDigits.startsWith('0')
+    ? `+63${printedDigits.slice(1)}`
+    : printedDigits;
+  if (
+    !contact.name ||
+    !contact.description ||
+    !/^(161|911|143|\+63\d{9,10})$/.test(contact.dial) ||
+    contact.dial !== expectedDial
+  )
+    errors.push(`Emergency phone display/dial mismatch: ${contact.id}`);
+  if (
+    !contact.sources.length ||
+    contact.sources.some(id => !emergencySourceIds.has(id))
+  )
+    errors.push(`Missing emergency contact source: ${contact.id}`);
+}
+for (const situation of emergency.situations) {
+  if (
+    !situation.title ||
+    !situation.steps.length ||
+    situation.steps.some(step => !step.title || !step.text) ||
+    !situation.sources.length ||
+    situation.sources.some(id => !emergencySourceIds.has(id)) ||
+    situation.contacts.some(id => !emergencyContactIds.has(id))
+  )
+    errors.push(`Invalid emergency guidance: ${situation.id}`);
 }
 
 if (errors.length > 0) {

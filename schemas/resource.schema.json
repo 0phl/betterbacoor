@@ -15,10 +15,8 @@
     "source_url",
     "source_page",
     "last_verified",
-    "reviewer",
     "risk_level",
-    "review_interval_days",
-    "correction_url"
+    "review_interval_days"
   ],
   "properties": {
     "id": {
@@ -72,11 +70,6 @@
       "type": "string",
       "format": "date"
     },
-    "reviewer": {
-      "type": "string",
-      "minLength": 2,
-      "maxLength": 80
-    },
     "risk_level": {
       "enum": ["ordinary", "high"]
     },
@@ -84,11 +77,6 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 365
-    },
-    "correction_url": {
-      "type": "string",
-      "format": "uri",
-      "pattern": "^https://"
     }
   }
 }

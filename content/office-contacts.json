@@ -1,0 +1,38 @@
+{
+  "source_resource_id": "bacoor-department-directory",
+  "offices": [
+    {
+      "name": "Business permits & licensing",
+      "description": "Business permits and licensing enquiries",
+      "email": "bplo@bacoor.gov.ph",
+      "phone": "+63464814100",
+      "extension": "203"
+    },
+    {
+      "name": "City civil registry",
+      "description": "Birth, marriage, and civil registration enquiries",
+      "email": "ccr@bacoor.gov.ph",
+      "phone": "+63464814100",
+      "extension": "216"
+    },
+    {
+      "name": "Public Employment Service Office",
+      "description": "Employment and jobseeker enquiries",
+      "email": "peso@bacoor.gov.ph",
+      "phone": "+63464814100",
+      "extension": "317"
+    },
+    {
+      "name": "Social welfare & development",
+      "description": "Social welfare and assistance enquiries",
+      "email": "cswd@bacoor.gov.ph",
+      "phone": "+63464814100",
+      "extension": "221"
+    },
+    {
+      "name": "Office of Senior Citizens Affairs",
+      "description": "Senior citizen service enquiries",
+      "email": "osca@bacoor.gov.ph"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "id": "citizens-charter-2026",
+      "path": "public/documents/bacoor-citizens-charter-2026.pdf",
+      "source_url": "https://bacoor.gov.ph/downloads/arta/CitizensCharter2026.pdf",
+      "edition": "2026, 1st Edition",
+      "downloaded": "2026-09-16",
+      "pages": 1202,
+      "bytes": 13048888,
+      "sha256": "32d040e308ad0b4988c28ba5e351cd4076bd7d17d6bc9fd0b1e2cff33e5070ed",
+      "note": "Unmodified public City of Bacoor service manual. Original download retained byte-for-byte; no third-party portal or authentication interface is mirrored."
+    }
+  ]
+}

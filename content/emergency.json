@@ -1,0 +1,257 @@
+{
+  "last_verified": "2026-09-16",
+  "review_interval_days": 30,
+  "sources": [
+    {
+      "id": "city",
+      "name": "City of Bacoor emergency advisory",
+      "type": "government",
+      "url": "https://bacoor.gov.ph/announcement/in-case-of-emergencies-dial-161/"
+    },
+    {
+      "id": "province",
+      "name": "Cavite provincial directory",
+      "type": "government",
+      "url": "https://cavite.gov.ph/directory/"
+    },
+    {
+      "id": "national",
+      "name": "Philippine government emergency directory",
+      "type": "government",
+      "url": "https://ehotlines.e.gov.ph/"
+    },
+    {
+      "id": "ambulance",
+      "name": "Philippine Red Cross ambulance information",
+      "type": "humanitarian",
+      "url": "https://redcross.org.ph/2025/06/29/ph-red-cross-ambulance-the-peoples-lifeline/"
+    },
+    {
+      "id": "flood",
+      "name": "PAGASA flood safety guidance",
+      "type": "government",
+      "url": "https://www.pagasa.dost.gov.ph/learning-tools/floods"
+    },
+    {
+      "id": "surge",
+      "name": "PAGASA storm surge guidance",
+      "type": "government",
+      "url": "https://www.pagasa.dost.gov.ph/information/storm-surge"
+    },
+    {
+      "id": "fire",
+      "name": "American Red Cross fire safety guidance",
+      "type": "humanitarian",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/fire/if-a-fire-starts.html"
+    },
+    {
+      "id": "handbook",
+      "name": "Disaster preparedness handbook · earthquake & tsunami guidance",
+      "type": "government",
+      "url": "https://www.climate.gov.ph/files/Disaster_Preparedness_First_Aid_Handbook.pdf"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "bacoor",
+      "name": "Bacoor emergency hotline",
+      "description": "The city’s priority emergency number.",
+      "number": "161",
+      "dial": "161",
+      "sources": ["city"]
+    },
+    {
+      "id": "national",
+      "name": "National emergency hotline",
+      "description": "For emergencies anywhere in the Philippines.",
+      "number": "911",
+      "dial": "911",
+      "sources": ["national"]
+    },
+    {
+      "id": "disaster",
+      "name": "Bacoor disaster response",
+      "description": "BDRRMO · disaster and rescue concerns",
+      "number": "(046) 417-0727",
+      "dial": "+63464170727",
+      "sources": ["city", "province"]
+    },
+    {
+      "id": "fire",
+      "name": "Bacoor fire station",
+      "description": "BFP · fire emergencies",
+      "number": "(046) 417-6060",
+      "dial": "+63464176060",
+      "sources": ["city"]
+    },
+    {
+      "id": "police",
+      "name": "Bacoor police",
+      "description": "PNP · police assistance",
+      "number": "(046) 417-6366",
+      "dial": "+63464176366",
+      "sources": ["city"]
+    },
+    {
+      "id": "province",
+      "name": "Cavite disaster response",
+      "description": "PDRRMO · provincial disaster assistance",
+      "number": "(046) 840-0774",
+      "dial": "+63468400774",
+      "sources": ["province"]
+    },
+    {
+      "id": "redcross",
+      "name": "Philippine Red Cross",
+      "description": "143 · ambulance and emergency assistance",
+      "number": "143",
+      "dial": "143",
+      "sources": ["ambulance", "national"]
+    }
+  ],
+  "situations": [
+    {
+      "id": "flood",
+      "label": "Flooding",
+      "title": "When water starts rising",
+      "contacts": ["disaster", "province"],
+      "sources": ["flood"],
+      "steps": [
+        {
+          "title": "Move early to higher ground",
+          "text": "Follow evacuation instructions before access is cut off. Avoid floodwater and water-covered roads or bridges."
+        },
+        {
+          "title": "Ask for a safe evacuation destination",
+          "text": "Contact BDRRMO or your barangay for the currently open evacuation center and safe route. This page does not track shelter capacity or road conditions."
+        },
+        {
+          "title": "Take care when returning",
+          "text": "Do not use flood-exposed electrical systems or appliances until a qualified electrician has checked them. Avoid food or drinking water contaminated by flooding."
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "label": "Fire",
+      "title": "Leave the fire. Stay outside.",
+      "contacts": ["fire"],
+      "sources": ["fire", "city"],
+      "steps": [
+        {
+          "title": "Get outside immediately",
+          "text": "Warn others, leave belongings behind, and use stairs instead of elevators. Do not return inside."
+        },
+        {
+          "title": "Avoid smoke and blocked exits",
+          "text": "Stay low if you must pass through smoke. Use another escape route if a door is hot or your way out is blocked."
+        },
+        {
+          "title": "Call from a safe place",
+          "text": "Call 161, 911, or the Bacoor fire station. Tell responders if anyone is still inside. If trapped, keep the door closed, call for help, and signal from a window."
+        }
+      ]
+    },
+    {
+      "id": "earthquake",
+      "label": "Earthquake",
+      "title": "Protect yourself during the shaking",
+      "contacts": ["disaster"],
+      "sources": ["handbook"],
+      "steps": [
+        {
+          "title": "Duck, cover, and hold",
+          "text": "If indoors, shelter under a sturdy table and hold on. Stay away from glass and heavy objects that could fall."
+        },
+        {
+          "title": "Keep clear of falling hazards",
+          "text": "If outside, move to an open area away from buildings, walls, posts, and power lines."
+        },
+        {
+          "title": "After shaking stops",
+          "text": "Exit calmly using stairs when safe. Expect aftershocks and keep away from damaged buildings."
+        }
+      ]
+    },
+    {
+      "id": "storm",
+      "label": "Typhoon & storm surge",
+      "title": "Prepare before the storm reaches you",
+      "contacts": ["disaster", "province"],
+      "sources": ["surge"],
+      "steps": [
+        {
+          "title": "Follow weather and local advisories",
+          "text": "Read PAGASA bulletins and local evacuation instructions. Conditions at the coast can change as a typhoon approaches."
+        },
+        {
+          "title": "Plan a route to higher ground",
+          "text": "Coastal storm surge can rapidly flood low-lying areas. Identify a safe destination with your barangay before an evacuation is needed."
+        },
+        {
+          "title": "Leave when advised",
+          "text": "Follow local evacuation orders and take your emergency supplies. Ask BDRRMO which evacuation center is open; a mapped building is not proof that it is operating."
+        }
+      ]
+    },
+    {
+      "id": "tsunami",
+      "label": "Coastal tsunami",
+      "title": "Recognize the natural warning signs",
+      "contacts": ["disaster"],
+      "sources": ["handbook"],
+      "steps": [
+        {
+          "title": "Move away from the coast",
+          "text": "After a strong coastal earthquake, or sudden unusual sea-level changes, move immediately to higher ground."
+        },
+        {
+          "title": "Do not approach the shoreline",
+          "text": "Do not go to the beach to watch or investigate receding water."
+        },
+        {
+          "title": "Wait for the official all-clear",
+          "text": "A tsunami can involve several waves. Stay away from danger areas until authorities allow return."
+        }
+      ]
+    },
+    {
+      "id": "medical",
+      "label": "Medical emergency",
+      "title": "Reach emergency responders",
+      "contacts": ["redcross"],
+      "sources": ["national", "ambulance"],
+      "steps": [
+        {
+          "title": "Call 911 or Bacoor’s 161",
+          "text": "Ask for emergency medical assistance. For Red Cross ambulance assistance, call 143."
+        },
+        {
+          "title": "Explain where help is needed",
+          "text": "Give your location and nearby landmark, explain what happened, and answer the dispatcher’s questions."
+        },
+        {
+          "title": "Follow the dispatcher’s instructions",
+          "text": "BetterBacoor cannot dispatch an ambulance or assess an injury. The responding service will advise on availability and next steps."
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "label": "Police & immediate danger",
+      "title": "Get help for an immediate threat",
+      "contacts": ["police"],
+      "sources": ["city", "national"],
+      "steps": [
+        {
+          "title": "Call for urgent assistance",
+          "text": "Use 161, 911, or the published Bacoor police number for an immediate threat or police emergency."
+        },
+        {
+          "title": "Tell the responder what is happening",
+          "text": "Give the incident’s location and follow the responder’s instructions. This website does not receive emergency reports."
+        }
+      ]
+    }
+  ]
+}

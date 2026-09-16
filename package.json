@@ -31,6 +31,7 @@
   "dependencies": {
     "@bettergov/kapwa": "^1.2.4",
     "lucide-react": "^0.575.0",
+    "pdfjs-dist": "^6.3.289",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.2"

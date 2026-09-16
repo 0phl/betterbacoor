@@ -4,6 +4,9 @@ import { About } from './pages/About';
 import { Home } from './pages/Home';
 import { NotFound } from './pages/NotFound';
 import { ResourcesPage } from './pages/ResourcesPage';
+import { ServiceGuide } from './pages/ServiceGuide';
+import { CharterReader } from './pages/CharterReader';
+import { Emergency } from './pages/Emergency';
 
 export default function App() {
   return (
@@ -11,6 +14,9 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="services/:slug" element={<ServiceGuide />} />
+          <Route path="charter" element={<CharterReader />} />
+          <Route path="emergency" element={<Emergency />} />
           <Route
             path="search"
             element={
@@ -27,8 +33,8 @@ export default function App() {
             element={
               <ResourcesPage
                 eyebrow="Services and online systems"
-                title="Start with a verified government source"
-                description="BetterBacoor currently points to the City of Bacoor’s published charter and transaction systems. Plain-language service guides will be added only after page-level verification."
+                title="Find your next step."
+                description="Prepare for your next visit with clear guides and personal checklists. Read the requirements here, then use the city’s official system when you’re ready to apply."
                 categories={['service', 'official-system']}
               />
             }
@@ -39,7 +45,7 @@ export default function App() {
               <ResourcesPage
                 eyebrow="Directories"
                 title="Find the office or local directory you need"
-                description="These links go to directories published by the City of Bacoor. Contact details can change, so each record carries a visible verification date and correction route."
+                description="Find barangay halls, hospitals, city departments, and national government offices. Each directory links directly to the City of Bacoor’s published information."
                 categories={['directory']}
               />
             }
@@ -50,7 +56,7 @@ export default function App() {
               <ResourcesPage
                 eyebrow="Transparency"
                 title="Go directly to Bacoor public records"
-                description="Browse the City of Bacoor’s procurement and disclosure pages without presenting copied documents as the current source of truth."
+                description="See how public money is spent and what the city is planning. Explore procurement, financial disclosures, and published development plans."
                 categories={['transparency']}
               />
             }

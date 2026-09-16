@@ -7,6 +7,26 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/emergency",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/business-permit",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/civil-registry",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/working-permit",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/charter",
+      "destination": "/index.html"
+    },
+    {
       "source": "/search",
       "destination": "/index.html"
     },
