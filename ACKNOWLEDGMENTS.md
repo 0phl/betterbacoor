@@ -17,3 +17,11 @@ BetterLocalGov is released under CC0. The original public-domain dedication rema
 [BetterSolano](https://github.com/BetterSolano/bettersolano) was reviewed as a design reference for service-first hierarchy and information density. It is not a BetterBacoor source ancestor, and no BetterSolano source code, municipal content, or branding was imported in this redesign.
 
 Bacoor records are checked separately against government sources. Content from a starter or another BetterLGU project is not used as evidence for Bacoor information.
+
+## Document reader and artwork
+
+[PDF.js](https://mozilla.github.io/pdf.js/) by Mozilla and its contributors powers the on-site Charter reader under Apache-2.0. Its license is included in `public/licenses/pdfjs-LICENSE.txt`.
+
+The City of Bacoor’s public 2026 Citizen’s Charter is preserved without modification, with source and integrity metadata in `content/documents.json`. The city seal appearing inside the original document is part of that source document and is not BetterBacoor branding.
+
+The conceptual community illustration in `public/images/community-life.png` was generated for this project using Codex’s built-in image generation. It is not a documentary photograph or an accurate depiction of a particular Bacoor street. Its creation prompt is preserved in `docs/COMMUNITY_PORTAL.md`.

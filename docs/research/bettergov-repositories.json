@@ -1,0 +1,290 @@
+[
+  {
+    "name": "bettergov",
+    "url": "https://github.com/bettergovph/bettergov",
+    "description": "Building a better Philippines' national website https://bettergov.ph",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "ph-tax-directory",
+    "url": "https://github.com/bettergovph/ph-tax-directory",
+    "description": "Philippines Tax Directory",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "healthcare-providers-api",
+    "url": "https://github.com/bettergovph/healthcare-providers-api",
+    "description": "Healthcare Providers - API",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "openbayan.org",
+    "url": "https://github.com/bettergovph/openbayan.org",
+    "description": "The community-led open source initiative for the betterment of the Philippines.",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "master"
+  },
+  {
+    "name": "open-congress-data",
+    "url": "https://github.com/bettergovph/open-congress-data",
+    "description": "Open data for the Philippine Congress: track representatives, senators, bills, and voting records. Transparent and community-maintained.",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "logo",
+    "url": "https://github.com/bettergovph/logo",
+    "description": "By keeping all logo assets centralized here, we ensure **consistency, accessibility, and correct usage** across teams, partners, and platforms. ",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "openverify",
+    "url": "https://github.com/bettergovph/openverify",
+    "description": "eGovPH + PhilSys Verification API/Frontend",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "kapwa",
+    "url": "https://github.com/bettergovph/kapwa",
+    "description": "Design System for BetterGov.ph",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "petition",
+    "url": "https://github.com/bettergovph/petition",
+    "description": null,
+    "license": "NOASSERTION",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-congress-api",
+    "url": "https://github.com/bettergovph/open-congress-api",
+    "description": "A REST API built with Deno, TypeScript, and Hono that serves Philippine Congress data from a Neo4j graph database. Based on data from the open-congress-data repository.",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "scamcheck",
+    "url": "https://github.com/bettergovph/scamcheck",
+    "description": "ScamCheck by BetterGov.ph",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "docs",
+    "url": "https://github.com/bettergovph/docs",
+    "description": "Documentation site for the BetterGov platform built with Fumadocs and Next.js.",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "govchain",
+    "url": "https://github.com/bettergovph/govchain",
+    "description": "A foundational blockchain platform designed to store and manage government datasets with complete transparency.",
+    "license": "MIT",
+    "archived": false,
+    "branch": "feat/ocds"
+  },
+  {
+    "name": "open-budget-data",
+    "url": "https://github.com/bettergovph/open-budget-data",
+    "description": "BetterGov.PH: Transform Philippine government budget data into an explorable graph database for transparent fiscal analysis.",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-budget-api",
+    "url": "https://github.com/bettergovph/open-budget-api",
+    "description": "A REST API built with NestJS, TypeScript, and Neo4j that serves Philippine Government Budget Data from a Neo4j graph database. Based on data from the open-budget-data repository.",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-philgeps-data",
+    "url": "https://github.com/bettergovph/open-philgeps-data",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "govchaind",
+    "url": "https://github.com/bettergovph/govchaind",
+    "description": null,
+    "license": "MIT",
+    "archived": false,
+    "branch": "feat/ocds"
+  },
+  {
+    "name": "govchain-ts",
+    "url": "https://github.com/bettergovph/govchain-ts",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-budget-browser",
+    "url": "https://github.com/bettergovph/open-budget-browser",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-data-visualization",
+    "url": "https://github.com/bettergovph/open-data-visualization",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-data",
+    "url": "https://github.com/bettergovph/open-data",
+    "description": "ODPH Mirror",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "hotlines",
+    "url": "https://github.com/bettergovph/hotlines",
+    "description": "Philippines Emergency Hotlines",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "security",
+    "url": "https://github.com/bettergovph/security",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "saln-tracker-ph",
+    "url": "https://github.com/bettergovph/saln-tracker-ph",
+    "description": "SALN Tracker for Philippine Government Officials",
+    "license": "MIT",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "2026-budget",
+    "url": "https://github.com/bettergovph/2026-budget",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "open-data-portal",
+    "url": "https://github.com/bettergovph/open-data-portal",
+    "description": "A community-run portal for exploring publicly available datasets",
+    "license": "CC0-1.0",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "transparency-dashboard",
+    "url": "https://github.com/bettergovph/transparency-dashboard",
+    "description": "Search and analyze millions of government records. From procurement contracts to infrastructure projects, we make Philippine government data accessible and actionable.",
+    "license": "MIT",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "oc4ids-registry",
+    "url": "https://github.com/bettergovph/oc4ids-registry",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "live"
+  },
+  {
+    "name": "api.dpwh",
+    "url": "https://github.com/bettergovph/api.dpwh",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "naga",
+    "url": "https://github.com/bettergovph/naga",
+    "description": "Naga City AIP 2026 Transparency Dashboard — ₱2.85B across 1,216 PAPs from 94 offices",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "deped",
+    "url": "https://github.com/bettergovph/deped",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "master"
+  },
+  {
+    "name": "dict-budget",
+    "url": "https://github.com/bettergovph/dict-budget",
+    "description": "DICT Budget Portal — interactive data viz + scrollytelling for the Philippine Department of ICT GAA, FY 2020–2026.",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "bettygo-discord",
+    "url": "https://github.com/bettergovph/bettygo-discord",
+    "description": "BettyGo is the BetterGov.ph Discord bot used for member validation",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "ai-budget",
+    "url": "https://github.com/bettergovph/ai-budget",
+    "description": null,
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "flood-watch",
+    "url": "https://github.com/bettergovph/flood-watch",
+    "description": "FloodLens PH flood-control map and DPWH project viewer",
+    "license": "MIT",
+    "archived": false,
+    "branch": "main"
+  },
+  {
+    "name": "officials-network-graph",
+    "url": "https://github.com/bettergovph/officials-network-graph",
+    "description": "Network Graph Visualization of Philippine Elected Public Officials",
+    "license": "Not detected",
+    "archived": false,
+    "branch": "main"
+  }
+]

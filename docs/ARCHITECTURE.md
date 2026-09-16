@@ -44,4 +44,10 @@ BetterBacoor may explain and link to a transaction. It must not:
 
 ## Routing and deployment
 
-The application uses browser routing. `_redirects` and `vercel.json` rewrite only the four known client routes to `index.html`; unmatched URLs remain unmatched so the host can return HTTP 404 instead of a soft 404. The build also ships `404.html` for hosts that support static custom-error pages. The domain remains disconnected until preview review is complete. Builds include a `noindex` directive during this phase; launch requires deliberately removing it and publishing a sitemap.
+The application uses browser routing. `_redirects` and `vercel.json` rewrite the known routes, including the three service guides and Charter reader, to `index.html`. Unknown guide slugs use the application's missing-page view. The build also ships `404.html` for hosts that support static custom-error pages. Builds include a `noindex` directive during this phase; launch requires deliberately removing it and publishing a sitemap.
+
+## Resident preparation tools
+
+`src/data/guides.ts` contains editorial service summaries with exact source pages and internal verification dates. Checklist completion is stored in browser localStorage, namespaced by guide, variant, and content version. Only integer item indexes are stored. Storage errors do not prevent using or printing a guide. There is no server synchronization or submission.
+
+The Charter reader loads PDF.js and its worker only after the resident requests the document. It renders individual pages from the local, unmodified PDF using range requests where supported and provides extracted text. Source metadata and SHA-256 validation live in `content/documents.json` and the content validation script. Both the engine and source document are separate assets; neither is included in the homepage JavaScript bundle.

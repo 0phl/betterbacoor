@@ -4,7 +4,7 @@ BetterBacoor is a resident-facing civic-information product. It should feel nati
 
 ## Product surface
 
-The primary surface is **Explore**: residents search, scan, compare, and leave for the correct government source. The homepage therefore prioritizes task discovery over project explanation.
+The primary surface is practical resident help: search, read service guides, prepare checklists, consult emergency guidance, and reach the right office. Government systems remain the destination for transactions. The homepage prioritizes tasks over project explanation.
 
 ## Visual direction
 
@@ -20,26 +20,30 @@ The former cobalt route-and-waypoint `B` is rejected and must not be restored.
 
 ## Homepage hierarchy
 
-1. Unofficial status and links to the official portal and corrections.
-2. Resident-facing promise and global search across every verified resource.
-3. Compact explanation of source, verification, and correction controls.
-4. Task-based pathways for services, directories, and transparency records.
-5. Recently checked starting points with visible provenance.
-6. Correction call to action and project attribution.
+1. Compact unofficial-status strip and the original emblem at 64px on mobile and 80px on desktop.
+2. Royal-blue split hero: plain-language introduction and global search alongside four everyday tasks. Emergency calling sits in the existing neutral utility header above navigation, with no separate homepage banner or hero card. The emergency hub remains in navigation and the everyday topic grid.
+3. Three on-site guide cards with saved preparation checklists and six compact topic links.
+4. Citizen's Charter callout, followed by selected government resource cards.
+5. A community illustration and purpose statement leading into BetterGov tools on one shared background.
+6. A charcoal footer with a larger emblem, upstream attribution, and borderless GitHub and Facebook links.
+
+Search results combine a text query and resource-type filters. Cards prioritize title, description, and the official destination. A native disclosure keeps detailed provenance accessible without dominating the card. Avoid unverified live dashboards, fabricated activity counts, unsupported statistics, or placeholder controls.
 
 ## Trust requirements
 
 Visual polish must not hide civic provenance. Resource cards continue to display:
 
-- authoritative source and source location;
-- last verification date;
-- reviewer/content owner;
-- official destination; and
-- correction route.
+- government destination domain and official link;
+- authoritative source and source location inside an expandable Source disclosure; and
+- a plain-language caution if a record is overdue.
 
-The community-run and non-endorsement disclosure remains visible before the main navigation. Applications, submissions, payments, and records remain on government-owned systems.
+At the owner's request, no public review dates, reviewer names, or GitHub correction links appear. Verification dates remain in source-controlled metadata and automated freshness checks. No personal identity is bundled in resource records.
+
+The community-run and non-endorsement disclosure remains visible before the main navigation. The footer has an owner-authorized creator GitHub link. Applications, submissions, payments, and authoritative records remain on government-owned systems. Readable service guides, preparation checklists, and an unchanged public Charter copy are available inside BetterBacoor.
 
 ## Reference boundary
+
+The September emergency-placement refinement uses [BetterCalauan](https://bettercalauan.org/) as a reference for contacts above navigation, with a neutral treatment suited to BetterBacoor instead of its bright alert strip. [GOV.UK notification guidance](https://design-system.service.gov.uk/components/notification-banner/) recommends sparing use of banners, and [Bristol’s alert pattern](https://design.bristol.gov.uk/docs/components/alert-banners/) is intended for temporary information. This supports treating a permanent hotline as a header utility rather than a large attention banner. The rendered [NYC homepage](https://www.nyc.gov/main) was also reviewed for service hierarchy and neutral navigation. This is a design inference, not a claim that these sites prescribe BetterBacoor’s exact layout.
 
 BetterSolano is a benchmark for service-first hierarchy and perceived completeness. BetterBacoor does not copy its municipal content, branding, logo, imagery, “Official Portal” wording, or application architecture. BetterBacoor's source lineage remains BetterLocalGov, with Kapwa and BetterGov ecosystem attribution preserved.
 

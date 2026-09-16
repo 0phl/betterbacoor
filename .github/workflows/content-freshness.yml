@@ -67,7 +67,7 @@ jobs:
             printf '%s\n' '```text'
             printf '%s\n' "$(< freshness-output.txt)"
             printf '%s\n\n' '```'
-            printf '%s\n' 'Update the affected record from an authoritative government source, record the reviewer and verification date, and close this issue only after validation passes.'
+            printf '%s\n' 'Update the affected record from an authoritative government source, record the verification date and source evidence, and close this issue only after validation passes.'
           } > "$body_file"
 
           if [ -n "$issue_number" ]; then

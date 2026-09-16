@@ -8,7 +8,7 @@ BetterBacoor is an **unofficial, community-run civic-information project** for B
 
 > Find the right Bacoor service, requirements, office, government link, and contact in under one minute.
 
-The foundation currently provides a small set of checked links. Plain-language service guides will be added only after page-level review of authoritative material.
+The portal provides three on-site service guides, personal preparation checklists, five office contacts, a native Citizen’s Charter reader, 16 sourced government links, and BetterGov community tools. Business permits include separate new and renewal checklists. See the [community portal implementation notes](docs/COMMUNITY_PORTAL.md) and [ecosystem research report](docs/ECOSYSTEM_REVIEW.md).
 
 ## Foundation architecture
 
@@ -27,7 +27,7 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/CONTENT_POLICY.md`](d
 
 Requirements:
 
-- Node.js 22
+- Node.js 22.13 or newer (or Node.js 24)
 - npm 10 or newer
 
 ```bash
@@ -53,10 +53,10 @@ Records live in [`content/resources.json`](content/resources.json) and must vali
 - direct government destination;
 - source title and URL;
 - source page or edition;
-- verification date;
-- reviewer;
-- risk-based review interval; and
-- public correction route.
+- internal verification date; and
+- risk-based review interval.
+
+The public interface shows source links and government destinations. Personal reviewer attribution, review dates, and GitHub correction prompts are intentionally absent from civic content. A creator GitHub link is available in the footer at the owner's request. Authorship remains traceable in Git history.
 
 Do not silently choose between conflicting government sources. Document the conflict and seek confirmation before publishing a definitive statement.
 
@@ -68,7 +68,7 @@ A pull request is optional for solo maintainer work. It is normally reserved for
 
 ## Corrections and contributions
 
-Use the [GitHub correction form](https://github.com/0phl/betterbacoor/issues/new?template=correction.yml) for inaccurate or outdated information. It currently requires a GitHub account; [a non-GitHub correction route is a launch requirement](https://github.com/0phl/betterbacoor/issues/2). Contributions must include an authoritative source and verification date. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting content.
+Contributions must include an authoritative source and verification date. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting content. Repository issues remain available for maintainer work; the resident-facing site does not direct people to GitHub or advertise a public correction form.
 
 ## Status
 

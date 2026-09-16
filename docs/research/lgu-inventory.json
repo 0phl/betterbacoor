@@ -1,0 +1,1156 @@
+[
+  {
+    "name": "Solano, Nueva Vizcaya",
+    "status": "Active",
+    "site": "https://bettersolano.org",
+    "repository": "https://github.com/BetterSolano/bettersolano",
+    "title": "BetterSolano.org | Official Portal",
+    "description": "BetterSolano.org - Your digital gateway to LGU Solano services. Access municipal services, online transactions via Filipizen, emergency hotlines, government information, and transparency data for Solano, Nueva Vizcaya.",
+    "headings": [
+      "Welcome to BetterSolano.org",
+      "Find a Service",
+      "Enhancing Appointment Services of LGU Solano Mayor's Office",
+      "Popular Services",
+      "Solano at a Glance",
+      "Weather and Map of Solano",
+      "Brief History of Solano",
+      "Latest Updates",
+      "Municipal Leadership",
+      "Contact Information",
+      "Solano Quiz",
+      "Be Part of Something Greater"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service search, task categories, local statistics, map and contact sections. Strong coverage hierarchy; long homepage and dense utility strips."
+  },
+  {
+    "name": "Bacolod City, Negros Occidental",
+    "status": "Active",
+    "site": "https://betterbacolod.org",
+    "repository": "https://github.com/betterbacolod/betterbacolod",
+    "title": "BetterBacolod | Bacolod City Services, Government Info & Public Data",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Search with service and government sections; compact structure suits quick discovery."
+  },
+  {
+    "name": "Calauan, Laguna",
+    "status": "Active",
+    "site": "https://bettercalauan.org",
+    "repository": "https://github.com/bettercalauan/bettercalauan/tree/react-typescript",
+    "title": "BetterCalauan.org | Official Portal",
+    "description": "BetterCalauan.org - Your digital gateway to LGU Calauan services.",
+    "headings": [
+      "Welcome to BetterCalauan.org",
+      "Find a Service",
+      "Popular Services",
+      "Calauan at a Glance",
+      "Weather and Map of Calauan",
+      "Brief History of Calauan",
+      "Latest Updates",
+      "Municipal Leadership",
+      "Contact Information"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Split search hero and task cards; history and local context. Observed blank hotline and weather placeholders; do not copy placeholders."
+  },
+  {
+    "name": "Pila, Laguna",
+    "status": "Work in progress",
+    "repository": "https://github.com/Necookie/betterpila",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Ormoc City, Leyte",
+    "status": "Active",
+    "site": "https://www.betterormoc.org/en",
+    "title": "Home | BetterOrmoc",
+    "description": "Access government services, programs, and public information for Ormoc City, Leyte, Philippines.",
+    "headings": [
+      "Welcome to BetterOrmoc",
+      "Find a Service",
+      "Popular Services",
+      "Ormoc at a Glance",
+      "Online Services",
+      "Weather &amp; Location",
+      "Brief History of Ormoc",
+      "Latest Updates"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service search, popular tasks and a separate online-services section; clear division between information and transactions."
+  },
+  {
+    "name": "Los Baños, Laguna",
+    "status": "Active",
+    "site": "https://betterlb.org",
+    "repository": "https://github.com/BetterLosBanos/betterlb",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Search-led blue hero, quick access to financial records, infrastructure and legislation; useful separation of services and accountability tools."
+  },
+  {
+    "name": "Las Piñas City, Metro Manila",
+    "status": "Active",
+    "site": "https://betterlaspinas.org",
+    "repository": "https://github.com/betterlaspinas/betterlaspinas",
+    "title": "Home | BetterLasPinas.org",
+    "description": "Welcome to Better Las Piñas — your digital gateway to City of Las Piñas services, government information, and community resources.",
+    "headings": [
+      "Welcome to BetterLasPinas.org",
+      "Find a Service",
+      "Popular Services",
+      "Las Piñas at a Glance",
+      "Weather and Map of Las Piñas",
+      "City Leadership",
+      "Contact Information"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service search plus prominent local contacts and barangay navigation; useful neighboring-city reference."
+  },
+  {
+    "name": "Cainta, Rizal",
+    "status": "Active",
+    "site": "https://bettercainta.org",
+    "title": "BetterCainta | Transparency Portal",
+    "description": "BetterCainta - Your digital gateway to LGU Cainta services. Access municipal services, online transactions via Filipizen, emergency hotlines, government information, and transparency data for Cainta, Rizal.",
+    "headings": [
+      "Welcome to BetterCainta",
+      "Find a Service",
+      "Enhancing Appointment Services of LGU Cainta Mayor's Office",
+      "Popular Services",
+      "Cainta at a Glance",
+      "Weather and Map of Cainta",
+      "Brief History of Cainta",
+      "Latest Updates",
+      "Municipal Leadership",
+      "Contact Information",
+      "Cainta Quiz"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Search, appointment links, task categories, statistics and history; extensive homepage can increase scanning effort."
+  },
+  {
+    "name": "Tagaytay City, Cavite",
+    "status": "Active",
+    "site": "https://www.bettertagaytay.org/",
+    "repository": "https://github.com/Arlovzki/bettertagaytay",
+    "title": "BetterTagaytay.org | Transparency Portal",
+    "description": "BetterTagaytay — a community transparency portal for Tagaytay City, Cavite. Access government services, officials, budgets, and public information.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Services, city facts, local history and leadership; Cavite family reference for local identity."
+  },
+  {
+    "name": "Indang, Cavite",
+    "status": "Active",
+    "site": "https://betterindang.org",
+    "repository": "https://github.com/michaustriaqa/betterindang",
+    "title": "BetterGov.ph | Republic of the Philippines | Community Powered Government\n        Portal",
+    "description": "Community-powered portal of the Republic of the Philippines. Access government services, stay updated with the latest news, and find information about the Philippines.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Service search with health programme, travel and government-activity sections; broad local discovery."
+  },
+  {
+    "name": "General Santos City, South Cotabato",
+    "status": "Active",
+    "site": "https://bettergensan.org",
+    "repository": "https://github.com/psalmcatulpos/bettergensan",
+    "title": "BetterGensan | General Santos City | Community Powered Government Portal",
+    "description": "Community-powered portal for General Santos City, South Cotabato. Access government services, stay updated with the latest news, and find information about the city government.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Task-first heading, jobs, business information and disaster-response surface; strongest everyday-utility inspiration, with substantial operational requirements."
+  },
+  {
+    "name": "Koronadal City, South Cotabato",
+    "status": "Work in progress",
+    "site": "https://betterkoronadal.org",
+    "repository": "https://github.com/janineooak/betterkoronadal",
+    "title": "BetterKoronadal.org | Community Portal for the City of Koronadal (Unofficial)",
+    "description": "BetterKoronadal.org is an independent, community-built portal that makes information and services for the City of Koronadal easier to find. Not the official city website.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Explicit Top Tasks plus search, services and information widgets; practical task prioritization."
+  },
+  {
+    "name": "Dasmariñas City, Cavite",
+    "status": "Active",
+    "site": "https://betterdasmarinas.org",
+    "repository": "https://github.com/Shuashuaa/BetterDasmarinas",
+    "title": "BetterDasmariñas.org — City services and transparency portal",
+    "description": "A free, open-source community portal for residents of Dasmariñas City, Cavite. Find city services, offices and officials, and public transparency documents.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "City services, history, officials and contact information; familiar neighboring-city portal organization."
+  },
+  {
+    "name": "General Trias, Cavite",
+    "status": "Active",
+    "site": "https://www.bettergeneraltrias.org/",
+    "repository": "https://github.com/kenhehe/betterGeneraltrias",
+    "title": "betterGeneralTrias.org | Transparency Portal",
+    "description": "BetterGeneralTrias.org — a community transparency portal for General Trias City, Cavite. Access government services, officials, budgets, and public information.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Services and quick government links before history and officials; useful separation of primary tasks from civic context."
+  },
+  {
+    "name": "Tanza, Cavite",
+    "status": "Work in progress",
+    "repository": "https://github.com/manalilib/betterTanza",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "San Pedro, Laguna",
+    "status": "Work in progress",
+    "repository": "https://github.com/sechipeanut/BetterSanPedro",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Cabuyao City, Laguna",
+    "status": "Active",
+    "site": "https://bettercabuyao.org/",
+    "repository": "https://github.com/johnrommeloctaviano/better-cabuyao",
+    "title": "Cabuyao City Portal | Official LGU Website | Laguna, Philippines",
+    "description": "Official community portal of Cabuyao City, Laguna. Access government services, stay updated with the latest news, and find information about your city.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Searchable city services plus weather, local discovery and history; broad but lengthy homepage."
+  },
+  {
+    "name": "Tuguegarao, Cagayan Valley",
+    "status": "Work in progress",
+    "repository": "https://github.com/JDgayagoy/BetterTuguegarao",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Davao City, Davao Del Sur",
+    "status": "Work in progress",
+    "repository": "https://github.com/johnloydlao/betterdavao",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Allen, Northern Samar",
+    "status": "Active",
+    "site": "https://betterallen.org",
+    "repository": "https://github.com/xandreiAThome/betterallen",
+    "title": "Municipality of Allen - Community Information Portal",
+    "description": "Community-driven portal for the Municipality of Allen. Access government services, tourism information, and local resources for residents and visitors.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Search, local discovery, leadership and project context; readable community framing."
+  },
+  {
+    "name": "Aparri, Cagayan Valley",
+    "status": "Active",
+    "site": "https://betteraparri.org/",
+    "repository": "https://github.com/egiebk/betteraparri",
+    "title": "BetterAparri.org",
+    "description": "BetterAparri.org aims to make public information simple and accessible.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Updates and clearly named civil-registry, permit, payment and social-service groups; useful task labels."
+  },
+  {
+    "name": "San Pablo, Laguna",
+    "status": "Active",
+    "site": "https://www.bettersanpablo.org/",
+    "repository": "https://github.com/ChristiannWick/bettersanpablo",
+    "title": "BetterSanPablo.org | San Pablo City Transparency Portal",
+    "description": "Community-powered portal for San Pablo City, Laguna. Access local government services, public information, and transparency resources.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Service search with dedicated transaction links and city highlights; helpful distinction between finding information and transacting."
+  },
+  {
+    "name": "Binangonan, Rizal",
+    "status": "Work in progress",
+    "repository": "https://github.com/betterbinangonan-devs/betterbinangonan",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Taytay, Rizal",
+    "status": "Work in progress",
+    "repository": "https://github.com/zzelif/bettertaytay",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Olongapo City, Zambales",
+    "status": "Active",
+    "site": "https://betterolongapo.org/",
+    "repository": "https://github.com/eyronjohn/betterolongapo",
+    "result": "Unavailable in this check: HTTP 404",
+    "assessment": "Unavailable: hosting page reports that the page does not exist (HTTP 404). No live UI assessment."
+  },
+  {
+    "name": "Biñan, Laguna",
+    "status": "Planned",
+    "repository": "https://github.com/Criflar/betterbinan",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Tanay, Rizal",
+    "status": "Active",
+    "site": "https://bettertanay.org",
+    "repository": "https://github.com/s4burieru/bettertanay",
+    "title": "BetterTanay.org | Transparency Portal",
+    "description": "Community-powered portal for Tanay, Rizal. Access government services, officials, budgets, and public information.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Search-led portal entry; deeper task coverage not evaluated."
+  },
+  {
+    "name": "Puerto Princesa City, Palawan",
+    "status": "Work in progress",
+    "repository": "https://github.com/hmcldryl/betterpuertoprincesa",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Iligan City, Lanao del Norte",
+    "status": "Active",
+    "site": "https://betteriligancity.org/",
+    "repository": "https://github.com/KishonShrill/BetterIligan",
+    "title": "BetterIligan City | Civic Tech Portal",
+    "description": "A modernized, volunteer-driven portal to access government services, public data, and resources for the people of Iligan.",
+    "headings": [
+      "Welcome to  BetterIliganCity.org",
+      "Find a Service",
+      "Quick Access",
+      "City Services",
+      "Emergency Hotlines",
+      "City Statistics &amp; Profile",
+      "Weather &amp; Location",
+      "Spot an error or outdated info?"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service search, quick access, local services, hotlines and city profile; recognizable service-first family pattern."
+  },
+  {
+    "name": "Hilongos, Leyte",
+    "status": "Work in progress",
+    "repository": "https://github.com/rolpppp/betterhilongos",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Limay, Bataan",
+    "status": "Work in progress",
+    "site": "https://betterlimay.org/",
+    "repository": "https://github.com/AstroMC98/betterlimay",
+    "title": "betterlimay.org",
+    "headings": ["Launching Soon", "Launching Soon", "Contact Us"],
+    "result": "HTML content inspected",
+    "assessment": "Launching Soon page with contact information; no full service interface to compare."
+  },
+  {
+    "name": "Balanga, Bataan",
+    "status": "Work in progress",
+    "site": "https://betterbalanga.org/",
+    "repository": "https://github.com/AstroMC98/betterbalanga",
+    "title": "betterbalanga.org",
+    "headings": ["Launching Soon", "Launching Soon", "Contact Us"],
+    "result": "HTML content inspected",
+    "assessment": "Launching Soon page with contact information; no full service interface to compare."
+  },
+  {
+    "name": "Bulakan, Bulacan",
+    "status": "Work in progress",
+    "site": "https://betterbulakan.vercel.app",
+    "repository": "https://github.com/kuyacarlo/betterbulakan",
+    "result": "Unavailable in this check: HTTP 404",
+    "assessment": "Unavailable: hosting page reports that the page does not exist (HTTP 404). No live UI assessment."
+  },
+  {
+    "name": "San Jose, Antique",
+    "status": "Work in progress",
+    "repository": "https://github.com/bonfire404/bettersanjose",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Libmanan, Camarines Sur",
+    "status": "Work in progress",
+    "site": "https://betterlibmanan.org",
+    "repository": "https://github.com/enzox0/betterlibmanan",
+    "title": "BetterLibmanan.org | Official Portal of Libmanan, Camarines Sur",
+    "description": "BetterLibmanan is the official digital transparency portal for the Municipality of Libmanan, Camarines Sur, Philippines. Access government services, public records, legislation, and community resources.",
+    "headings": ["JavaScript Required"],
+    "result": "HTML content inspected",
+    "assessment": "Searchable portal with community submission invitation; participation requires a reliable moderation and operations plan."
+  },
+  {
+    "name": "San Pascual, Masbate",
+    "status": "Work in progress",
+    "repository": "https://github.com/marcuwynu23/bettersanpascualmasbate",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Teresa, Rizal",
+    "status": "Work in progress",
+    "repository": "https://github.com/MewSeiren/betterteresa.org",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Atimonan, Quezon",
+    "status": "Work in progress",
+    "repository": "https://github.com/EmsiPrds/betteratimonan",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Dinalupihan, Bataan",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Calamba, Laguna",
+    "status": "Work in progress",
+    "repository": "https://github.com/apajuan/bettercalamba",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Cabanatuan City, Nueva Ecija",
+    "status": "Active",
+    "site": "https://bettercabanatuan.org",
+    "repository": "https://github.com/BetterCabanatuan/bettercabanatuan",
+    "title": "Cabanatuan City — BetterCabanatuan.org",
+    "description": "Official community portal of Cabanatuan City, Nueva Ecija — government services, barangays, officials, and public information.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Clear city-government headline, four task entry points and service search; strong plain-language navigation reference."
+  },
+  {
+    "name": "Angeles City, Pampanga",
+    "status": "Planned",
+    "repository": "https://github.com/ongods/betterangeles",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Cebu City, Cebu",
+    "status": "Work in progress",
+    "repository": "https://github.com/kyrenmearr/bettercebucity",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Piat, Cagayan Valley",
+    "status": "Work in progress",
+    "repository": "https://github.com/JoScripty/betterpiat",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Alaminos City, Pangasinan",
+    "status": "Active",
+    "site": "https://betteralaminoscity.org",
+    "repository": "https://github.com/BetterAlaminosCity/betteralaminoscity",
+    "title": "BetterAlaminosCity.org — Community Guide to Alaminos City Government Services",
+    "description": "BetterAlaminosCity.org is a community-run guide to Alaminos City government services, home of the Hundred Islands National Park.",
+    "headings": [
+      "BetterAlaminosCity.org",
+      "Find a Service",
+      "Popular Services",
+      "Weather and Map of Alaminos City",
+      "City Leadership",
+      "Emergency Hotlines &amp; Contact",
+      "Discover Hundred Islands National Park",
+      "City at a Glance",
+      "A Brief History of Alaminos City"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Search and popular services with local tourism context; clear separation of resident and visitor interests."
+  },
+  {
+    "name": "Santo Tomas, Pangasinan",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Legazpi, Albay",
+    "status": "Active",
+    "site": "https://www.betterlegazpi.org/",
+    "repository": "https://github.com/bpbelen/betterlegazpi",
+    "title": "BetterLegazpi.org | Independent Civic Tech Portal",
+    "description": "BetterLegazpi.org - Your digital gateway to LGU Legazpi City services. Access city services, emergency hotlines, government information, and transparency data for Legazpi City, Albay.",
+    "headings": [
+      "Welcome to BetterLegazpi.org",
+      "City Services",
+      "Latest Updates",
+      "Legazpi at a Glance",
+      "Weather and Map of Legazpi",
+      "Discover Fun &amp; Adventure in Legazpi City",
+      "Brief History of Legazpi",
+      "City Leadership",
+      "Contact Information",
+      "Quick Links",
+      "Resources",
+      "Be Part of Something Greater"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Services and updates, followed by city profile, local discovery and history; useful order for a civic portal."
+  },
+  {
+    "name": "Santa Barbara, Pangasinan",
+    "status": "Work in progress",
+    "repository": "https://github.com/JericoGarcia21/better-santabarbara",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Mapandan, Pangasinan",
+    "status": "Active",
+    "site": "https://www.bettermapandan.org/",
+    "repository": "https://github.com/jadolation/bettermapandan",
+    "title": "Better Mapandan — Civic Transparency Portal for Mapandan, Pangasinan",
+    "description": "An independent civic transparency portal for Mapandan, Pangasinan, offering officials, budgets, ordinances, frontline services, and emergency contacts, built under the BetterGov.ph BetterLGU initiative.",
+    "headings": [
+      "Better Mapandan",
+      "Find a Service",
+      "Budget, Contracts & Audit",
+      "Infrastructure Projects",
+      "A rice-growing town in Pangasinan's third district",
+      "Currently in office",
+      "Weather &amp; map",
+      "Who to call"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Search plus budget, audit, infrastructure and governance sections. Distinct green/serif identity; borrow information hierarchy, not its palette."
+  },
+  {
+    "name": "Taguig City, Metro Manila",
+    "status": "Planned",
+    "repository": "https://github.com/plvzfq-rit/bettertaguig",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Sara, Iloilo",
+    "status": "Work in progress",
+    "repository": "https://github.com/SaraGugmaKo/bettersara",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Bayawan, Negros Oriental",
+    "status": "Work in progress",
+    "repository": "https://github.com/rodneydelacruz/betterbayawan",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Bacoor City, Cavite",
+    "status": "Work in progress",
+    "repository": "https://github.com/0phl/betterbacoor",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Lucena City, Quezon",
+    "status": "Work in progress",
+    "repository": "https://github.com/RyannKim327/BetterLucenaCity",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Carigara, Leyte",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Claver, Surigao del Norte",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Agoo, La Union",
+    "status": "Work in progress",
+    "site": "https://betteragoo.org/",
+    "repository": "https://github.com/glennmarkgarcia/betteragoo",
+    "title": "BetterAgoo.org | Official Portal",
+    "description": "BetterAgoo.org - Your digital gateway to LGU Agoo services. Access municipal services, online transactions via eLGU BPLS, emergency hotlines, government information, and transparency data for Agoo, La Union.",
+    "headings": [
+      "Welcome to BetterAgoo.org",
+      "Find a Service",
+      "Popular Services",
+      "Agoo at a Glance",
+      "Weather and Map of Agoo",
+      "Brief History of Agoo",
+      "Latest Updates",
+      "Municipal Leadership",
+      "Contact Information",
+      "Agoo Quiz",
+      "This site is still work in progress..."
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service search, popular tasks, statistics and local history; familiar blue-portal structure."
+  },
+  {
+    "name": "Aurora, Zamboanga del Sur",
+    "status": "Active",
+    "site": "https://betteraurora.org",
+    "repository": "https://github.com/Jayke770/betteraurora",
+    "title": "BetterAurora.org | Official Portal",
+    "description": "BetterAurora.org - Your digital gateway to LGU Aurora services.",
+    "headings": [
+      "Welcome to BetterAurora.org",
+      "Find a Service",
+      "Popular Services",
+      "Aurora at a Glance",
+      "Weather and Map of Aurora",
+      "Brief History of Aurora",
+      "Latest Updates",
+      "Municipal Leadership",
+      "Contact Information"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service search, task categories, statistics, map and history; familiar civic-portal structure."
+  },
+  {
+    "name": "Infanta, Quezon",
+    "status": "Active",
+    "site": "https://betterinfantaquezon.org/",
+    "repository": "https://github.com/davisolpruvnik/better-infanta",
+    "title": "Better Infanta | Community Powered Government Portal",
+    "description": "Community-powered portal of the Republic of the Philippines. Access government services, stay updated with the latest news, and find information about the Philippines.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Search with services and government information; compact entry surface."
+  },
+  {
+    "name": "Bocaue, Bulacan",
+    "status": "Work in progress",
+    "repository": "https://github.com/ericksondelacruz/betterbocaue",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "General Mariano Alvarez, Cavite",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Meycauayan, Bulacan",
+    "status": "Active",
+    "site": "https://bettermeycauayan.org",
+    "repository": "https://github.com/shnflrsc/bettermeycauayan",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Rendered search interface observed; semantic main headings were not exposed by the inspected snapshot."
+  },
+  {
+    "name": "Calapan, Oriental Mindoro",
+    "status": "Active",
+    "site": "https://bettercalapan.org",
+    "repository": "https://github.com/bettercalapan/portal",
+    "title": "BetterCalapan",
+    "description": "An independent, community-driven portal for Calapan City services, local government information, legislation, and public data.",
+    "headings": [
+      "BetterCalapan",
+      "The better portal to find Calapan services and information",
+      "Quick links",
+      "Services",
+      "Government",
+      "Others",
+      "BetterCalapan",
+      "Services",
+      "Government",
+      "Apps",
+      "Others"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Quick links grouped into services and government; useful compact navigation reference."
+  },
+  {
+    "name": "Midsayap, North Cotabato",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Tandag City, Surigao del Sur",
+    "status": "Work in progress",
+    "repository": "https://github.com/BetterTandag/better-tandag",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Baler, Aurora",
+    "status": "Active",
+    "site": "https://betterbaler.org/",
+    "repository": "https://github.com/tekwicks/betterbaler",
+    "title": "BetterBaler.org | Municipality of Baler, Aurora | Community Powered Government\n        Portal",
+    "description": "Community-powered portal of the Municipality of Baler. Access government services, stay updated with the latest news, and find information about the Philippines.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Services, city profile and coastal-weather context; local relevance differentiates the portal."
+  },
+  {
+    "name": "City of Manila, Metro Manila",
+    "status": "Work in progress",
+    "site": "https://bettermanila.org",
+    "repository": "https://github.com/grgdlm/bettermanila",
+    "title": "BetterGov.ph | Republic of the Philippines | Community Powered Government\n        Portal",
+    "description": "Community-powered portal of the Republic of the Philippines. Access government services, stay updated with the latest news, and find information about the Philippines.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Project introduction and city context; not a mature service-directory comparison."
+  },
+  {
+    "name": "Butuan City, Agusan del Norte",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Aborlan, Palawan",
+    "status": "Active",
+    "site": "https://betteraborlan.org",
+    "repository": "https://github.com/BetterAborlan/betteraborlan",
+    "title": "BetterAborlan.org | Official Portal",
+    "description": "BetterAborlan.org - Your digital gateway to LGU Aborlan services.",
+    "headings": [
+      "Welcome to BetterAborlan.org",
+      "Government Services",
+      "Aborlan at a Glance",
+      "Real-Time Data Services",
+      "Latest News",
+      "Official Directory"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Service-first portal with city facts, news and a directory; familiar modular composition."
+  },
+  {
+    "name": "Quezon City, Metro Manila",
+    "status": "Planned",
+    "repository": "https://github.com/brixavengoza/betterquezoncity",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Kabugao, Apayao",
+    "status": "Active",
+    "site": "https://betterkabugao.org",
+    "repository": "https://github.com/KuyaLoy/betterkabugao",
+    "title": "Kabugao, Apayao — public information, barangays and officials | BetterKabugao.org",
+    "description": "Public information about the municipality of Kabugao, Apayao: all 21 barangays with population and directions, elected municipal officials, and sourced local data. Independent and volunteer-run.",
+    "headings": [
+      "Know your Kabugao.",
+      "Start with what you need.",
+      "Explore Kabugao’s 21 barangays.",
+      "BetterKabugao.org"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Concise local heading and task-first entry with barangay exploration; strong minimalist information hierarchy."
+  },
+  {
+    "name": "Tago, Surigao del Sur",
+    "status": "Work in progress",
+    "site": "https://www.bettertago.org",
+    "repository": "https://github.com/BetterTago/better-tago",
+    "title": "BetterTago | Municipality of Tago Services, Government Info &amp; Public Data",
+    "description": "An independent, volunteer-run index over the Municipality of Tago&#x27;s own published information. Not the official site.",
+    "headings": [
+      "Padayon sa pag-asensoTago",
+      "Find a service",
+      "Tago at a glance",
+      "What you came here to sort out",
+      "How Tago became a municipality",
+      "In an emergency",
+      "Getting to Tago",
+      "Finding Tago, and the weather there",
+      "Reaching the Municipality of Tago",
+      "Pages",
+      "Resources",
+      "Contribute"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Local-language introduction, service search and everyday tasks with emergency and travel sections; useful community voice."
+  },
+  {
+    "name": "San Mariano, Isabela",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Pasig City, Metro Manila",
+    "status": "Work in progress",
+    "repository": "https://github.com/ericvelasco-dev/betterpasig",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Cavite City, Cavite",
+    "status": "Active",
+    "site": "https://bettercavitecity.org",
+    "title": "",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "App-like search and bottom tabs with weather, fuel and currency tools; interesting mobile pattern, but avoid unnecessary resident accounts or unverified live values."
+  },
+  {
+    "name": "Aklan Province",
+    "status": "Active",
+    "site": "https://betteraklan.org/",
+    "repository": "https://github.com/fr4nc1stein/betteraklan",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Rendered search interface observed; semantic main headings were not exposed by the inspected snapshot."
+  },
+  {
+    "name": "Bicol Region",
+    "status": "Active",
+    "site": "https://betterbicol.org",
+    "repository": "https://github.com/winclores/betterbicol",
+    "title": "Bicol Region LGU Directory | Budgets, Officials, Services",
+    "description": "Budgets, officials, ordinances and public services for all 120 local government units of the Bicol Region, each figure linked back to the PSA or DILG record.",
+    "headings": [
+      "Every Bicol government,in one place.",
+      "What Bicol actually is",
+      "The six provinces of Bicol",
+      "Bicol&#8217;s seven cities",
+      "What you came here to do",
+      "Who governs, and how the money moves",
+      "The sections, and where each one stands",
+      "Where every number comes from",
+      "What we published recently",
+      "Know your town better than we do?"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Regional directory and clearly stated section maturity; useful honest treatment of incomplete content."
+  },
+  {
+    "name": "Dumaguete City, Negros Oriental",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Magsaysay, Davao del Sur",
+    "status": "Planned",
+    "repository": "https://github.com/ianmuico/better-magsaysay",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Paombong, Bulacan",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "City of Mati, Davao Oriental",
+    "status": "Work in progress",
+    "repository": "https://github.com/kaarlosasiang/bettermaticity",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Surallah, South Cotabato",
+    "status": "Planned",
+    "site": "https://bettersurallah.org",
+    "repository": "https://github.com/average04/bettersurallah",
+    "title": "BetterSurallah — Transparency for Surallah, South Cotabato",
+    "description": "An independent, citizen-built window into how Surallah works — transparency documents, officials, and government projects in one place.",
+    "headings": [
+      "See how Surallah works.",
+      "Transparency →",
+      "Projects →",
+      "Officials →",
+      "Latest documents"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Compact transparency, projects, officials and document navigation; focused public-records reference."
+  },
+  {
+    "name": "Malolos, Bulacan",
+    "status": "Active",
+    "site": "https://bettermalolos.org/",
+    "repository": "https://github.com/francisdiaz22/bettermalolos",
+    "title": "BetterMalolos.org | Community-built civic tools",
+    "description": "BetterMalolos is an independent, community-built civic platform making useful local tools, information, government services, and public data easier to find and understand.",
+    "headings": [
+      "Better tools and information for a better Malolos.",
+      "Find a Government Service",
+      "What can BetterMalolos help you with?",
+      "Have a problem or an idea for Malolos?",
+      "Explore your Barangay",
+      "Know what’s being built",
+      "More Community Tools",
+      "Find Government Services",
+      "Help build BetterMalolos",
+      "Malolos at a Glance",
+      "Weather and Map of Malolos",
+      "Brief History of Malolos"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Browser-check interstitial encountered. Not bypassed; full live UI assessment unavailable."
+  },
+  {
+    "name": "Maddela, Quirino",
+    "status": "Active",
+    "site": "https://bettermaddela.vercel.app/",
+    "repository": "https://github.com/Hendrizzzz/bettermaddela",
+    "title": "BetterMaddela",
+    "description": "Independent, source-linked civic information about Maddela, Quirino.",
+    "headings": [
+      "Welcome to BetterMaddela",
+      "Find a Service",
+      "Service Categories",
+      "Maddela at a Glance",
+      "Where is Maddela?",
+      "Brief History of Maddela",
+      "Latest Updates",
+      "Municipal Leadership",
+      "Contact Information",
+      "Quick Links",
+      "Resources"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Search, service categories, statistics, location and history; familiar service-first structure."
+  },
+  {
+    "name": "Caloocan City, Metro Manila",
+    "status": "Active",
+    "site": "https://www.bettercaloocan.org/",
+    "repository": "https://github.com/angelicatanagras/bettercaloocan",
+    "title": "City of Caloocan Portal | A Community-Run Civic Transparency Site",
+    "description": "A community-run portal for the City of Caloocan. Access government services, officials, budget, and civic information for Caloocan City, Metro Manila.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Search and services with location distinctions inside the city; demonstrates the value of local geographic context."
+  },
+  {
+    "name": "Zamboanga City, Zamboanga del Sur",
+    "status": "Work in progress",
+    "site": "https://betterzamboangacity.vercel.app",
+    "repository": "https://github.com/RALPH22222/betterzamboangacity",
+    "title": "Better Zamboanga City | Civic Transparency &amp; Services Portal",
+    "description": "A modernized, volunteer-driven portal to access government services, public data, and resources for the people of Zamboanga City.",
+    "headings": [
+      "Bienvenidos! BetterZamboangaCity",
+      "BetterZamboangaCity",
+      "City Services",
+      "Emergency Hotlines",
+      "City Statistics & Profile",
+      "Weather & Location"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Services, hotlines, city profile and location; local-language greeting adds place identity."
+  },
+  {
+    "name": "Dagupan City, Pangasinan",
+    "status": "Planned",
+    "repository": "https://github.com/jamesjmnz/better-dagupan",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Baguio City, Benguet",
+    "status": "Active",
+    "site": "https://betterbaguio.org",
+    "repository": "https://github.com/ashier/betterbaguio",
+    "title": "BetterBaguio.org: A clearer guide to Baguio City",
+    "description": "Find Baguio City services, officials, projects, public records, local data, and emergency contacts in one clear, independent guide.",
+    "headings": [
+      "Find what you need in Baguio.",
+      "Baguio at a glance",
+      "We’re here to make Baguio information easier to find.",
+      "A quick look at the city",
+      "Popular starting points",
+      "See what City Hall is doing",
+      "Baguio’s current elected leaders",
+      "How Baguio became the city it is today",
+      "Where these facts come from"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Task-focused search heading and popular starting points with city information; strong readable discovery hierarchy."
+  },
+  {
+    "name": "Trece Martires City, Cavite",
+    "status": "Active",
+    "site": "https://bettertrecemartires.org",
+    "repository": "https://github.com/hiroqt/bettertrece",
+    "title": "BetterTrece.org | City of Trece Martires, Cavite | Community Government\n      Portal",
+    "description": "Community-powered portal for the City of Trece Martires, Cavite. Access city services, local government updates, barangay information, and emergency hotlines.",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Services and transparency with detailed fiscal and infrastructure sections; learn from source-linked explanations, not unverified copied figures."
+  },
+  {
+    "name": "Pagsanjan, Laguna",
+    "status": "Work in progress",
+    "repository": "https://github.com/rswlljms/betterpagsanjan",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Naic, Cavite",
+    "status": "Planned",
+    "repository": "https://github.com/riecodes/betternaic",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "City of San Fernando, Pampanga",
+    "status": "Planned",
+    "repository": "https://github.com/bettersanfernando/bettersanfernando",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Inabanga, Bohol",
+    "status": "Work in progress",
+    "site": "https://betterinabanga.vercel.app",
+    "repository": "https://github.com/gerardosocias29/betterinabanga",
+    "title": "BetterInabanga.org | Public Transparency &amp; Citizen Services - Inabanga, Bohol",
+    "description": "Community-maintained public transparency and citizen services portal for the Municipality of Inabanga, Bohol, Philippines. Empowering citizens with direct access to local public services, elected officials, 20% development fund projects, municipal budgets, and emergency hotlines.",
+    "headings": [
+      "Public Transparency &amp; Citizen Services for Inabanga",
+      "Emergency Hotlines &amp; Fast Response",
+      "Weather and Map of Inabanga",
+      "Essential Municipal Services",
+      "Elected Municipal Officials",
+      "Where Your Public Taxes &amp; Allotments Go",
+      "Heritage, Resilience &amp; Natural Splendor of Inabanga",
+      "Brief History of Inabanga"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Transparency, emergency contacts, services and local heritage; broad coverage needs careful content maintenance."
+  },
+  {
+    "name": "Samal, Bataan",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Makati City, Metro Manila",
+    "status": "Work in progress",
+    "repository": "https://github.com/migi-macati/bettermakati",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "San Carlos City, Pangasinan",
+    "status": "Active",
+    "site": "https://bettersancarlos.vercel.app/",
+    "repository": "https://github.com/edisonmalasan/bettersancarlos",
+    "title": "Better San Carlos | Official Portal",
+    "description": "Better San Carlos - Your digital gateway to LGU San Carlos services.",
+    "headings": [
+      "Welcome to Better San Carlos",
+      "Find a Service",
+      "Popular Services",
+      "San Carlos City at a Glance",
+      "Weather and Map of San Carlos City",
+      "Brief History of San Carlos City",
+      "Latest Updates",
+      "City Leadership",
+      "Contact Information"
+    ],
+    "result": "HTML content inspected",
+    "assessment": "Search, popular services, city facts, map, history and updates; familiar service-first structure."
+  },
+  {
+    "name": "Mandaue City, Cebu",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Santa Cruz, Laguna",
+    "status": "Work in progress",
+    "repository": "https://github.com/BetterSantaCruz/betterstacruzlaguna",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Bauang, La Union",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Tabaco City, Albay",
+    "status": "Work in progress",
+    "repository": "https://github.com/johnjoshualipio/bettertabaco",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Rizal, Nueva Ecija",
+    "status": "Planned",
+    "repository": "https://github.com/njveneracion/betterrizalne",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Liliw, Laguna",
+    "status": "Work in progress",
+    "repository": "https://github.com/BetterLiliw/betterliliw",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Naguilian, La Union",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Minalabac, Camarines Sur",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Maasin City, Southern Leyte",
+    "status": "Work in progress",
+    "site": "https://bettermaasin.netlify.app",
+    "repository": "https://github.com/bettermaasin/BetterMaasin",
+    "title": "BetterMaasin.org | Community Portal",
+    "headings": [],
+    "result": "Client-rendered; visual review needed",
+    "assessment": "Explicit work-in-progress heading with search; useful honest status framing, not a finished portal benchmark."
+  },
+  {
+    "name": "Tacloban City, Leyte",
+    "status": "Planned",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "City of Santa Rosa, Laguna",
+    "status": "Planned",
+    "repository": "https://github.com/jericizon/bettersantarosacity",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  },
+  {
+    "name": "Roxas City, Capiz",
+    "status": "Planned",
+    "repository": "https://github.com/chariz1101/betterroxas",
+    "result": "No live URL listed",
+    "assessment": "No public URL listed. Repository/status inventory only; no live UI to assess."
+  }
+]

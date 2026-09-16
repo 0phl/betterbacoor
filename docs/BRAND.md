@@ -48,7 +48,7 @@ The primary artwork uses flat fills only. Do not add gradients, shadows, extra c
 
 ## Navbar lockup
 
-In the application navbar, pair the primary mark with the plain-text name `BetterBacoor.org` and the existing `Civic guide` descriptor. Do not typeset the domain inside the emblem.
+In the application navbar, pair the primary mark with the plain-text name `BetterBacoor.org` and the existing `Civic guide` descriptor. Display the emblem at 64 CSS pixels on mobile and 80 on desktop, preserving its aspect ratio and clear space. Do not typeset the domain inside the emblem.
 
 ## Favicon
 

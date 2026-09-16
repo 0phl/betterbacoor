@@ -5,7 +5,7 @@ BetterBacoor welcomes corrections, source improvements, accessibility fixes, and
 ## Before changing civic information
 
 1. Prefer a City of Bacoor page, published charter, ordinance, memorandum, or government transaction system.
-2. Record the exact source URL, title, page or edition, date checked, and reviewer.
+2. Record the exact source URL, title, page or edition, and date checked. Authorship is preserved in Git history; do not add personal reviewer attribution or GitHub correction links to the public interface.
 3. If two government sources conflict, describe the conflict. Do not silently choose one.
 4. Use “Not linked on the government page when checked” rather than claiming that information was never published.
 5. Do not submit private resident information, credentials, application records, IDs, or uploaded documents.

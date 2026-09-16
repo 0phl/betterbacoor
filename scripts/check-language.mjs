@@ -45,6 +45,8 @@ const banned = [
 ];
 
 function collect(directory) {
+  // External research is evidence about other LGUs, not publishable Bacoor copy.
+  if (directory === path.join(root, 'docs', 'research')) return [];
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     if (excludedDirectories.has(entry.name)) return [];
     const fullPath = path.join(directory, entry.name);

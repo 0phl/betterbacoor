@@ -2,7 +2,9 @@
 
 ## Trust rule
 
-A civic record is publishable only when a resident can see where it came from, when it was checked, who reviewed it, and how to request a correction.
+A civic record is publishable only when its government source has been inspected and its source URL, title, location, and review date are recorded. Residents see the official destination and an expandable Source section. Review dates are maintenance metadata; reviewer attribution is recorded in Git history rather than displayed on the website.
+
+The September 2026 community redesign removes reviewer attribution and GitHub correction prompts from civic content. The owner subsequently authorized a creator GitHub link in the footer only. Keep verification and freshness enforcement in the content pipeline.
 
 Required fields are enforced by [`schemas/resource.schema.json`](../schemas/resource.schema.json).
 
@@ -34,11 +36,13 @@ Do not write “not published” unless the responsible authority confirms that 
 | High      | service requirements, transaction destinations, health directories | 90 days          |
 | Emergency | hotlines, evacuation instructions, urgent response guidance        | 30 days          |
 
-The foundation does not yet publish emergency records. They require a second manual verification before release.
+Emergency records live in `content/emergency.json`, separately from the government-only resource catalog. The validator enforces a 30-day review interval, HTTPS source types, unique references, and agreement between displayed phone digits and callable destinations. They require a second source proofreading pass before release; retain evidence and conflict decisions in `docs/EMERGENCY_HUB.md`.
 
-## Corrections
+For this collection, explicitly labeled humanitarian sources from the Philippine Red Cross and American Red Cross may support emergency assistance and general safety guidance. They are not government offices. Do not reuse foreign response numbers as Philippine contacts. Guidance is a concise editorial summary; sources are linked in context. Never promise a connected line, available ambulance, open shelter, safe road, or live hazard status without a current authoritative feed. Source review does not mean a test call was made.
 
-Each record links to a public correction form. A correction should include:
+## Content maintenance
+
+A content change should record:
 
 - the affected record;
 - what appears wrong or stale;
@@ -47,13 +51,19 @@ Each record links to a public correction form. A correction should include:
 
 High-impact corrections receive priority. Preserve the reason for the change in Git history.
 
-The current prelaunch form is hosted on GitHub and requires an account. Resource links prefill the record title and ID. [A practical non-GitHub correction route](https://github.com/0phl/betterbacoor/issues/2) is required before removing `noindex` or launching publicly; until then, the account requirement must be disclosed wherever the form is linked.
+There is currently no public BetterBacoor correction form. Do not advertise an unavailable contact channel or require residents to use GitHub. Residents with service or application questions should be directed to the responsible government office. Maintainers can continue using repository issues internally. The prelaunch indexing setting remains a separate deployment decision.
+
+## Community tools
+
+BetterGov projects may be linked in a clearly labeled community-tools section. They are independent tools, not government sources, and must not be inserted into the government-only resource collection. Do not infer a working API, supported filter, reuse license, live dataset, or Bacoor coverage from a project name alone. Verify those before integrating data or code. Outbound links are the initial integration.
 
 ## Privacy and safety
 
 Do not collect or publish private resident data. Do not accept IDs, permits, health documents, application numbers, payment details, or private complaints. Public office contact information may be included only from a government source and with a verification date.
 
 ## Editorial voice
+
+On-site service guides are editorial summaries with page-specific government sources, internal review dates, and explicit limits for conditional requirements, fees, and timelines. Checklists store only completion ticks locally, never personal details or application documents. The Charter reader serves a byte-for-byte public document copy with its original government URL and a recorded SHA-256 digest; it is not a mirrored government transaction portal. See `content/documents.json` and `docs/COMMUNITY_PORTAL.md`.
 
 - Use plain language.
 - Separate BetterBacoor explanations from government quotations.
