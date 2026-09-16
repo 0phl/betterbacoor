@@ -1,6 +1,6 @@
 import { Search, X } from 'lucide-react';
 import { useEffect, useId, useMemo, useState } from 'react';
-import { filterResources, resources } from '../data/resources';
+import { categoryLabels, filterResources, resources } from '../data/resources';
 import type { ResourceCategory } from '../types';
 import { ResourceCard } from './ResourceCard';
 
@@ -18,11 +18,24 @@ export function ResourceExplorer({
   onQueryChange,
 }: ResourceExplorerProps) {
   const [query, setQuery] = useState(initialQuery);
+  const [selectedCategory, setSelectedCategory] = useState<
+    ResourceCategory | 'all'
+  >('all');
+  const allowedCategories =
+    categories ?? (Object.keys(categoryLabels) as ResourceCategory[]);
   const inputId = useId();
   const resultCountId = useId();
   const filteredResources = useMemo(
-    () => filterResources(resources, query, categories),
-    [categories, query]
+    () =>
+      filterResources(
+        resources,
+        query,
+        selectedCategory === 'all' ||
+          !allowedCategories.includes(selectedCategory)
+          ? categories
+          : [selectedCategory]
+      ),
+    [categories, query, selectedCategory, allowedCategories]
   );
 
   useEffect(() => {
@@ -46,7 +59,7 @@ export function ResourceExplorer({
               {label}
             </label>
             <p className="mt-1 text-sm text-slate-600">
-              Search titles, topics, and resident-facing keywords.
+              Try a service, office, or something you need help with.
             </p>
           </div>
           <p
@@ -86,6 +99,34 @@ export function ResourceExplorer({
         </div>
       </div>
 
+      <div
+        className="filter-chips"
+        role="group"
+        aria-label="Filter by resource type"
+      >
+        <button
+          type="button"
+          aria-pressed={
+            selectedCategory === 'all' ||
+            !allowedCategories.includes(selectedCategory)
+          }
+          onClick={() => setSelectedCategory('all')}
+        >
+          All resources
+        </button>
+        {allowedCategories.length > 1 &&
+          allowedCategories.map(category => (
+            <button
+              key={category}
+              type="button"
+              aria-pressed={selectedCategory === category}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {categoryLabels[category]}
+            </button>
+          ))}
+      </div>
+
       {filteredResources.length > 0 ? (
         <div className="mt-7 grid gap-4 md:grid-cols-2">
           {filteredResources.map(resource => (
@@ -102,8 +143,8 @@ export function ResourceExplorer({
             No matching resource
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-600">
-            Try a shorter term, browse another section, or report what you
-            expected to find through the correction link below.
+            Try a shorter term such as “permit” or “office”, select All
+            resources, or clear your search to browse the available links.
           </p>
         </div>
       )}

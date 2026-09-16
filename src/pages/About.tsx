@@ -1,105 +1,107 @@
 import {
-  CheckCircle2,
-  CircleOff,
-  ExternalLink,
-  GitPullRequest,
+  ArrowUpRight,
+  BookOpen,
+  HeartHandshake,
+  ShieldCheck,
 } from 'lucide-react';
 import { PageIntro } from '../components/PageIntro';
 import { PageMeta } from '../components/PageMeta';
-
-const projectDoes = [
-  'Organizes links around resident needs instead of agency structure.',
-  'Records the source, verification date, and reviewer.',
-  'Explains services only when an authoritative source supports it.',
-  'Keeps prelaunch corrections public and traceable through GitHub.',
-];
-
-const projectDoesNot = [
-  'Represent or speak for the City Government of Bacoor.',
-  'Accept payments, applications, IDs, or documents.',
-  'Provide an unofficial application-status checker.',
-  'Replace emergency services or professional advice.',
-];
 
 export function About() {
   return (
     <div className="page-shell py-12 sm:py-16 lg:py-20">
       <PageMeta
         title="About"
-        description="How BetterBacoor sources, reviews, and corrects community civic information."
+        description="Built by the community, for the community. Learn how BetterBacoor makes useful public information easier to find."
       />
       <PageIntro
-        eyebrow="About the project"
-        title="A community guide, not another government system"
-        description="BetterBacoor helps residents discover and understand public information while keeping official transactions and records on government-owned systems."
+        eyebrow="A little more connected. A little better informed."
+        title="For Bacoor. For all of us."
+        description="Finding a service or getting a simple answer should be easy. BetterBacoor brings useful public information together so our community can spend less time searching and more time getting things done."
       />
-
-      <div className="mt-10 grid overflow-hidden rounded-2xl border border-slate-200 bg-white lg:grid-cols-2">
-        <section className="p-6 sm:p-8 lg:border-r lg:border-slate-200">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-emerald-50 text-emerald-700">
-            <CheckCircle2 aria-hidden="true" className="h-5 w-5" />
-          </span>
-          <h2 className="mt-5 text-2xl font-bold tracking-tight text-slate-950">
-            What BetterBacoor does
-          </h2>
-          <ul className="mt-6 space-y-4 text-sm leading-6 text-slate-600">
-            {projectDoes.map(item => (
-              <li key={item} className="flex gap-3">
-                <span
-                  aria-hidden="true"
-                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600"
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="border-t border-slate-200 bg-slate-50 p-6 sm:p-8 lg:border-t-0">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-slate-200 text-slate-700">
-            <CircleOff aria-hidden="true" className="h-5 w-5" />
-          </span>
-          <h2 className="mt-5 text-2xl font-bold tracking-tight text-slate-950">
-            What it does not do
-          </h2>
-          <ul className="mt-6 space-y-4 text-sm leading-6 text-slate-600">
-            {projectDoesNot.map(item => (
-              <li key={item} className="flex gap-3">
-                <span
-                  aria-hidden="true"
-                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400"
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
+      <div className="mt-10 grid gap-5 md:grid-cols-3">
+        {[
+          {
+            icon: HeartHandshake,
+            title: 'Community comes first',
+            text: 'An independent, volunteer-built guide for people who live, work, and build a life in Bacoor. Free to browse, with no BetterBacoor account needed.',
+          },
+          {
+            icon: BookOpen,
+            title: 'Useful, understandable information',
+            text: 'Read service guides, prepare a personal checklist, and browse the city’s Charter here. Official sources stay attached to the information you use.',
+          },
+          {
+            icon: ShieldCheck,
+            title: 'Sources you can see',
+            text: 'Every government resource includes its original source. Open the Source section to see where the information comes from and confirm details with the responsible office.',
+          },
+        ].map(({ icon: Icon, title, text }) => (
+          <section className="resource-card" key={title}>
+            <Icon size={27} className="text-civic-700" aria-hidden="true" />
+            <h2>{title}</h2>
+            <p className="resource-summary">{text}</p>
+          </section>
+        ))}
       </div>
-
-      <section className="mt-6 flex flex-col gap-6 rounded-2xl border border-civic-200 bg-civic-50 p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-civic-700">
-            <GitPullRequest aria-hidden="true" className="h-4 w-4" />
-            Open corrections
-          </span>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-950">
-            Correct something
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
-            If a record is stale, unclear, or points to the wrong destination,
-            open a correction report with the source that supports the change.
-            The current prelaunch form requires a GitHub account.
-          </p>
+      <section className="mt-10 rounded-xl border border-civic-200 bg-civic-50 p-7 sm:p-9">
+        <p className="eyebrow">THE BETTERGOV COMMUNITY</p>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight">
+          Better public information is something we can build together.
+        </h2>
+        <p className="mt-4 max-w-3xl leading-7 text-slate-600">
+          BetterBacoor is inspired by BetterGov.ph and the independent Better
+          LGU projects across the Philippines. We share a belief that open
+          information and thoughtful technology can make everyday life easier
+          for our communities.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-x-7 gap-y-2">
+          <a
+            href="https://lgu.bettergov.ph/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-link"
+          >
+            Meet the Better LGU community{' '}
+            <ArrowUpRight size={17} aria-hidden="true" />
+          </a>
+          <a
+            href="https://about.bettergov.ph/projects/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-link"
+          >
+            Explore BetterGov projects{' '}
+            <ArrowUpRight size={17} aria-hidden="true" />
+          </a>
         </div>
-        <a
-          href="https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-civic-700 px-5 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2"
-        >
-          Open correction form (GitHub account required)
-          <ExternalLink aria-hidden="true" className="h-4 w-4" />
-        </a>
+      </section>
+      <section className="mt-10 max-w-3xl">
+        <h2 className="text-xl font-bold tracking-tight">
+          Your checklist stays with you
+        </h2>
+        <p className="mt-4 leading-7 text-slate-600">
+          Service checklists save only the items you tick in this browser. They
+          are not sent to a server or shared across devices. Use Reset checklist
+          to remove your saved progress. No account, personal details, or
+          document uploads are needed.
+        </p>
+      </section>
+      <section className="mt-10 max-w-3xl">
+        <h2 className="text-xl font-bold tracking-tight">
+          Independent and community-run
+        </h2>
+        <p className="mt-4 leading-7 text-slate-600">
+          BetterBacoor is not operated by or endorsed by the City Government of
+          Bacoor. Applications, payments, and submissions take place on the
+          linked government websites. We do not collect IDs, application
+          documents, or payment details.
+        </p>
+        <p className="mt-4 leading-7 text-slate-600">
+          Government pages can change. For a question about a service or your
+          application, use the office directories to reach the responsible
+          agency.
+        </p>
       </section>
     </div>
   );

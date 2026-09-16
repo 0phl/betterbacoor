@@ -28,7 +28,7 @@ describe('BetterBacoor application shell', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /Know where to go in Bacoor/i,
+        name: /Bacoor, made easier/i,
       })
     ).toBeInTheDocument();
     expect(
@@ -37,19 +37,13 @@ describe('BetterBacoor application shell', () => {
     expect(
       screen.getByRole('link', { name: 'BetterGov.ph community' })
     ).toHaveAttribute('href', 'https://bettergov.ph/');
-    expect(
-      within(screen.getByRole('contentinfo')).getByRole('link', {
-        name: /Report incorrect or outdated information on GitHub \(account required\)/i,
-      })
-    ).toBeInTheDocument();
-
     const correctionLinks = screen
       .getAllByRole('link')
       .filter(link => link.getAttribute('href')?.includes('correction.yml'));
-    expect(correctionLinks.length).toBeGreaterThan(0);
-    correctionLinks.forEach(link => {
-      expect(link).toHaveAccessibleName(/account required/i);
-    });
+    expect(correctionLinks).toHaveLength(0);
+    expect(
+      screen.queryByText(/@0phl|Last checked|Checked.*by/i)
+    ).not.toBeInTheDocument();
   });
 
   it('uses the approved logo and domain lockup in the navbar', () => {
@@ -104,6 +98,19 @@ describe('BetterBacoor application shell', () => {
     ).toHaveAttribute('aria-expanded', 'true');
   });
 
+  it.each(['/services', '/directories', '/transparency', '/about', '/search'])(
+    'keeps personal attribution and correction prompts off %s',
+    path => {
+      window.history.replaceState({}, '', path);
+      const { container } = render(<App />);
+      expect(container.textContent).not.toMatch(
+        /@0phl|Last checked|account required|Suggest a correction|correction route/i
+      );
+      expect(container.querySelector('a[href*="correction.yml"]')).toBeNull();
+      expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
+    }
+  );
+
   it('has no detectable axe violations on the home page', async () => {
     const { container } = render(<App />);
     const result = await axe.run(container, {
@@ -127,6 +134,10 @@ describe('BetterBacoor application shell', () => {
     await waitFor(() => {
       expect(document.activeElement).toBe(screen.getByRole('main'));
     });
-    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, left: 0 });
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
   });
 });

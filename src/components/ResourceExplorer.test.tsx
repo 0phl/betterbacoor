@@ -20,13 +20,12 @@ describe('ResourceExplorer', () => {
       screen.queryByRole('heading', { name: 'Bacoor One Stop Shop System' })
     ).not.toBeInTheDocument();
 
-    const correctionLink = screen.getByRole('link', {
-      name: 'Suggest a correction on GitHub (account required)',
-    });
-    const correctionUrl = new URL(correctionLink.getAttribute('href') ?? '');
-    expect(correctionUrl.searchParams.get('title')).toBe(
-      'Correction: Barangay hall directory [bacoor-barangay-directory]'
-    );
+    expect(
+      screen.getByRole('link', {
+        name: 'Open official page: Barangay hall directory',
+      })
+    ).toHaveAttribute('href', 'https://bacoor.gov.ph/barangay-hall-directory/');
+    expect(screen.queryByText(/Suggest a correction/)).not.toBeInTheDocument();
   });
 
   it('shows a useful empty state and can clear the search', () => {
@@ -51,6 +50,26 @@ describe('ResourceExplorer', () => {
     expect(screen.getByText('1 resource found')).toBeInTheDocument();
     expect(
       screen.getByRole('heading', { level: 2, name: 'Hospital directory' })
+    ).toBeInTheDocument();
+  });
+
+  it('combines category filters with search and restores all resources', () => {
+    render(<ResourceExplorer />);
+    fireEvent.change(screen.getByRole('searchbox'), {
+      target: { value: 'employment' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Directory' }));
+    expect(
+      screen.getByRole('heading', {
+        name: 'City departments & service contacts',
+      })
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', { name: 'Jobs & career opportunities' })
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'All resources' }));
+    expect(
+      screen.getByRole('heading', { name: 'Jobs & career opportunities' })
     ).toBeInTheDocument();
   });
 });

@@ -2,12 +2,14 @@ import {
   ArrowRight,
   ExternalLink,
   Github,
+  Facebook,
   Menu,
   Search,
   ShieldCheck,
+  Phone,
   X,
 } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { BrandMark } from './BrandMark';
 
@@ -15,23 +17,26 @@ const navigation = [
   { to: '/', label: 'Home', end: true },
   { to: '/services', label: 'Services' },
   { to: '/directories', label: 'Directories' },
+  { to: '/emergency', label: 'Emergency' },
   { to: '/transparency', label: 'Transparency' },
   { to: '/about', label: 'About' },
 ];
 
 function RouteChangeManager() {
   const location = useLocation();
-  const isInitialRender = useRef(true);
+  const previousPath = useRef(location.pathname + location.hash);
 
-  useEffect(() => {
-    if (isInitialRender.current) {
-      isInitialRender.current = false;
-      return;
-    }
-
-    window.scrollTo({ top: 0, left: 0 });
-    document.getElementById('main-content')?.focus();
-  }, [location.pathname]);
+  useLayoutEffect(() => {
+    const nextPath = location.pathname + location.hash;
+    if (previousPath.current === nextPath) return;
+    previousPath.current = nextPath;
+    document.getElementById('main-content')?.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (location.hash)
+      document
+        .getElementById(location.hash.slice(1))
+        ?.scrollIntoView({ behavior: 'instant', block: 'start' });
+  }, [location.pathname, location.hash]);
 
   return null;
 }
@@ -40,7 +45,7 @@ export function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
@@ -53,9 +58,9 @@ export function Layout() {
         Skip to content
       </a>
 
-      <header>
-        <div className="border-b border-civic-100 bg-civic-50 text-civic-950">
-          <div className="page-shell flex min-h-9 items-center justify-between gap-5 py-1.5 text-[0.72rem] leading-5 sm:text-xs">
+      <header className="relative z-40">
+        <div className="site-utility-bar">
+          <div className="page-shell site-utility-inner">
             <p className="flex items-center gap-2">
               <ShieldCheck
                 aria-hidden="true"
@@ -63,35 +68,46 @@ export function Layout() {
               />
               <span>
                 <strong>Unofficial and community-run.</strong>{' '}
-                <span className="hidden text-civic-800 sm:inline">
+                <span className="hidden xl:inline">
                   Not operated by or endorsed by the City Government of Bacoor.
                 </span>
               </span>
             </p>
-            <a
-              href="https://bacoor.gov.ph/"
-              target="_blank"
-              rel="noreferrer"
-              className="hidden shrink-0 items-center gap-1 font-semibold text-civic-800 hover:text-civic-950 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 sm:inline-flex"
-            >
-              Official city portal
-              <ExternalLink aria-hidden="true" className="h-3 w-3" />
-            </a>
+            <div className="site-utility-links">
+              <a
+                href="https://bacoor.gov.ph/"
+                target="_blank"
+                rel="noreferrer"
+                className="utility-city-link"
+              >
+                Official city portal
+                <ExternalLink aria-hidden="true" className="h-3 w-3" />
+              </a>
+              <a
+                className="utility-emergency-call"
+                href="tel:161"
+                aria-label="Call 161 — Bacoor emergency hotline"
+              >
+                <Phone size={13} aria-hidden="true" />
+                <span className="utility-emergency-label">Emergency?</span>
+                <strong>Call 161</strong>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
-          <div className="page-shell flex min-h-[4.5rem] flex-wrap items-center justify-between gap-x-5 py-2.5">
+        <div className="modern-navbar">
+          <div className="page-shell flex min-h-[6rem] flex-wrap items-center justify-between gap-x-2 py-2.5 sm:min-h-[6.75rem] xl:gap-x-5">
             <NavLink
               to="/"
-              className="inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-4"
+              className="navbar-brand inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-4"
             >
-              <BrandMark className="h-9 w-9 text-civic-700" />
+              <BrandMark className="h-16 w-16 shrink-0 sm:h-20 sm:w-20" />
               <span>
-                <span className="block text-base font-bold tracking-[-0.025em] text-slate-950">
+                <span className="block text-lg font-bold tracking-[-0.035em] text-slate-950 sm:text-xl">
                   BetterBacoor.org
                 </span>
-                <span className="block text-[0.61rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                <span className="mt-1 block text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-slate-500">
                   Civic guide
                 </span>
               </span>
@@ -103,7 +119,7 @@ export function Layout() {
               aria-expanded={menuOpen}
               aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
               onClick={() => setMenuOpen(open => !open)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 lg:hidden"
+              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 xl:hidden"
             >
               {menuOpen ? (
                 <X aria-hidden="true" className="h-5 w-5" />
@@ -115,16 +131,16 @@ export function Layout() {
             <nav
               id="primary-navigation"
               aria-label="Primary navigation"
-              className={`${menuOpen ? 'block' : 'hidden'} w-full border-t border-slate-200 pt-3 lg:block lg:w-auto lg:border-0 lg:pt-0`}
+              className={`${menuOpen ? 'block' : 'hidden'} w-full border-t border-slate-200 pt-3 xl:block xl:w-auto xl:border-0 xl:pt-0`}
             >
-              <ul className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-0.5">
+              <ul className="nav-links flex flex-col gap-1 xl:flex-row xl:items-center xl:gap-0.5">
                 {navigation.map(item => (
                   <li key={item.to}>
                     <NavLink
                       to={item.to}
                       end={item.end}
                       className={({ isActive }) =>
-                        `inline-flex min-h-10 w-full items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 lg:w-auto ${
+                        `inline-flex min-h-10 w-full items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 xl:w-auto ${
                           isActive
                             ? 'bg-civic-50 text-civic-800'
                             : 'text-slate-600 hover:bg-slate-50 hover:text-slate-950'
@@ -135,10 +151,10 @@ export function Layout() {
                     </NavLink>
                   </li>
                 ))}
-                <li className="lg:ml-2">
+                <li className="xl:ml-2">
                   <NavLink
                     to="/search"
-                    className="inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full bg-civic-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2 lg:w-auto"
+                    className="inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full bg-civic-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2 xl:w-auto"
                   >
                     <Search aria-hidden="true" className="h-4 w-4" />
                     Search
@@ -155,25 +171,45 @@ export function Layout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="page-shell grid gap-10 py-12 lg:grid-cols-[1.5fr_0.75fr_0.75fr]">
-          <div>
+      <footer className="site-footer">
+        <div className="page-shell grid grid-cols-2 gap-x-6 gap-y-10 py-12 lg:grid-cols-[1.5fr_0.75fr_0.75fr]">
+          <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2.5">
-              <BrandMark className="h-9 w-9 text-civic-700" />
+              <BrandMark className="footer-logo" />
               <div>
-                <p className="font-bold tracking-tight text-slate-950">
-                  BetterBacoor
-                </p>
+                <p className="footer-brand-name">BetterBacoor</p>
                 <p className="text-xs text-slate-500">
-                  Find the right starting point
+                  Built for our community
                 </p>
               </div>
             </div>
             <p className="mt-5 max-w-lg text-sm leading-6 text-slate-600">
-              An unofficial, open-source civic guide for Bacoor. Complete
-              applications, submissions, and payments only on the linked
-              government system.
+              A community-built home for clearer information and easier everyday
+              life in Bacoor. Learn and prepare here; submit applications and
+              payments through the official city systems.
             </p>
+            <div className="footer-socials">
+              <a
+                href="https://github.com/0phl"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit the creator on GitHub"
+              >
+                <Github size={20} aria-hidden="true" />
+                <span>GitHub</span>
+                <ExternalLink size={13} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.facebook.com/people/BetterBacoororg/61594400221717/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="BetterBacoor on Facebook"
+              >
+                <Facebook size={20} aria-hidden="true" />
+                <span>Facebook</span>
+                <ExternalLink size={13} aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           <div>
@@ -204,27 +240,25 @@ export function Layout() {
 
           <div>
             <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
-              Project
+              Community
             </h2>
             <div className="mt-4 flex flex-col items-start gap-3 text-sm text-slate-600">
               <a
-                href="https://github.com/0phl/betterbacoor"
+                href="https://lgu.bettergov.ph/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
-                <Github aria-hidden="true" className="h-4 w-4" /> Source on
-                GitHub
+                Explore Better LGUs
                 <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
               </a>
               <a
-                href="https://github.com/0phl/betterbacoor/issues/new?template=correction.yml"
+                href="https://about.bettergov.ph/projects/"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded leading-6 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
-                Report incorrect or outdated information on GitHub (account
-                required)
+                BetterGov projects
               </a>
             </div>
           </div>

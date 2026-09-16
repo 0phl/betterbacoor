@@ -57,7 +57,7 @@ if (writeMode) {
     );
   }
 
-  if (current !== favicon) {
+  if (current.replace(/\r\n/g, '\n') !== favicon) {
     throw new Error(
       'public/favicon.svg does not match the approved primary logo. Run npm run generate:favicon and review the result.'
     );
