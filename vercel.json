@@ -7,6 +7,22 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/services/find",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/senior-citizen-id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/my-barangay",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/local-services",
+      "destination": "/index.html"
+    },
+    {
       "source": "/emergency",
       "destination": "/index.html"
     },

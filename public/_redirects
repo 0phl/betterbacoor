@@ -1,4 +1,8 @@
 /services /index.html 200
+/services/find /index.html 200
+/services/senior-citizen-id /index.html 200
+/my-barangay /index.html 200
+/local-services /index.html 200
 /services/business-permit /index.html 200
 /services/civil-registry /index.html 200
 /services/working-permit /index.html 200
