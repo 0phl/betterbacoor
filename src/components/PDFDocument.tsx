@@ -23,6 +23,7 @@ export default function PDFDocument({
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(true);
   const [text, setText] = useState('');
+  const [renderedPage, setRenderedPage] = useState<number | null>(null);
   const [width, setWidth] = useState(900);
   const [pageInput, setPageInput] = useState(String(page));
   const host = useRef<HTMLDivElement>(null);
@@ -72,8 +73,7 @@ export default function PDFDocument({
     let renderTask: RenderTask | undefined;
     setBusy(true);
     setError('');
-    setText('');
-    host.current?.replaceChildren();
+    // Keep the displayed page and its height until the replacement is ready.
     async function renderPage() {
       try {
         const pdfPage = await document!.getPage(page);
@@ -105,6 +105,7 @@ export default function PDFDocument({
         const content = await pdfPage.getTextContent();
         if (!active) return;
         host.current?.replaceChildren(canvas);
+        setRenderedPage(page);
         setText(
           content.items
             .map(item =>
@@ -192,9 +193,11 @@ export default function PDFDocument({
             : `${t('PDF page')} ${page} ${t('of')} ${document?.numPages}`)}
       </p>
       <div className="pdf-canvas" ref={host} aria-busy={busy} />
-      {!busy && !error && (
-        <details className="pdf-text">
-          <summary>{t('Text version of this page')}</summary>
+      {renderedPage !== null && (
+        <details className="pdf-text" aria-busy={busy}>
+          <summary>
+            {t('Text version of this page')} — {t('PDF page')} {renderedPage}
+          </summary>
           <p className="reader-fallback">
             {t(
               'Extracted from the original PDF. Table columns may read out of order; our service guides summarize the selected procedures.'
