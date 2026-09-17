@@ -1,0 +1,340 @@
+{
+  "source_url": "https://psa.gov.ph/classification/psgc/barangays/0402103000",
+  "publisher": "Philippine Statistics Authority",
+  "retrieved_on": "2026-09-17",
+  "population_reference": "2024 POPCEN",
+  "listing_as_of": "2025-07-31",
+  "usage": "Research reference. Census counts are not live population estimates. Match by PSGC; do not infer geographic boundaries.",
+  "city_population": 661381,
+  "barangays": [
+    {
+      "name": "Bayanan",
+      "psgc": "0402103004",
+      "correspondence_code": "042103004",
+      "classification": "Urban",
+      "population_2024": 12552
+    },
+    {
+      "name": "Dulong Bayan",
+      "psgc": "0402103007",
+      "correspondence_code": "042103007",
+      "classification": "Urban",
+      "population_2024": 5907
+    },
+    {
+      "name": "Habay I",
+      "psgc": "0402103008",
+      "correspondence_code": "042103008",
+      "classification": "Urban",
+      "population_2024": 20541
+    },
+    {
+      "name": "Maliksi 1",
+      "psgc": "0402103012",
+      "correspondence_code": "042103012",
+      "classification": "Urban",
+      "population_2024": 4525
+    },
+    {
+      "name": "Mambog 1",
+      "psgc": "0402103013",
+      "correspondence_code": "042103013",
+      "classification": "Urban",
+      "population_2024": 12501
+    },
+    {
+      "name": "Molino I",
+      "psgc": "0402103014",
+      "correspondence_code": "042103014",
+      "classification": "Urban",
+      "population_2024": 19199
+    },
+    {
+      "name": "P.F. Espiritu 1",
+      "psgc": "0402103018",
+      "correspondence_code": "042103018",
+      "classification": "Urban",
+      "population_2024": 4430
+    },
+    {
+      "name": "Salinas I",
+      "psgc": "0402103020",
+      "correspondence_code": "042103020",
+      "classification": "Urban",
+      "population_2024": 20015
+    },
+    {
+      "name": "San Nicolas 1",
+      "psgc": "0402103021",
+      "correspondence_code": "042103021",
+      "classification": "Urban",
+      "population_2024": 8106
+    },
+    {
+      "name": "Queens Row Central",
+      "psgc": "0402103026",
+      "correspondence_code": "042103026",
+      "classification": "Urban",
+      "population_2024": 6354
+    },
+    {
+      "name": "Queens Row East",
+      "psgc": "0402103027",
+      "correspondence_code": "042103027",
+      "classification": "Urban",
+      "population_2024": 18911
+    },
+    {
+      "name": "Queens Row West",
+      "psgc": "0402103028",
+      "correspondence_code": "042103028",
+      "classification": "Urban",
+      "population_2024": 11473
+    },
+    {
+      "name": "Habay II",
+      "psgc": "0402103034",
+      "correspondence_code": "042103034",
+      "classification": "Urban",
+      "population_2024": 11748
+    },
+    {
+      "name": "Ligas 2",
+      "psgc": "0402103036",
+      "correspondence_code": "042103036",
+      "classification": "Urban",
+      "population_2024": 7893
+    },
+    {
+      "name": "Mambog 3",
+      "psgc": "0402103042",
+      "correspondence_code": "042103042",
+      "classification": "Urban",
+      "population_2024": 21928
+    },
+    {
+      "name": "Mambog 4",
+      "psgc": "0402103043",
+      "correspondence_code": "042103043",
+      "classification": "Urban",
+      "population_2024": 14130
+    },
+    {
+      "name": "Molino II",
+      "psgc": "0402103045",
+      "correspondence_code": "042103045",
+      "classification": "Urban",
+      "population_2024": 47328
+    },
+    {
+      "name": "Molino III",
+      "psgc": "0402103046",
+      "correspondence_code": "042103046",
+      "classification": "Urban",
+      "population_2024": 70558
+    },
+    {
+      "name": "Molino IV",
+      "psgc": "0402103047",
+      "correspondence_code": "042103047",
+      "classification": "Urban",
+      "population_2024": 62907
+    },
+    {
+      "name": "Molino V",
+      "psgc": "0402103048",
+      "correspondence_code": "042103048",
+      "classification": "Urban",
+      "population_2024": 6793
+    },
+    {
+      "name": "Molino VI",
+      "psgc": "0402103049",
+      "correspondence_code": "042103049",
+      "classification": "Urban",
+      "population_2024": 20945
+    },
+    {
+      "name": "Molino VII",
+      "psgc": "0402103050",
+      "correspondence_code": "042103050",
+      "classification": "Urban",
+      "population_2024": 14203
+    },
+    {
+      "name": "P.F. Espiritu 3",
+      "psgc": "0402103055",
+      "correspondence_code": "042103055",
+      "classification": "Urban",
+      "population_2024": 11954
+    },
+    {
+      "name": "P.F. Espiritu 5",
+      "psgc": "0402103058",
+      "correspondence_code": "042103058",
+      "classification": "Urban",
+      "population_2024": 4184
+    },
+    {
+      "name": "P.F. Espiritu 6",
+      "psgc": "0402103059",
+      "correspondence_code": "042103059",
+      "classification": "Urban",
+      "population_2024": 7914
+    },
+    {
+      "name": "San Nicolas II",
+      "psgc": "0402103064",
+      "correspondence_code": "042103064",
+      "classification": "Urban",
+      "population_2024": 9768
+    },
+    {
+      "name": "San Nicolas III",
+      "psgc": "0402103065",
+      "correspondence_code": "042103065",
+      "classification": "Urban",
+      "population_2024": 31008
+    },
+    {
+      "name": "Talaba 2",
+      "psgc": "0402103066",
+      "correspondence_code": "042103066",
+      "classification": "Urban",
+      "population_2024": 12334
+    },
+    {
+      "name": "Zapote 3",
+      "psgc": "0402103075",
+      "correspondence_code": "042103075",
+      "classification": "Urban",
+      "population_2024": 17009
+    },
+    {
+      "name": "Aniban 1",
+      "psgc": "0402103076",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 7221
+    },
+    {
+      "name": "Aniban 2",
+      "psgc": "0402103077",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 5379
+    },
+    {
+      "name": "Kaingin Digman",
+      "psgc": "0402103078",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 4322
+    },
+    {
+      "name": "Ligas 1",
+      "psgc": "0402103079",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 11012
+    },
+    {
+      "name": "Mabolo",
+      "psgc": "0402103080",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 5205
+    },
+    {
+      "name": "Maliksi 2",
+      "psgc": "0402103081",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 6690
+    },
+    {
+      "name": "Mambog 2",
+      "psgc": "0402103082",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 11823
+    },
+    {
+      "name": "Niog",
+      "psgc": "0402103083",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 16796
+    },
+    {
+      "name": "P.F. Espiritu 2",
+      "psgc": "0402103084",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 7252
+    },
+    {
+      "name": "P.F. Espiritu 4",
+      "psgc": "0402103085",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 8515
+    },
+    {
+      "name": "Poblacion",
+      "psgc": "0402103086",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 6364
+    },
+    {
+      "name": "Real",
+      "psgc": "0402103087",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 10508
+    },
+    {
+      "name": "Salinas 2",
+      "psgc": "0402103088",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 10243
+    },
+    {
+      "name": "Sinbanali",
+      "psgc": "0402103089",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 7023
+    },
+    {
+      "name": "Talaba 1",
+      "psgc": "0402103090",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 5577
+    },
+    {
+      "name": "Talaba 3",
+      "psgc": "0402103091",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 6147
+    },
+    {
+      "name": "Zapote 1",
+      "psgc": "0402103092",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 9850
+    },
+    {
+      "name": "Zapote 2",
+      "psgc": "0402103093",
+      "correspondence_code": null,
+      "classification": "Urban",
+      "population_2024": 4336
+    }
+  ]
+}

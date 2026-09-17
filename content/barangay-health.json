@@ -1,0 +1,320 @@
+{
+  "source_date": "2026-07-31",
+  "reviewed_on": "2026-09-17",
+  "entries": [
+    {
+      "id": "yakap-1614",
+      "service": "yakap",
+      "name": "Lingap Kalusugan City Health Unit",
+      "address": "Barangay Alima",
+      "sector": "Government",
+      "phones": [],
+      "email": "bacoorcityalimachu@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=62",
+      "source_page": 62,
+      "source_row": 1614,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1649",
+      "service": "yakap",
+      "name": "Strike sa Serbisyo City Health Unit (Molino III)",
+      "address": "Barangay Molino III",
+      "sector": "Government",
+      "phones": [],
+      "email": "molinochustrikesaerbisyo@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1649,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1650",
+      "service": "yakap",
+      "name": "Strike sa Serbisyo City Health Unit II (Floraville)",
+      "address": "Floraville Subdivision, Panapaan I",
+      "sector": "Government",
+      "phones": [],
+      "email": "floraville.rhu@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1650,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1651",
+      "service": "yakap",
+      "name": "Strike sa Serbisyo City Health Unit III (Salinas)",
+      "address": "Barangay Salinas I",
+      "sector": "Government",
+      "phones": [],
+      "email": "salinaschu@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1651,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1652",
+      "service": "yakap",
+      "name": "Strike sa Serbisyo City Health Unit VI (Queens Row)",
+      "address": "Barangay Queens Row Central",
+      "sector": "Government",
+      "phones": [],
+      "email": "qrchu2022@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1652,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1653",
+      "service": "yakap",
+      "name": "Strike sa Serbisyo Lying-In and City Health Unit IV (Bayanan)",
+      "address": "Ground Floor, Sagip Buhay and Recovery Building",
+      "sector": "Government",
+      "phones": [],
+      "email": "bayananchu@yahoo.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1653,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1644",
+      "service": "yakap",
+      "name": "Southern Tagalog Regional Hospital (Bacoor District Hospital)",
+      "address": "Reyville Subdivision, Habay II",
+      "sector": "Government",
+      "phones": [
+        {
+          "number": "(046) 418-3644",
+          "dial": "+63464183644"
+        },
+        {
+          "number": "09393716746",
+          "dial": "+639393716746"
+        }
+      ],
+      "email": "medicalcenterchief@strh.doh.gov.ph",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1644,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1576",
+      "service": "yakap",
+      "name": "Cavite East Asia Medical Center, Inc.",
+      "address": "Molino Road, Barangay Molino 3",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "09452259136",
+          "dial": "+639452259136"
+        }
+      ],
+      "email": "",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=60",
+      "source_page": 60,
+      "source_row": 1576,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1620",
+      "service": "yakap",
+      "name": "Metro South Medical Center",
+      "address": "National Road, Molino IV",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "09178602104",
+          "dial": "+639178602104"
+        }
+      ],
+      "email": "",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=62",
+      "source_page": 62,
+      "source_row": 1620,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1623",
+      "service": "yakap",
+      "name": "mWell PH",
+      "address": "2F Main Square Mall, Bacoor Boulevard, Barangay Bayanan",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "09399794083",
+          "dial": "+639399794083"
+        }
+      ],
+      "email": "bacoor@clinic.mwell.com.ph",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=62",
+      "source_page": 62,
+      "source_row": 1623,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1632",
+      "service": "yakap",
+      "name": "Purehealth Diagnostic Center, Inc.",
+      "address": "4935 MDSW Building, Aguinaldo Highway, Talaba 4",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "(046) 416-2215",
+          "dial": "+63464162215"
+        }
+      ],
+      "email": "purehealthtalaba@yahoo.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=62",
+      "source_page": 62,
+      "source_row": 1632,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1643",
+      "service": "yakap",
+      "name": "South City Hospital and Medical Center, Inc.",
+      "address": "115 Daang Hari Road, Molino IV",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "(046) 419-8240",
+          "dial": "+63464198240"
+        }
+      ],
+      "email": "",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1643,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "yakap-1645",
+      "service": "yakap",
+      "name": "St. Dominic Medical Center, Inc.",
+      "address": "Emilio Aguinaldo Highway, Talaba IV",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "(046) 417-2520",
+          "dial": "+63464172520"
+        }
+      ],
+      "email": "stdominicmedicalcenter@sdmc.com.ph",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/YAKAP.pdf#page=63",
+      "source_page": 63,
+      "source_row": 1645,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "animal-bite-565",
+      "service": "animal-bite",
+      "name": "City of Bacoor Animal Bite Treatment Center",
+      "address": "Sagip Buhay and Recovery Center, Bayanan",
+      "sector": "Government",
+      "phones": [
+        {
+          "number": "(046) 435-3420",
+          "dial": "+63464353420"
+        }
+      ],
+      "email": "",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/ABPP_073126.pdf#page=25",
+      "source_page": 25,
+      "source_row": 565,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "animal-bite-606",
+      "service": "animal-bite",
+      "name": "Southern Tagalog Regional Hospital Animal Bite Treatment Center",
+      "address": "Barangay Habay II",
+      "sector": "Government",
+      "phones": [
+        {
+          "number": "(046) 884-2810",
+          "dial": "+63468842810"
+        }
+      ],
+      "email": "medicalcenterchief@strh.doh.gov.ph",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/ABPP_073126.pdf#page=27",
+      "source_page": 27,
+      "source_row": 606,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "animal-bite-587",
+      "service": "animal-bite",
+      "name": "IVAX Animal Bite and Vaccination Center — Molino Branch",
+      "address": "Alfredo Arevalo Compound, corner Molino Road, Molino 3",
+      "sector": "Private",
+      "phones": [],
+      "email": "ivax.ph@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/ABPP_073126.pdf#page=26",
+      "source_page": 26,
+      "source_row": 587,
+      "expires_on": "2027-12-31"
+    },
+    {
+      "id": "animal-bite-588",
+      "service": "animal-bite",
+      "name": "IVAX Animal Bite and Vaccination Center — Revilla Branch",
+      "address": "Revilla Business Park, Habay 2",
+      "sector": "Private",
+      "phones": [
+        {
+          "number": "09617417257",
+          "dial": "+639617417257"
+        },
+        {
+          "number": "09166968530",
+          "dial": "+639166968530"
+        }
+      ],
+      "email": "ivax.ph@gmail.com",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/ABPP_073126.pdf#page=26",
+      "source_page": 26,
+      "source_row": 588,
+      "expires_on": "2027-12-31"
+    },
+    {
+      "id": "dental-362",
+      "service": "dental",
+      "name": "Southern Tagalog Regional Hospital (Bacoor District Hospital)",
+      "address": "Reyville Subdivision, Habay II",
+      "sector": "Government",
+      "phones": [
+        {
+          "number": "(046) 418-3644",
+          "dial": "+63464183644"
+        },
+        {
+          "number": "09393716746",
+          "dial": "+639393716746"
+        }
+      ],
+      "email": "medicalcenterchief@strh.doh.gov.ph",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/DENTAL_073126.pdf#page=15",
+      "source_page": 15,
+      "source_row": 362,
+      "expires_on": "2026-12-31"
+    },
+    {
+      "id": "dental-352",
+      "service": "dental",
+      "name": "Basa-Gaspar Dental Clinic",
+      "address": "51-A Emilio Aguinaldo Highway, Panapaan 1",
+      "sector": "Private",
+      "phones": [],
+      "email": "",
+      "source_url": "https://www.philhealth.gov.ph/partners/providers/facilities/accredited/DENTAL_073126.pdf#page=14",
+      "source_page": 14,
+      "source_row": 352,
+      "expires_on": "2026-12-31"
+    }
+  ]
+}

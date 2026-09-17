@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
+import { validateBarangayInformation } from './validate-barangay-information.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const schema = JSON.parse(
@@ -265,6 +266,7 @@ for (const entry of directory.entries) {
 if (directory.entries.length === 0)
   errors.push('Local directory must not be empty.');
 
+errors.push(...validateBarangayInformation(root));
 if (errors.length > 0) {
   console.error('Content validation failed:\n');
   for (const error of errors) console.error(`- ${error}`);
