@@ -1,6 +1,6 @@
 import { t, useLanguage } from '../i18n';
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -17,6 +17,7 @@ import {
 } from '../data/guides';
 import { PageMeta } from '../components/PageMeta';
 import { NotFound } from './NotFound';
+import { checklistKey, readChecklist } from '../data/checklists';
 
 function Checklist({
   guide,
@@ -26,26 +27,10 @@ function Checklist({
   variant: GuideVariant;
 }) {
   useLanguage();
-  const key = `betterbacoor:checklist:${guide.slug}:${variant.id}:${guide.verified}`;
-  const [checked, setChecked] = useState<number[]>(() => {
-    try {
-      const stored: unknown = JSON.parse(localStorage.getItem(key) ?? '[]');
-      return Array.isArray(stored)
-        ? [
-            ...new Set(
-              stored.filter(
-                (n): n is number =>
-                  Number.isInteger(n) &&
-                  n >= 0 &&
-                  n < variant.requirements.length
-              )
-            ),
-          ]
-        : [];
-    } catch {
-      return [];
-    }
-  });
+  const key = checklistKey(guide, variant);
+  const [checked, setChecked] = useState<number[]>(
+    () => readChecklist(guide, variant).checked
+  );
   const [storageError, setStorageError] = useState(false);
   function update(next: number[]) {
     setChecked(next);
@@ -139,12 +124,16 @@ function Checklist({
 export function GuideContent({
   guide,
   fixedVariantId,
+  initialVariantId,
 }: {
   guide: Guide;
   fixedVariantId?: string;
+  initialVariantId?: string;
 }) {
   useLanguage();
-  const [variantId, setVariantId] = useState(guide.variants[0].id);
+  const [variantId, setVariantId] = useState(
+    initialVariantId ?? guide.variants[0].id
+  );
   const variant =
     guide.variants.find(item => item.id === (fixedVariantId ?? variantId)) ??
     guide.variants[0];
@@ -302,6 +291,18 @@ export function GuideContent({
 export function ServiceGuide() {
   useLanguage();
   const { slug } = useParams();
+  const [params] = useSearchParams();
   const guide = guides.find(item => item.slug === slug);
-  return guide ? <GuideContent key={guide.slug} guide={guide} /> : <NotFound />;
+  const variant = guide?.variants.find(
+    item => item.id === params.get('variant')
+  );
+  return guide ? (
+    <GuideContent
+      key={`${guide.slug}:${variant?.id ?? ''}`}
+      guide={guide}
+      initialVariantId={variant?.id}
+    />
+  ) : (
+    <NotFound />
+  );
 }

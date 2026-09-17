@@ -109,6 +109,10 @@ for (const office of JSON.parse(
   fs.readFileSync(path.join(root, 'content/office-contacts.json'), 'utf8')
 ).offices)
   check(office.description);
+for (const facility of JSON.parse(
+  fs.readFileSync(path.join(root, 'content/barangay-health.json'), 'utf8')
+).entries)
+  check(facility.sector);
 if (failures.size) {
   console.error('Missing Filipino translations:\n' + [...failures].join('\n'));
   process.exit(1);

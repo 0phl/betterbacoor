@@ -242,6 +242,14 @@ export function Layout() {
               ))}
               <li>
                 <NavLink
+                  to="/my-barangay"
+                  className="rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
+                >
+                  {t('My Barangay')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/search"
                   className="rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
                 >

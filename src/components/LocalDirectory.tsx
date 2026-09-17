@@ -18,7 +18,7 @@ import {
   type DirectoryEntry,
 } from '../data/directory';
 
-function Place({ entry }: { entry: DirectoryEntry }) {
+export function Place({ entry }: { entry: DirectoryEntry }) {
   useLanguage();
   const source = directorySource(entry.source_id);
   const Icon = entry.category === 'barangay' ? Building2 : HeartPulse;

@@ -44,6 +44,19 @@ export function ResourcesPage({
     <div className="page-shell py-12 sm:py-16 lg:py-20">
       <PageMeta title={title} description={description} />
       <PageIntro eyebrow={eyebrow} title={title} description={description} />
+      {categories?.includes('directory') && (
+        <Link className="finder-entry" to="/my-barangay">
+          <span>
+            <strong>{t('Your neighborhood, within reach.')}</strong>
+            <span>
+              {t(
+                'Explore local health services, schools and collection schedules.'
+              )}
+            </span>
+          </span>
+          <span>{t('My Barangay')} →</span>
+        </Link>
+      )}
       {categories?.includes('service') && (
         <Link className="finder-entry" to="/services/find">
           <span>

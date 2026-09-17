@@ -39,9 +39,9 @@ const quickTasks = [
     icon: Users,
   },
   {
-    label: 'Find the right city office',
-    detail: 'Call or email published office contacts',
-    to: '/directories#office-contacts-title',
+    label: 'My Barangay',
+    detail: 'Local contacts & your saved checklists',
+    to: '/my-barangay',
     icon: Building2,
   },
 ];
@@ -116,7 +116,7 @@ export function Home() {
             </h1>
             <p className="hero-description">
               {t(
-                'A little less paperwork. A little more living. Clear guides, useful contacts, and everyday help for our community.'
+                'Your community guide to Bacoor. Find local services, prepare requirements, and get the information you need—all in one place.'
               )}
             </p>
             <HomeSearch />
