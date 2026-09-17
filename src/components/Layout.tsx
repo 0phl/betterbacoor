@@ -307,7 +307,7 @@ export function Layout() {
                 ·
               </span>
               <a
-                href="https://github.com/0phl/betterbacoor/blob/main/docs/LICENSING.md#software-mit-for-new-contributions"
+                href="https://github.com/0phl/betterbacoor/blob/main/LICENSE"
                 target="_blank"
                 rel="noreferrer"
                 aria-label={t('Code license: MIT')}
@@ -318,7 +318,7 @@ export function Layout() {
                 ·
               </span>
               <a
-                href="https://github.com/0phl/betterbacoor/blob/main/docs/LICENSING.md#existing-cc0-material-stays-cc0"
+                href="https://github.com/0phl/betterbacoor/blob/main/LICENSE-CC0"
                 target="_blank"
                 rel="noreferrer"
                 aria-label={t(

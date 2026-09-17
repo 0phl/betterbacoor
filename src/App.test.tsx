@@ -37,6 +37,20 @@ describe('BetterBacoor application shell', () => {
     expect(
       screen.getByRole('link', { name: 'BetterGov.ph community' })
     ).toHaveAttribute('href', 'https://bettergov.ph/');
+    expect(
+      screen.getByRole('link', { name: 'Code license: MIT' })
+    ).toHaveAttribute(
+      'href',
+      'https://github.com/0phl/betterbacoor/blob/main/LICENSE'
+    );
+    expect(
+      screen.getByRole('link', {
+        name: 'Earlier project material and original civic content: CC0 1.0',
+      })
+    ).toHaveAttribute(
+      'href',
+      'https://github.com/0phl/betterbacoor/blob/main/LICENSE-CC0'
+    );
     const correctionLinks = screen
       .getAllByRole('link')
       .filter(link => link.getAttribute('href')?.includes('correction.yml'));
