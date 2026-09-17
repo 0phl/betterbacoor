@@ -1,0 +1,27 @@
+name: Suggest an improvement
+description: Propose a useful feature, accessibility improvement, or documentation change.
+title: 'Idea: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome from residents and contributors. Describe the need without naming private individuals or sharing personal cases. This form does not submit a government application or emergency report.
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help people do?
+      description: Describe the problem and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested improvement
+      description: Explain your idea and any simpler alternatives.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources or examples
+      description: For new civic information, include a government source if available. It is fine to leave this blank for design or accessibility ideas.

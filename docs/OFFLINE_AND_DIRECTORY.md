@@ -2,6 +2,8 @@
 
 Implemented locally on September 16, 2026. No deployment or indexing change is part of this work.
 
+Verification counts below describe that implementation date. See the [documentation index](README.md) for later My Barangay, citywide search, and translation work.
+
 ## Local places
 
 `content/local-directory.json` contains 64 entries transcribed from three City of Bacoor publications:

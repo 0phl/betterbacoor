@@ -2,6 +2,8 @@
 
 Implemented locally on September 16, 2026. No deployment or government-system integration was performed.
 
+This is a dated implementation record. The current app also includes a fourth service guide, the service finder, My Barangay, citywide local-information search, and updated contribution/licensing links. Start with the [documentation index](README.md) for the current structure.
+
 ## Design and resident experience
 
 - Wider 84rem page shell, a wider task panel, shorter hero copy, more breathing room, and no location-pin icon in the hero eyebrow.

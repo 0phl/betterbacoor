@@ -1,85 +1,86 @@
+![BetterBacoor.org — Bacoor, made easier. An unofficial, community-run civic guide.](docs/assets/betterbacoor-cover.png)
+
 # BetterBacoor
 
-BetterBacoor is an **unofficial, community-run civic-information project** for Bacoor, Cavite. It helps residents find the right government source, service, office, directory, or public record without pretending to replace the City of Bacoor's systems.
+**Bacoor, made easier.**
 
-> BetterBacoor is not operated by or endorsed by the City Government of Bacoor. Applications, payments, and authoritative records remain on the linked government systems.
+BetterBacoor is an open-source community guide for Bacoor, Cavite. It brings local services, practical guides, published contacts, and public information together so residents can find what they need and prepare for their next step.
 
-## Product promise
+Built for the community, with contributions welcome in code, research, design, accessibility, and Filipino translation.
 
-> Find the right Bacoor service, requirements, office, government link, and contact in under one minute.
+[Contribute](CONTRIBUTING.md) · [Documentation](docs/README.md) · [Facebook](https://www.facebook.com/people/BetterBacoororg/61594400221717/) · [Better LGU community](https://lgu.bettergov.ph/)
 
-The portal provides three on-site service guides, personal preparation checklists, five office contacts, a native Citizen’s Charter reader, 16 sourced government links, and BetterGov community tools. Business permits include separate new and renewal checklists. See the [community portal implementation notes](docs/COMMUNITY_PORTAL.md) and [ecosystem research report](docs/ECOSYSTEM_REVIEW.md).
+> **Unofficial and community-run.** BetterBacoor is not operated by or endorsed by the City Government of Bacoor. Applications and payments go through official systems. Emergency tools provide reference information; BetterBacoor does not monitor incidents or dispatch help.
 
-## Foundation architecture
+## What you can do
 
-- React and TypeScript
-- Vite static build
-- Tailwind CSS and Kapwa, based on the BetterLocalGov starter
-- Source-controlled JSON civic records
-- JSON Schema validation with Ajv
-- Client-side search; no search server
-- No resident accounts, payments, uploads, or private complaint intake
-- No application database or CMS
+- **Read and prepare:** guides for business permits, civil registry copies, working permits, and Senior Citizen IDs, with saved checklists and printable instructions.
+- **Find your service:** answer a few questions to find the relevant guide and application type.
+- **Explore your barangay:** save a barangay choice, view published contacts and dated census figures, and resume your preparation checklists.
+- **Browse local information:** schools, health services, garbage collection tables, and assistance-center locations are available through Directories, Services, and global search.
+- **Get emergency information:** published hotlines and guidance for floods, fires, and other hazards, plus an emergency guide you can explicitly save for offline reference.
+- **Read the Citizen’s Charter here:** an on-demand PDF reader with page navigation and extracted text, using an unmodified copy of the city’s published document.
+- **Use English or Filipino:** switch languages without losing your current filters or checklist progress.
 
-See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/CONTENT_POLICY.md`](docs/CONTENT_POLICY.md), [`docs/DESIGN.md`](docs/DESIGN.md), and [`docs/BRAND.md`](docs/BRAND.md).
+The current local-information collection includes **47 barangay profiles**, **19 health-service listings**, **44 school listings by education level**, and published garbage tables covering **33 barangays**, with five transcribed route summaries. School listings are not a count of distinct campuses. Garbage images are readable on-site but are not all transcribed or fully searchable. See [coverage and source limitations](docs/MY_BARANGAY.md).
+
+## Information you can check
+
+Service guidance and civic records link to their sources. Publication years, incomplete coverage, and known conflicts remain visible where they matter. A checked source is a dated reference, not a guarantee of current availability, eligibility, fees, or response time.
+
+Contributors record source URLs, exact pages or table rows, and review dates. Automated checks validate supported content structures and freshness rules; they cannot establish that a phone connects, a facility is open, or a source is factually correct. Read the [content policy](docs/CONTENT_POLICY.md) before changing civic information.
 
 ## Run locally
 
-Requirements:
-
-- Node.js 22.13 or newer (or Node.js 24)
-- npm 10 or newer
+Use **Node.js 22.13+ on the Node 22 line, or Node 24**, and **npm 10+**. CI uses Node 22. No API keys, database, or environment file are needed for the current app.
 
 ```bash
+git clone https://github.com/0phl/betterbacoor.git
+cd betterbacoor
 npm ci
 npm run dev
 ```
 
-The development server prints its local address.
-
-## Quality checks
+Open the local URL printed by Vite. External source links and remotely hosted garbage-table images need internet access. The Charter PDF is included in the repository and loads only when requested.
 
 ```bash
 npm run check
 npm audit --omit=dev --audit-level=high
+npm run preview
 ```
 
-`npm run check` verifies formatting, lint, content schemas, banned starter language, tests, accessibility rules available in jsdom, TypeScript, and the production build.
+`check` runs formatting, lint, tests, content and translation validation, TypeScript, and the production build. `preview` serves that build locally. Preview is not a production hosting service.
 
-## Civic records
+## Contribute
 
-Records live in [`content/resources.json`](content/resources.json) and must validate against [`schemas/resource.schema.json`](schemas/resource.schema.json). Every record includes:
+You do not need to be a developer to help. Check a source, improve a Filipino translation, review keyboard access, or suggest a clearer guide. For code and documentation changes, fork the repository and open a focused pull request.
 
-- direct government destination;
-- source title and URL;
-- source page or edition;
-- internal verification date; and
-- risk-based review interval.
+- [Contribution guide](CONTRIBUTING.md): setup, source requirements, checks, and pull requests.
+- [Report an issue](https://github.com/0phl/betterbacoor/issues/new/choose): incorrect information, bugs, or feature suggestions. GitHub requires an account; do not include private resident details.
+- [Security policy](SECURITY.md): report sensitive vulnerabilities privately.
 
-The public interface shows source links and government destinations. Personal reviewer attribution, review dates, and GitHub correction prompts are intentionally absent from civic content. A creator GitHub link is available in the footer at the owner's request. Authorship remains traceable in Git history.
+Repository issues are for improving BetterBacoor. Government applications, personal cases, and urgent incidents should go to the responsible office or emergency service.
 
-Do not silently choose between conflicting government sources. Document the conflict and seek confirmation before publishing a definitive statement.
+## Project structure
 
-## Git workflow
+| Location                        | Purpose                                                              |
+| ------------------------------- | -------------------------------------------------------------------- |
+| `src/pages/`, `src/components/` | Resident-facing pages and shared UI                                  |
+| `src/data/`                     | Service guides, search, source adapters, and local preparation state |
+| `src/i18n/`                     | English/Filipino language support                                    |
+| `content/`                      | Source-controlled civic datasets and document provenance             |
+| `scripts/`, `schemas/`          | Validation, offline-guide generation, and brand checks               |
+| `public/`                       | Logo, original Charter PDF, static assets, and hosting rules         |
+| `docs/`                         | Architecture, content rules, feature notes, and dated research       |
 
-Small, reversible documentation fixes may be committed directly after checks pass. Meaningful maintainer work uses a short-lived feature branch. Pushes to every branch run CI; the maintainer reviews the branch locally and explicitly approves it before it is integrated into linear `main` and deleted.
+The app uses React, TypeScript, Vite, Tailwind CSS, Kapwa, and PDF.js. Search runs locally. Language preference, a selected barangay, and checklist progress stay in the browser; the current application has no resident accounts or application server. Only the explicitly saved emergency guide supports offline use. See [architecture](docs/ARCHITECTURE.md) and [offline behavior](docs/OFFLINE_AND_DIRECTORY.md).
 
-A pull request is optional for solo maintainer work. It is normally reserved for external contributions or used when the maintainer specifically requests one. Contributor pull requests may be squash merged when one coherent commit keeps the project history clearer.
+## Deployment status
 
-## Corrections and contributions
+This repository is open for collaboration. Publishing the website is a separate release step: the current HTML still includes `noindex, nofollow`. Documentation updates do not change that setting or connect a public domain. See [deployment and release checks](docs/DEPLOYMENT.md) before launching.
 
-Contributions must include an authoritative source and verification date. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting content. Repository issues remain available for maintainer work; the resident-facing site does not direct people to GitHub or advertise a public correction form.
+## Credits and licensing
 
-## Status
+BetterBacoor continues a transferred project based on the [BetterLocalGov starter](https://github.com/iyanski/betterlocalgov), inspired by the [BetterGov.ph](https://bettergov.ph/) community. The original history and credits are preserved in [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md).
 
-Foundation work is in progress. The inherited starter is not deployed, the public domain is not connected, and builds default to `noindex` until launch review.
-
-## Credits
-
-BetterBacoor started from the [BetterLocalGov](https://github.com/iyanski/betterlocalgov) starter and is inspired by the [BetterGov.ph](https://bettergov.ph/) BetterLGU community. See [`ACKNOWLEDGMENTS.md`](ACKNOWLEDGMENTS.md) for the source snapshot and full project lineage.
-
-## License and provenance
-
-New original software contributions use [MIT](LICENSE-MIT), starting with the commit that introduces this policy. Earlier CC0 releases and the inherited starter remain available under [CC0 1.0](LICENSE-CC0); those permissions are not withdrawn. Original non-software civic content continues under CC0 where we hold the relevant rights. Government documents and third-party material retain their own terms.
-
-See [the licensing scope](docs/LICENSING.md), [license index](LICENSE), and [credits](ACKNOWLEDGMENTS.md). The transferred repository history and original CC0 text are preserved.
+New original software contributions use [MIT](LICENSE-MIT). Earlier CC0 releases and the starter retain their [CC0 1.0](LICENSE-CC0) permissions. Original non-software civic content continues under CC0 where contributors hold the relevant rights. Sourced documents, images, data, and dependencies keep their own terms. See the [licensing scope](docs/LICENSING.md) for details.

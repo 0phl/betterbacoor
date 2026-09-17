@@ -20,6 +20,8 @@ Bacoor records are checked separately against government sources. Content from a
 
 ## Document reader and artwork
 
+The README cover at `docs/assets/betterbacoor-cover.png` was supplied by the project maintainer as `BetterBacoor-Facebook-Cover-1702x630.png` and copied without alteration. It is a BetterBacoor community-project cover, not a government endorsement.
+
 [PDF.js](https://mozilla.github.io/pdf.js/) by Mozilla and its contributors powers the on-site Charter reader under Apache-2.0. Its license is included in `public/licenses/pdfjs-LICENSE.txt`.
 
 The City of Bacoor’s public 2026 Citizen’s Charter is preserved without modification, with source and integrity metadata in `content/documents.json`. The city seal appearing inside the original document is part of that source document and is not BetterBacoor branding.

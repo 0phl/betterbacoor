@@ -35,6 +35,8 @@ Examples include `ospital`, `sertipiko kapanganakan`, `permit negosyo`, and
 `panahon`. Directory matching retains the existing Roman/Arabic barangay-number
 normalization.
 
+Global discovery also includes school, health, barangay-profile, waste, and assistance records through `src/data/local-discovery.ts`. Aliases include `paaralan`, `basura`, and `populasyon`. A new searchable collection must update both its on-site browsing view and the global discovery index.
+
 ## Offline and printing
 
 The build generates self-contained English and Filipino emergency HTML files.

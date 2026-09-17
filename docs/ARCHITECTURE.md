@@ -1,53 +1,66 @@
 # Architecture
 
-## Decision
+## Application model
 
-BetterBacoor is a static-first React application built by Vite. Civic records are reviewed in source control and loaded into the client build. There is no application server, CMS, resident database, or server-backed search service in the foundation.
+BetterBacoor is a static React/TypeScript application built by Vite, with Tailwind CSS and Kapwa. Civic records are reviewed in source control and bundled into the client. It has no application server, resident database, CMS, or server-backed search.
 
-## Why
+Residents can read guidance, prepare checklists, search local information, and follow official transaction links. BetterBacoor does not accept government applications, payments, uploaded documents, or incident reports.
 
-The MVP publishes public navigation and explanation, not transactions. A static design provides:
+## Routes
 
-- a small attack surface;
-- inexpensive hosting;
-- cacheable low-bandwidth delivery;
-- reviewable content diffs;
-- easy rollback; and
-- no store of resident data to protect.
+| Route                         | Purpose                                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
+| `/`                           | Homepage and quick tasks                                                                |
+| `/services`, `/services/find` | Service catalog and guided finder                                                       |
+| `/services/:slug`             | Business permit, civil registry, working permit, or Senior Citizen ID guide             |
+| `/my-barangay`                | Saved barangay choice, local information, emergency contacts, and checklist progress    |
+| `/local-services?section=…`   | Citywide schools, health, barangay profiles, garbage collection, and assistance centers |
+| `/directories`                | Citywide discovery, local places, and office contacts                                   |
+| `/search?q=…`                 | Combined search of official resources and on-site information                           |
+| `/charter?page=…`             | On-demand reader for the preserved official PDF                                         |
+| `/emergency`                  | Contacts, safety guidance, and offline-save controls                                    |
+| `/transparency`, `/about`     | Public-record links and project explanation                                             |
+
+`src/App.tsx` defines routes. `RouteChangeManager` focuses the main landmark and resets scrolling on pathname changes; query-only changes preserve the user's position. Hash links target their section. Unknown routes or guide slugs show a missing-page view.
+
+## Content and validation
+
+| Content                                   | Runtime location                                               | Validation / maintenance                                                            |
+| ----------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Government-resource catalog               | `content/resources.json` → `src/data/resources.ts`             | JSON Schema and `scripts/validate-content.mjs`                                      |
+| Local places and offices                  | `content/local-directory.json`, `content/office-contacts.json` | Source references, review dates, and contact checks                                 |
+| Emergency information                     | `content/emergency.json`                                       | Dedicated source rules, phone normalization, and 30-day freshness                   |
+| Barangay profiles, health, schools, waste | `content/barangay-*.json` → `src/data/barangay-information.ts` | `scripts/validate-barangay-information.mjs`; manual source review remains necessary |
+| Assistance centers                        | `src/data/barangay-information.ts`                             | Ordinance citation and explicit conflict notes                                      |
+| Service guides and finder                 | `src/data/guides.ts`, `senior-guide.ts`, `service-finder.ts`   | Typed editorial data, source citations, behavior tests, and review notices          |
+| Charter provenance                        | `content/documents.json`                                       | Original URL, edition, page count, and SHA-256 check                                |
+
+The barangay validator is called by the main content validator. It checks coverage, population totals, selected publisher hosts, contact formats, school emails, and garbage-source associations. It does not apply the resource catalog's age thresholds to every barangay dataset. A passing check is not evidence of a fresh source inspection.
+
+The weekly freshness workflow reruns content validation and opens or updates an issue for failures. It does not crawl publishers, test telephone connections, or update data automatically.
+
+## Search and browsing
+
+`src/data/local-discovery.ts` derives local results from the same datasets used by the feature pages. Global search combines those records with the official resource catalog, including result counts, categories, pagination, and empty states. Links carry the selected section, query, service, or barangay into the corresponding on-site view.
+
+Original garbage-table images are not full-text indexed. Only reviewed headings and transcribed routes are searchable. Browsing citywide information never changes the saved My Barangay choice.
+
+## Local state and offline access
+
+Browser localStorage holds language preference, a validated barangay ID, service-finder choices, and checklist ticks. Checklist keys include the guide, variant, and content version. Only validated item indexes are counted; updates to requirement meanings need a version change. Storage failures must not prevent reading guidance. Nothing is synchronized to a BetterBacoor server.
+
+The emergency service worker caches a standalone guide only after an explicit save. The guide includes its language and source-snapshot date. Failed refreshes preserve the previous saved copy; removing it clears only the dedicated cache. This does not make the full app, remote images, or source websites available offline. See [offline notes](OFFLINE_AND_DIRECTORY.md).
+
+## PDF reader
+
+The reader lazy-loads PDF.js and its worker after the resident chooses to load the document. It renders the unmodified local Charter PDF, using range requests where supported, and offers extracted text without claiming correct table reading order.
+
+During navigation, the current canvas and text stay mounted until the next canvas and text are ready. Cancelled or outdated renders cannot replace the latest requested page. The text disclosure names its displayed PDF page. A render failure preserves the previous readable page while showing an error. This avoids the temporary height collapse that previously exposed the footer.
+
+## Hosting
+
+Browser routes need explicit host rewrites to `index.html`. `vercel.json` and `public/_redirects` cover the supported page routes while leaving assets as real files. The build also includes a static `404.html`; host-specific behavior must be verified. Current HTML includes `noindex, nofollow`. See [deployment notes](DEPLOYMENT.md) for direct-route checks and the separate public-launch step.
 
 ## Upstream lineage
 
-The transferred repository started from [BetterLocalGov commit `b807a8b`](https://github.com/iyanski/betterlocalgov/commit/b807a8bee0a005049e3d3492413d1ab03be7cfa1). That snapshot was imported as a new root commit rather than through GitHub's fork mechanism. Its CC0 dedication remains in place. The current foundation retains parts of the React, Vite, Tailwind, Kapwa, and development-tooling setup while replacing the sample content, routes, metadata, information architecture, and validation.
-
-The unrelated admin/API branch is not part of the application architecture.
-
-## Content path
-
-```text
-content/resources.json
-  -> scripts/validate-content.mjs
-  -> src/data/resources.ts
-  -> client-side search and resource cards
-```
-
-The schema is [`schemas/resource.schema.json`](../schemas/resource.schema.json). CI rejects malformed, duplicate, future-dated, or stale records. A weekly scheduled workflow reruns freshness validation even when the repository is idle and opens or refreshes a correction issue when action is required.
-
-## Boundaries
-
-BetterBacoor may explain and link to a transaction. It must not:
-
-- accept a transaction itself;
-- ask for credentials used by a government system;
-- proxy payments or uploads;
-- present copied records as authoritative; or
-- introduce accounts or a database without a separate threat model and explicit decision.
-
-## Routing and deployment
-
-The application uses browser routing. `_redirects` and `vercel.json` rewrite the known routes, including the three service guides and Charter reader, to `index.html`. Unknown guide slugs use the application's missing-page view. The build also ships `404.html` for hosts that support static custom-error pages. Builds include a `noindex` directive during this phase; launch requires deliberately removing it and publishing a sitemap.
-
-## Resident preparation tools
-
-`src/data/guides.ts` contains editorial service summaries with exact source pages and internal verification dates. Checklist completion is stored in browser localStorage, namespaced by guide, variant, and content version. Only integer item indexes are stored. Storage errors do not prevent using or printing a guide. There is no server synchronization or submission.
-
-The Charter reader loads PDF.js and its worker only after the resident requests the document. It renders individual pages from the local, unmodified PDF using range requests where supported and provides extracted text. Source metadata and SHA-256 validation live in `content/documents.json` and the content validation script. Both the engine and source document are separate assets; neither is included in the homepage JavaScript bundle.
+The transferred repository started from [BetterLocalGov commit b807a8b](https://github.com/iyanski/betterlocalgov/commit/b807a8bee0a005049e3d3492413d1ab03be7cfa1), imported as a new root commit rather than a GitHub fork. Parts of the tooling setup remain from that starter. Its CC0 dedication is preserved; new original software contributions follow the [MIT policy](LICENSING.md). See [credits](../ACKNOWLEDGMENTS.md).

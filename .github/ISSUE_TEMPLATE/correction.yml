@@ -28,8 +28,8 @@ body:
   - type: input
     id: source
     attributes:
-      label: Supporting government source
-      description: Paste the strongest government URL supporting the correction.
+      label: Supporting authoritative source
+      description: Prefer the responsible government publication. For an existing humanitarian or school listing, use the publisher allowed by the content policy.
       placeholder: https://bacoor.gov.ph/...
     validations:
       required: true

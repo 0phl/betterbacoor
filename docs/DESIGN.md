@@ -22,10 +22,10 @@ The former cobalt route-and-waypoint `B` is rejected and must not be restored.
 
 1. Compact unofficial-status strip and the original emblem at 64px on mobile and 80px on desktop.
 2. Royal-blue split hero: plain-language introduction and global search alongside four everyday tasks. Emergency calling sits in the existing neutral utility header above navigation, with no separate homepage banner or hero card. The emergency hub remains in navigation and the everyday topic grid.
-3. Three on-site guide cards with saved preparation checklists and six compact topic links.
+3. On-site guide cards with saved preparation checklists and compact topic links; the service catalog includes four guides and a guided finder.
 4. Citizen's Charter callout, followed by selected government resource cards.
 5. A community illustration and purpose statement leading into BetterGov tools on one shared background.
-6. A charcoal footer with a larger emblem, upstream attribution, and borderless GitHub and Facebook links.
+6. A charcoal footer with a larger emblem, a subtle contribution button, Facebook and contributor links, and a consistent copyright/credit row showing MIT and CC0 with links to their scopes.
 
 Search results combine a text query and resource-type filters. Cards prioritize title, description, and the official destination. A native disclosure keeps detailed provenance accessible without dominating the card. Avoid unverified live dashboards, fabricated activity counts, unsupported statistics, or placeholder controls.
 
@@ -37,9 +37,9 @@ Visual polish must not hide civic provenance. Resource cards continue to display
 - authoritative source and source location inside an expandable Source disclosure; and
 - a plain-language caution if a record is overdue.
 
-At the owner's request, no public review dates, reviewer names, or GitHub correction links appear. Verification dates remain in source-controlled metadata and automated freshness checks. No personal identity is bundled in resource records.
+Avoid reviewer names, routine “last checked by” badges, and GitHub correction links on civic records. Verification dates remain maintenance metadata. Display publication dates, census reference years, and offline snapshot dates when needed to explain age or coverage. No personal reviewer identity is bundled in resource records.
 
-The community-run and non-endorsement disclosure remains visible before the main navigation. The footer has an owner-authorized creator GitHub link. Applications, submissions, payments, and authoritative records remain on government-owned systems. Readable service guides, preparation checklists, and an unchanged public Charter copy are available inside BetterBacoor.
+The community-run and non-endorsement disclosure remains visible before the main navigation. The footer invites contributions to the project repository. Applications, submissions, payments, and authoritative records remain on government-owned systems. Readable service guides, preparation checklists, and an unchanged public Charter copy are available inside BetterBacoor.
 
 ## Reference boundary
 
