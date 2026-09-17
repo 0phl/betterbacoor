@@ -77,7 +77,7 @@ The app uses React, TypeScript, Vite, Tailwind CSS, Kapwa, and PDF.js. Search ru
 
 ## Deployment status
 
-This repository is open for collaboration. Publishing the website is a separate release step: the current HTML still includes `noindex, nofollow`. Documentation updates do not change that setting or connect a public domain. See [deployment and release checks](docs/DEPLOYMENT.md) before launching.
+BetterBacoor is publicly available at [betterbacoor.org](https://www.betterbacoor.org/). The main application permits search indexing; standalone offline guides and error pages remain non-indexable. See [deployment and release checks](docs/DEPLOYMENT.md) for release verification and rollback guidance.
 
 ## Credits and licensing
 

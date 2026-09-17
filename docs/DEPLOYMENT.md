@@ -32,9 +32,9 @@ Confirm that `/documents/bacoor-citizens-charter-2026.pdf`, the emitted PDF work
 
 ## Search indexing and domain
 
-`index.html` currently includes `<meta name="robots" content="noindex, nofollow" />`. `public/robots.txt` allows crawling so a crawler can see that directive. Neither setting is authentication or privacy protection.
+`index.html` includes `<meta name="robots" content="index, follow" />`, and `public/robots.txt` allows crawling. Generated offline emergency guides and the static 404 page remain `noindex, nofollow`; they are supporting snapshots or error content, not search landing pages. Robots directives are not authentication or privacy protection.
 
-For an approved public launch, confirm the production domain and HTTPS, deliberately update the robots meta directive, publish a sitemap using the actual production URLs, and review canonical/social metadata. Keep preview environments non-indexable using the hosting platform's settings. Do not infer that a domain is configured because it appears in the branding.
+For a public release, confirm the production domain and HTTPS, verify the robots directives, publish a sitemap using the actual production URLs, and review canonical/social metadata. Keep preview environments non-indexable using the hosting platform's settings. Do not infer that a domain is configured because it appears in the branding.
 
 ## Release review
 

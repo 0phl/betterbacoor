@@ -59,7 +59,7 @@ During navigation, the current canvas and text stay mounted until the next canva
 
 ## Hosting
 
-Browser routes need explicit host rewrites to `index.html`. `vercel.json` and `public/_redirects` cover the supported page routes while leaving assets as real files. The build also includes a static `404.html`; host-specific behavior must be verified. Current HTML includes `noindex, nofollow`. See [deployment notes](DEPLOYMENT.md) for direct-route checks and the separate public-launch step.
+Browser routes need explicit host rewrites to `index.html`. `vercel.json` and `public/_redirects` cover the supported page routes while leaving assets as real files. The build also includes a static `404.html`; host-specific behavior must be verified. The public application permits search indexing, while offline snapshots and the 404 page remain non-indexable. See [deployment notes](DEPLOYMENT.md) for direct-route and release checks.
 
 ## Upstream lineage
 

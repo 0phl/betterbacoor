@@ -8,6 +8,7 @@ const sourcePath = fileURLToPath(
 const faviconPath = fileURLToPath(
   new URL('../public/favicon.svg', import.meta.url)
 );
+const indexPath = fileURLToPath(new URL('../index.html', import.meta.url));
 const writeMode = process.argv.includes('--write');
 
 const source = readFileSync(sourcePath, 'utf8');
@@ -42,6 +43,42 @@ const favicon = [
   '',
 ].join('\n');
 
+const faviconBytes = Buffer.byteLength(favicon);
+if (faviconBytes >= 1_200_000) {
+  throw new Error(
+    `public/favicon.svg is ${faviconBytes} bytes; the BetterLGU crawler limit is under 1.2MB.`
+  );
+}
+
+if (
+  /<script\b|<foreignObject\b|(?:href|xlink:href)=["'](?:https?:)?\/\//i.test(
+    favicon
+  )
+) {
+  throw new Error(
+    'public/favicon.svg contains content rejected by the BetterLGU crawler.'
+  );
+}
+
+const index = readFileSync(indexPath, 'utf8');
+const iconTags = (index.match(/<link\b[^>]*>/gi) ?? []).filter(tag =>
+  /\brel=["'][^"']*\bicon\b[^"']*["']/i.test(tag)
+);
+const expectedFirstIcon =
+  '<link rel="icon" type="image/svg+xml" href="/favicon.svg" />';
+
+if (iconTags[0] !== expectedFirstIcon) {
+  throw new Error(
+    'The first rel=icon in index.html must resolve to /favicon.svg as image/svg+xml.'
+  );
+}
+
+if (!index.includes('<meta name="robots" content="index, follow" />')) {
+  throw new Error(
+    'The public application must use index, follow after its approved launch.'
+  );
+}
+
 if (writeMode) {
   writeFileSync(faviconPath, favicon);
   console.log(
@@ -64,6 +101,6 @@ if (writeMode) {
   }
 
   console.log(
-    `Validated favicon: white background plus ${pathLines.length} unchanged primary-logo paths.`
+    `Validated crawler-ready favicon: ${faviconBytes} bytes, white background, and ${pathLines.length} unchanged primary-logo paths.`
   );
 }

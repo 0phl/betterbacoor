@@ -36,7 +36,7 @@ The cache contains a single complete HTML response with saved time, source snaps
 
 The standalone guide displays its saved date and information snapshot, plus a review warning after the emergency content's 30-day interval. Expiry never hides the phone numbers. Re-saving old information does not reset its source review date. External source links still require internet; calls require phone service. Browser storage eviction, clearing site data, or private browsing can remove the saved guide. The downloadable text contact card remains a separate fallback. This is offline reference access, not a live alert service or a fully offline app.
 
-Keep the current noindex settings. A future public launch remains a separate decision.
+Keep the standalone emergency guides non-indexable. Search indexing for the public application is controlled separately in `index.html` and does not change the offline cache boundary.
 
 ## Verification
 
