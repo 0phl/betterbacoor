@@ -6,7 +6,7 @@ BetterBacoor started from a transferred snapshot of [iyanski/betterlocalgov](htt
 
 The Bacoor content, page structure, resource model, validation, tests, and project documentation were rebuilt. Parts of the React, TypeScript, Vite, Tailwind, and development-tooling setup still come from the BetterLocalGov starter.
 
-BetterLocalGov is released under CC0. The original public-domain dedication remains in [`LICENSE`](LICENSE).
+BetterLocalGov is released under CC0. Its original public-domain dedication is preserved unchanged in [`LICENSE-CC0`](LICENSE-CC0). New original software contributions use MIT under the [licensing policy](docs/LICENSING.md); existing CC0 permissions and the starter's authorship remain intact.
 
 ## BetterGov community
 

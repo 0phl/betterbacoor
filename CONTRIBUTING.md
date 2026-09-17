@@ -13,6 +13,10 @@ BetterBacoor welcomes corrections, source improvements, accessibility fixes, and
 
 Read [`docs/CONTENT_POLICY.md`](docs/CONTENT_POLICY.md) for the full policy.
 
+## Contribution licenses
+
+New original software contributions are accepted under [MIT](LICENSE-MIT). Original non-software civic guides and dataset contributions continue under [CC0](LICENSE-CC0), where the contributor holds the relevant rights. Existing CC0 releases retain their permissions. Third-party material must preserve its own terms and source notices. Contribute only material you have the right to offer under the applicable terms; see [the licensing policy](docs/LICENSING.md) for scope.
+
 ## Development workflow
 
 For meaningful work:

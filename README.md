@@ -80,4 +80,6 @@ BetterBacoor started from the [BetterLocalGov](https://github.com/iyanski/better
 
 ## License and provenance
 
-The repository remains under the CC0 1.0 dedication in [`LICENSE`](LICENSE). The transferred repository history is preserved.
+New original software contributions use [MIT](LICENSE-MIT), starting with the commit that introduces this policy. Earlier CC0 releases and the inherited starter remain available under [CC0 1.0](LICENSE-CC0); those permissions are not withdrawn. Original non-software civic content continues under CC0 where we hold the relevant rights. Government documents and third-party material retain their own terms.
+
+See [the licensing scope](docs/LICENSING.md), [license index](LICENSE), and [credits](ACKNOWLEDGMENTS.md). The transferred repository history and original CC0 text are preserved.
