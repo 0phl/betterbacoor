@@ -1,4 +1,5 @@
 import data from '../../content/emergency.json';
+import { getLanguage, translate, type Language } from '../i18n';
 
 export const emergency = data;
 export type EmergencyContact = (typeof data.contacts)[number];
@@ -11,20 +12,28 @@ export function emergencyNeedsReview(now = new Date()) {
   return age > data.review_interval_days * 86_400_000;
 }
 
-export function emergencyCardText() {
+export function emergencyCardText(language: Language = getLanguage()) {
+  const tr = (value: string) => translate(value, language);
   return [
-    'BETTERBACOOR · EMERGENCY CONTACT CARD',
-    'Independent community reference. BetterBacoor does not dispatch help.',
-    `Information snapshot: ${data.last_verified}. Recheck with the linked sources within ${data.review_interval_days} days.`,
-    'If a local number does not connect, try 911. Availability and network routing may vary.',
-    '',
-    ...data.contacts.map(
-      contact => `${contact.name}: ${contact.number}\n${contact.description}`
+    tr('BETTERBACOOR · EMERGENCY CONTACT CARD'),
+    tr('Independent community reference. BetterBacoor does not dispatch help.'),
+    language === 'fil'
+      ? `Petsa ng impormasyon: ${data.last_verified}. Suriin muli sa mga sanggunian sa loob ng ${data.review_interval_days} araw.`
+      : `Information snapshot: ${data.last_verified}. Recheck with the linked sources within ${data.review_interval_days} days.`,
+    tr(
+      'If a local number does not connect, try 911. Availability and network routing may vary.'
     ),
     '',
-    'Tell the dispatcher your location, a nearby landmark, and what happened. Follow their instructions.',
+    ...data.contacts.map(
+      contact =>
+        `${tr(contact.name)}: ${contact.number}\n${tr(contact.description)}`
+    ),
     '',
-    'PUBLISHED SOURCES',
+    tr(
+      'Tell the dispatcher your location, a nearby landmark, and what happened. Follow their instructions.'
+    ),
+    '',
+    tr('PUBLISHED SOURCES'),
     ...data.sources
       .filter(source =>
         data.contacts.some(contact => contact.sources.includes(source.id))

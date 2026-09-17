@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
@@ -24,6 +25,7 @@ function Checklist({
   guide: Guide;
   variant: GuideVariant;
 }) {
+  useLanguage();
   const key = `betterbacoor:checklist:${guide.slug}:${variant.id}:${guide.verified}`;
   const [checked, setChecked] = useState<number[]>(() => {
     try {
@@ -59,19 +61,23 @@ function Checklist({
     <section className="guide-checklist" aria-labelledby="checklist-title">
       <div className="checklist-heading">
         <div>
-          <p className="eyebrow">YOUR PREPARATION SPACE</p>
-          <h2 id="checklist-title">My checklist</h2>
+          <p className="eyebrow">{t('YOUR PREPARATION SPACE')}</p>
+          <h2 id="checklist-title">{t('My checklist')}</h2>
         </div>
         <span className="checklist-count" aria-live="polite">
-          {checked.length} of {variant.requirements.length} ready
+          {checked.length}
+          {t(' of ')}
+          {variant.requirements.length}
+          {t(' ready')}
         </span>
       </div>
       <p className="checklist-help">
-        Tick what you’ve prepared. Only your ticks are saved in this browser. No
-        documents or personal details are collected.
+        {t(
+          'Tick what you’ve prepared. Only your ticks are saved in this browser. No documents or personal details are collected.'
+        )}
       </p>
       <progress
-        aria-label="Checklist progress"
+        aria-label={t('Checklist progress')}
         max={variant.requirements.length}
         value={checked.length}
       />
@@ -92,33 +98,38 @@ function Checklist({
                 )
               }
             />
-            <span>{item}</span>
+            <span>{t(item)}</span>
           </label>
         ))}
       </div>
-      <p className="guide-callout">{variant.note}</p>
+      <p className="guide-callout">{t(variant.note)}</p>
       {checked.length === variant.requirements.length && (
         <p className="checklist-complete">
-          <Check size={18} aria-hidden="true" /> Your preparation list is
-          complete. The city will still review your application.
+          <Check size={18} aria-hidden="true" />
+          {t(
+            ' Your preparation list is complete. The city will still review your application.'
+          )}
         </p>
       )}
       {storageError && (
         <p role="status">
-          Your browser could not save these ticks. You can still use and print
-          this checklist during this visit.
+          {t(
+            'Your browser could not save these ticks. You can still use and print this checklist during this visit.'
+          )}
         </p>
       )}
       <div className="checklist-actions">
         <button type="button" onClick={() => window.print()}>
-          <Printer size={16} aria-hidden="true" /> Print guide & checklist
+          <Printer size={16} aria-hidden="true" />
+          {t(' Print guide & checklist')}
         </button>
         <button
           type="button"
           onClick={() => update([])}
           disabled={!checked.length}
         >
-          <RotateCcw size={15} aria-hidden="true" /> Reset checklist
+          <RotateCcw size={15} aria-hidden="true" />
+          {t(' Reset checklist')}
         </button>
       </div>
     </section>
@@ -126,6 +137,7 @@ function Checklist({
 }
 
 function GuideContent({ guide }: { guide: Guide }) {
+  useLanguage();
   const [variantId, setVariantId] = useState(guide.variants[0].id);
   const variant =
     guide.variants.find(item => item.id === variantId) ?? guide.variants[0];
@@ -138,14 +150,15 @@ function GuideContent({ guide }: { guide: Guide }) {
       <div className="guide-intro">
         <div className="page-shell">
           <Link className="back-link" to="/services">
-            <ArrowLeft size={16} aria-hidden="true" /> All service guides
+            <ArrowLeft size={16} aria-hidden="true" />
+            {t(' All service guides')}
           </Link>
-          <p className="eyebrow">{guide.category}</p>
-          <h1>{guide.title}</h1>
-          <p>{guide.summary}</p>
+          <p className="eyebrow">{t(guide.category)}</p>
+          <h1>{t(guide.title)}</h1>
+          <p>{t(guide.summary)}</p>
           <span className="guide-source-badge">
-            <BookOpen size={15} aria-hidden="true" /> A BetterBacoor guide based
-            on official city information
+            <BookOpen size={15} aria-hidden="true" />
+            {t(' A BetterBacoor guide based on official city information')}
           </span>
         </div>
       </div>
@@ -153,13 +166,14 @@ function GuideContent({ guide }: { guide: Guide }) {
         <div className="guide-main">
           {overdue && (
             <p className="guide-callout">
-              This guide is due for a source review. Confirm current
-              requirements with the office before using this checklist.
+              {t(
+                'This guide is due for a source review. Confirm current requirements with the office before using this checklist.'
+              )}
             </p>
           )}
           {guide.variants.length > 1 && (
             <fieldset className="guide-options">
-              <legend>What are you applying for?</legend>
+              <legend>{t('What are you applying for?')}</legend>
               <div>
                 {guide.variants.map(item => (
                   <label key={item.id}>
@@ -170,7 +184,7 @@ function GuideContent({ guide }: { guide: Guide }) {
                       checked={variant.id === item.id}
                       onChange={() => setVariantId(item.id)}
                     />
-                    <span>{item.label}</span>
+                    <span>{t(item.label)}</span>
                   </label>
                 ))}
               </div>
@@ -178,8 +192,8 @@ function GuideContent({ guide }: { guide: Guide }) {
           )}
           <Checklist key={variant.id} guide={guide} variant={variant} />
           <section className="guide-steps" aria-labelledby="steps-title">
-            <p className="eyebrow">HOW IT WORKS</p>
-            <h2 id="steps-title">Your next steps</h2>
+            <p className="eyebrow">{t('HOW IT WORKS')}</p>
+            <h2 id="steps-title">{t('Your next steps')}</h2>
             <ol>
               {variant.steps.map((step, i) => (
                 <li key={step.title}>
@@ -187,38 +201,38 @@ function GuideContent({ guide }: { guide: Guide }) {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3>{step.title}</h3>
-                    <p>{step.detail}</p>
+                    <h3>{t(step.title)}</h3>
+                    <p>{t(step.detail)}</p>
                   </div>
                 </li>
               ))}
             </ol>
           </section>
         </div>
-        <aside className="guide-sidebar" aria-label="Service details">
+        <aside className="guide-sidebar" aria-label={t('Service details')}>
           <section>
-            <h2>Good to know</h2>
+            <h2>{t('Good to know')}</h2>
             <dl>
-              <dt>Responsible office</dt>
-              <dd>{guide.office}</dd>
-              <dt>Fees</dt>
-              <dd>{guide.fee}</dd>
-              <dt>Processing</dt>
-              <dd>{guide.timing}</dd>
+              <dt>{t('Responsible office')}</dt>
+              <dd lang="en">{guide.office}</dd>
+              <dt>{t('Fees')}</dt>
+              <dd>{t(guide.fee)}</dd>
+              <dt>{t('Processing')}</dt>
+              <dd>{t(guide.timing)}</dd>
             </dl>
             <a className="contact-link" href={`mailto:${guide.email}`}>
               <Mail size={16} aria-hidden="true" /> {guide.email}
             </a>
           </section>
           <section className="guide-source">
-            <h2>Go to the source</h2>
-            <p>{guide.sourceLabel}</p>
+            <h2>{t('Go to the source')}</h2>
+            <p lang="en">{guide.sourceLabel}</p>
             {variant.sourcePage && (
               <Link
                 className="text-link"
                 to={`/charter?page=${variant.sourcePage}`}
               >
-                Read these pages here{' '}
+                {t('Read these pages here')}{' '}
                 <ArrowUpRight size={16} aria-hidden="true" />
               </Link>
             )}
@@ -227,19 +241,20 @@ function GuideContent({ guide }: { guide: Guide }) {
               target="_blank"
               rel="noreferrer"
             >
-              Original government source{' '}
+              {t('Original government source')}{' '}
               <ArrowUpRight size={15} aria-hidden="true" />
             </a>
           </section>
           {guide.actionUrl && (
             <section className="guide-continue">
-              <h2>Ready to apply?</h2>
+              <h2>{t('Ready to apply?')}</h2>
               <p>
-                Preparation happens here. Your official application, account,
-                and payment stay with the city.
+                {t(
+                  'Preparation happens here. Your official application, account, and payment stay with the city.'
+                )}
               </p>
               <a href={guide.actionUrl} target="_blank" rel="noreferrer">
-                {guide.actionLabel}
+                {t(guide.actionLabel)}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             </section>
@@ -251,6 +266,7 @@ function GuideContent({ guide }: { guide: Guide }) {
 }
 
 export function ServiceGuide() {
+  useLanguage();
   const { slug } = useParams();
   const guide = guides.find(item => item.slug === slug);
   return guide ? <GuideContent key={guide.slug} guide={guide} /> : <NotFound />;

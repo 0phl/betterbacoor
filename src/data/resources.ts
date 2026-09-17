@@ -1,5 +1,7 @@
 import resourceData from '../../content/resources.json';
 import type { CivicResource, ResourceCategory } from '../types';
+import { bilingualSearch } from './search';
+import { translate } from '../i18n';
 
 export const resources = resourceData.resources as CivicResource[];
 
@@ -36,21 +38,23 @@ export function filterResources(
   query: string,
   categories?: ResourceCategory[]
 ): CivicResource[] {
-  const normalizedQuery = query.trim().toLocaleLowerCase('en-PH');
+  const words = bilingualSearch(query).split(/\s+/).filter(Boolean);
 
   return items.filter(resource => {
     if (categories && !categories.includes(resource.category)) return false;
-    if (!normalizedQuery) return true;
+    if (!words.length) return true;
 
     const searchable = [
       resource.title,
       resource.summary,
+      translate(resource.title, 'fil'),
+      translate(resource.summary, 'fil'),
       resource.category,
       ...resource.tags,
     ]
       .join(' ')
       .toLocaleLowerCase('en-PH');
 
-    return searchable.includes(normalizedQuery);
+    return words.every(word => bilingualSearch(searchable).includes(word));
   });
 }

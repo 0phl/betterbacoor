@@ -1297,6 +1297,81 @@
   }
 }
 
+/* A separate preference control, outside the primary navigation. */
+.header-language {
+  padding-block: 1rem 0.5rem;
+}
+.language-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  color: #526176;
+}
+.language-switch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.language-switch-options {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid #e8ecf2;
+  border-radius: 0.5rem;
+}
+.language-switch button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 30px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+.language-switch button::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: transparent;
+}
+.language-switch button:hover {
+  color: #00329e;
+  background: #f7f8fa;
+}
+.language-switch button[aria-pressed='true'] {
+  color: #00329e;
+  background: #edf3ff;
+}
+.language-switch button[aria-pressed='true']::before {
+  background: currentColor;
+}
+.language-switch button:focus-visible {
+  outline: 2px solid #00329e;
+  outline-offset: 2px;
+}
+@media (pointer: coarse) {
+  .language-switch button {
+    min-height: 44px;
+  }
+}
+@media (min-width: 1536px) {
+  .header-language {
+    padding: 0;
+    margin-left: 0.5rem;
+  }
+  .language-switch-label span {
+    display: none;
+  }
+}
+
 /* Local directory and optional offline essentials */
 .local-directory {
   margin-top: 3rem;

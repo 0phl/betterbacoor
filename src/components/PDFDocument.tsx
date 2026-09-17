@@ -1,3 +1,4 @@
+import { t, useLanguage, phrase } from '../i18n';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
@@ -17,6 +18,7 @@ export default function PDFDocument({
   page: number;
   onPageChange: (page: number) => void;
 }) {
+  const language = useLanguage();
   const [document, setDocument] = useState<PDFDocumentProxy | null>(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(true);
@@ -89,7 +91,10 @@ export default function PDFDocument({
         canvas.setAttribute('role', 'img');
         canvas.setAttribute(
           'aria-label',
-          `Charter PDF page ${page}. An accessible text version is available below.`
+          phrase(
+            `Charter PDF page ${page}. An accessible text version is available below.`,
+            `Pahina ${page} ng Charter PDF. May tekstong bersiyon sa ibaba.`
+          )
         );
         renderTask = pdfPage.render({
           canvas,
@@ -122,7 +127,7 @@ export default function PDFDocument({
       active = false;
       renderTask?.cancel();
     };
-  }, [document, page, width]);
+  }, [document, page, width, language]);
 
   function jump(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -137,20 +142,20 @@ export default function PDFDocument({
   return (
     <section
       className="pdf-reader"
-      aria-label="Citizen’s Charter document viewer"
+      aria-label={t('Citizen’s Charter document viewer')}
     >
       <div className="pdf-controls">
         <button
           type="button"
           disabled={page <= 1}
           onClick={() => onPageChange(page - 1)}
-          aria-label="Previous PDF page"
+          aria-label={t('Previous PDF page')}
         >
           <ChevronLeft size={19} aria-hidden="true" />
-          <span>Previous</span>
+          <span>{t('Previous')}</span>
         </button>
         <form onSubmit={jump}>
-          <label htmlFor="pdf-page">PDF page</label>
+          <label htmlFor="pdf-page">{t('PDF page')}</label>
           <input
             id="pdf-page"
             type="number"
@@ -161,36 +166,45 @@ export default function PDFDocument({
             value={pageInput}
             onChange={event => setPageInput(event.target.value)}
           />
-          <span>of {document?.numPages ?? 1202}</span>
-          <button type="submit">Go</button>
+          <span>
+            {t('of ')}
+            {document?.numPages ?? 1202}
+          </span>
+          <button type="submit">{t('Go')}</button>
         </form>
         <button
           type="button"
           disabled={page >= (document?.numPages ?? 1202)}
           onClick={() => onPageChange(page + 1)}
-          aria-label="Next PDF page"
+          aria-label={t('Next PDF page')}
         >
-          <span>Next</span>
+          <span>{t('Next')}</span>
           <ChevronRight size={19} aria-hidden="true" />
         </button>
       </div>
       <p role="status" className="pdf-status">
-        {error ||
+        {t(error) ||
           (busy
-            ? `Loading PDF page ${page}…`
-            : `PDF page ${page} of ${document?.numPages}`)}
+            ? phrase(
+                `Loading PDF page ${page}…`,
+                `Binubuksan ang pahina ${page} ng PDF…`
+              )
+            : `${t('PDF page')} ${page} ${t('of')} ${document?.numPages}`)}
       </p>
       <div className="pdf-canvas" ref={host} aria-busy={busy} />
       {!busy && !error && (
         <details className="pdf-text">
-          <summary>Text version of this page</summary>
+          <summary>{t('Text version of this page')}</summary>
           <p className="reader-fallback">
-            Extracted from the original PDF. Table columns may read out of
-            order; our service guides summarize the selected procedures.
+            {t(
+              'Extracted from the original PDF. Table columns may read out of order; our service guides summarize the selected procedures.'
+            )}
           </p>
-          <pre>
+          <pre lang="en">
             {text.trim() ||
-              'This page has no extractable text. Use the visual page above or contact the responsible office.'}
+              t(
+                'This page has no extractable text. Use the visual page above or contact the responsible office.'
+              )}
           </pre>
         </details>
       )}

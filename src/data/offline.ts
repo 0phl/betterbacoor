@@ -1,9 +1,11 @@
+import { getLanguage, type Language } from '../i18n';
 const CACHE = 'betterbacoor-emergency-v1';
 export const offlineGuidePath = '/offline/emergency.html';
 export interface OfflineSnapshot {
   savedAt: string;
   reviewed: string;
   version: string;
+  language?: Language;
 }
 export const supportsOffline = () =>
   window.isSecureContext && 'serviceWorker' in navigator && 'caches' in window;
@@ -15,7 +17,11 @@ export async function readOfflineSnapshot(): Promise<OfflineSnapshot | null> {
   const savedAt = response.headers.get('X-BB-Saved');
   const reviewed = response.headers.get('X-BB-Reviewed');
   const version = response.headers.get('X-BB-Version');
-  return savedAt && reviewed && version ? { savedAt, reviewed, version } : null;
+  const language =
+    response.headers.get('X-BB-Language') === 'fil' ? 'fil' : 'en';
+  return savedAt && reviewed && version
+    ? { savedAt, reviewed, version, language }
+    : null;
 }
 
 export async function changeOfflineGuide(
@@ -69,6 +75,8 @@ export async function changeOfflineGuide(
           )
         );
     };
-    registration.active!.postMessage({ type }, [channel.port2]);
+    registration.active!.postMessage({ type, language: getLanguage() }, [
+      channel.port2,
+    ]);
   });
 }

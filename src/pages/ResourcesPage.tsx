@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import { Link, useSearchParams } from 'react-router-dom';
 import { PageIntro } from '../components/PageIntro';
 import { PageMeta } from '../components/PageMeta';
@@ -25,6 +26,7 @@ export function ResourcesPage({
   categories,
   searchLabel,
 }: ResourcesPageProps) {
+  useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('q') ?? '';
 
@@ -44,15 +46,16 @@ export function ResourcesPage({
       <PageIntro eyebrow={eyebrow} title={title} description={description} />
       {!categories &&
         (!query.trim() ||
-          /emergency|hotline|flood|fire|rescue|disaster|police|ambulance|typhoon|earthquake|tsunami|baha|sunog|saklolo|911|161/i.test(
+          /emergency|hotline|flood|fire|rescue|disaster|police|ambulance|typhoon|earthquake|tsunami|baha|sunog|saklolo|lindol|bagyo|pulis|ambulansiya|sakuna|911|161/i.test(
             query
           )) && (
           <Link to="/emergency" className="search-emergency-result">
-            <span className="eyebrow">ON BETTERBACOOR</span>
-            <strong>Emergency help & hotlines</strong>
+            <span className="eyebrow">{t('ON BETTERBACOOR')}</span>
+            <strong>{t('Emergency help & hotlines')}</strong>
             <span>
-              Bacoor 161, national 911, local responders, and flood, fire, and
-              disaster guidance.
+              {t(
+                'Bacoor 161, national 911, local responders, and flood, fire, and disaster guidance.'
+              )}
             </span>
           </Link>
         )}
@@ -60,12 +63,12 @@ export function ResourcesPage({
         findGuides(query).length > 0 && (
           <section
             className="mt-10"
-            aria-label="Guides you can use on BetterBacoor"
+            aria-label={t('Guides you can use on BetterBacoor')}
           >
             <div className="section-heading">
               <div>
-                <p className="eyebrow">READ & PREPARE HERE</p>
-                <h2>Guides for your next step</h2>
+                <p className="eyebrow">{t('READ & PREPARE HERE')}</p>
+                <h2>{t('Guides for your next step')}</h2>
               </div>
             </div>
             <GuideCards query={query} />
@@ -78,11 +81,16 @@ export function ResourcesPage({
             to={`/directories?q=${encodeURIComponent(query)}`}
             className="search-emergency-result"
           >
-            <span className="eyebrow">ON BETTERBACOOR</span>
-            <strong>Local places matching “{query}”</strong>
+            <span className="eyebrow">{t('ON BETTERBACOOR')}</span>
+            <strong>
+              {t('Local places matching “')}
+              {query}”
+            </strong>
             <span>
-              {findDirectoryEntries(query).length} barangay, hospital, or health
-              center matches. Read contact details here.
+              {findDirectoryEntries(query).length}
+              {t(
+                ' barangay, hospital, or health center matches. Read contact details here.'
+              )}
             </span>
           </Link>
         )}

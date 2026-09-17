@@ -1,5 +1,6 @@
 dist/
 public/offline/emergency.html
+public/offline/emergency-fil.html
 node_modules/
 coverage/
 package-lock.json

@@ -14,4 +14,8 @@ fs.writeFileSync(
   new URL('emergency.html', destination),
   renderOfflineEmergency(data, logo)
 );
+fs.writeFileSync(
+  new URL('emergency-fil.html', destination),
+  renderOfflineEmergency(data, logo, 'fil')
+);
 console.log('Generated self-contained emergency essentials.');

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/build-offline.mjs && vite",
-    "build": "npm run validate:content && npm run validate:brand && npm run check:language && node scripts/build-offline.mjs && tsc -b && vite build",
+    "build": "npm run validate:content && npm run validate:brand && npm run check:language && npm run validate:translations && node scripts/build-offline.mjs && tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -15,6 +15,7 @@
     "validate:brand": "node scripts/validate-brand-assets.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "check:language": "node scripts/check-language.mjs",
+    "validate:translations": "node scripts/validate-translations.mjs",
     "check": "npm run format:check && npm run lint && npm run test && npm run build",
     "preview": "vite preview",
     "prepare": "husky"

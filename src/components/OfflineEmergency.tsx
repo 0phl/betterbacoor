@@ -1,3 +1,4 @@
+import { t, useLanguage, phrase } from '../i18n';
 import { useEffect, useState } from 'react';
 import {
   ArrowUpRight,
@@ -15,6 +16,7 @@ import {
 } from '../data/offline';
 
 export function OfflineEmergency() {
+  const language = useLanguage();
   const [snapshot, setSnapshot] = useState<OfflineSnapshot | null>(null);
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState('');
@@ -66,27 +68,42 @@ export function OfflineEmergency() {
           <WifiOff size={23} aria-hidden="true" />
         </span>
         <div>
-          <p className="eyebrow">READY BEFORE YOU NEED IT</p>
-          <h2 id="offline-title">Keep help available offline.</h2>
+          <p className="eyebrow">{t('READY BEFORE YOU NEED IT')}</p>
+          <h2 id="offline-title">{t('Keep help available offline.')}</h2>
         </div>
       </div>
       <p>
-        Save all seven hotlines and safety guidance for this browser. Open the
-        saved guide even when you lose internet access. Calls still need phone
-        service.
+        {t(
+          'Save all seven hotlines and safety guidance for this browser. Open the saved guide even when you lose internet access. Calls still need phone service.'
+        )}
       </p>
       {snapshot && (
         <p className="offline-snapshot">
-          Saved{' '}
-          {new Date(snapshot.savedAt).toLocaleDateString('en-PH', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric',
-          })}{' '}
-          · Information snapshot: {snapshot.reviewed}
+          {t('Saved')}{' '}
+          {new Date(snapshot.savedAt).toLocaleDateString(
+            language === 'fil' ? 'fil-PH' : 'en-PH',
+            {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            }
+          )}{' '}
+          {t('· Information snapshot: ')}
+          {snapshot.reviewed}
           {overdue
-            ? ' · Due for a source review. Reconnect and check for updates.'
-            : ''}
+            ? t(' · Due for a source review. Reconnect and check for updates.')
+            : t('')}
+        </p>
+      )}
+      {snapshot && (
+        <p className="offline-snapshot">
+          {phrase('Saved language:', 'Wika ng naka-save na gabay:')}{' '}
+          {(snapshot.language ?? 'en') === 'fil' ? 'Filipino' : 'English'}.{' '}
+          {(snapshot.language ?? 'en') !== language &&
+            phrase(
+              'Refresh to save this guide in English.',
+              'I-update para i-save ang gabay sa Filipino.'
+            )}
         </p>
       )}
       {supportsOffline() ? (
@@ -102,16 +119,19 @@ export function OfflineEmergency() {
             ) : (
               <Download size={17} aria-hidden="true" />
             )}
-            {busy
-              ? 'Please wait…'
-              : snapshot
-                ? 'Refresh saved guide'
-                : 'Save emergency essentials'}
+            {t(
+              busy
+                ? 'Please wait…'
+                : snapshot
+                  ? 'Refresh saved guide'
+                  : 'Save emergency essentials'
+            )}
           </button>
           {snapshot && (
             <>
               <a href={offlineGuidePath} className="text-link">
-                Open saved guide <ArrowUpRight size={16} aria-hidden="true" />
+                {t('Open saved guide ')}
+                <ArrowUpRight size={16} aria-hidden="true" />
               </a>
               <button
                 className="offline-remove"
@@ -119,24 +139,26 @@ export function OfflineEmergency() {
                 type="button"
                 onClick={() => change('REMOVE_EMERGENCY')}
               >
-                <Trash2 size={16} aria-hidden="true" /> Remove
+                <Trash2 size={16} aria-hidden="true" />
+                {t(' Remove')}
               </button>
             </>
           )}
         </div>
       ) : (
         <p className="offline-snapshot">
-          Offline saving is unavailable in this browser. Use “Save contact card”
-          below for a downloadable backup.
+          {t(
+            'Offline saving is unavailable in this browser. Use “Save contact card” below for a downloadable backup.'
+          )}
         </p>
       )}
       <p className="offline-feedback" aria-live="polite">
-        {error || message}
+        {t(error || message)}
       </p>
       <p className="offline-fine-print">
-        Saved only on this device. Clearing browser storage can remove it. This
-        is a reference guide, not live weather, road, or evacuation-center
-        information.
+        {t(
+          'Saved only on this device. Clearing browser storage can remove it. This is a reference guide, not live weather, road, or evacuation-center information.'
+        )}
       </p>
     </section>
   );

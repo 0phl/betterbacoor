@@ -7,11 +7,14 @@ self.addEventListener('activate', event =>
   event.waitUntil(self.clients.claim())
 );
 
-async function saveGuide() {
-  const response = await fetch(PAGE, {
-    cache: 'no-store',
-    signal: AbortSignal.timeout(15000),
-  });
+async function saveGuide(language = 'en') {
+  const response = await fetch(
+    language === 'fil' ? '/offline/emergency-fil.html' : PAGE,
+    {
+      cache: 'no-store',
+      signal: AbortSignal.timeout(15000),
+    }
+  );
   if (
     !response.ok ||
     !response.headers.get('content-type')?.includes('text/html')
@@ -26,21 +29,24 @@ async function saveGuide() {
   )?.[1];
   if (!version || !reviewed || !html.includes('id="saved-state"'))
     throw new Error('Invalid guide response.');
+  if (!html.includes(`name="bb-emergency-language" content="${language}"`))
+    throw new Error('The downloaded guide is in a different language.');
   const savedAt = new Date().toISOString();
   html = html.replace(
     /(<strong id="saved-state">)[^<]*(<\/strong>)/,
-    `$1Saved in this browser · ${savedAt.slice(0, 10)} (UTC)$2`
+    `$1${language === 'fil' ? 'Na-save sa browser na ito' : 'Saved in this browser'} · ${savedAt.slice(0, 10)} (UTC)$2`
   );
   const headers = new Headers({
     'Content-Type': 'text/html; charset=utf-8',
     'X-BB-Saved': savedAt,
     'X-BB-Reviewed': reviewed,
     'X-BB-Version': version,
+    'X-BB-Language': language,
   });
   const cache = await caches.open(CACHE);
   // Replace only after the complete download has passed validation.
   await cache.put(PAGE, new Response(html, { headers }));
-  return { savedAt, reviewed, version };
+  return { savedAt, reviewed, version, language };
 }
 
 self.addEventListener('message', event => {
@@ -58,7 +64,7 @@ self.addEventListener('message', event => {
       try {
         const snapshot =
           event.data.type === 'SAVE_EMERGENCY'
-            ? await saveGuide()
+            ? await saveGuide(event.data.language === 'fil' ? 'fil' : 'en')
             : (await caches.delete(CACHE), null);
         port.postMessage({ ok: true, snapshot });
       } catch {

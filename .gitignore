@@ -2,6 +2,7 @@
 node_modules/
 dist/
 public/offline/emergency.html
+public/offline/emergency-fil.html
 coverage/
 *.tsbuildinfo
 

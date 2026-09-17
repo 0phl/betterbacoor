@@ -1,7 +1,9 @@
+import { t, useLanguage } from '../i18n';
 import { ArrowRight, Search } from 'lucide-react';
 import { type FormEvent, useId, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 export function HomeSearch() {
+  useLanguage();
   const [query, setQuery] = useState('');
   const inputId = useId();
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ export function HomeSearch() {
     <div className="home-search">
       <form role="search" onSubmit={submitSearch}>
         <label htmlFor={inputId} className="sr-only">
-          Search all verified Bacoor resources
+          {t('Search all verified Bacoor resources')}
         </label>
         <div className="home-search-field">
           <Search size={21} aria-hidden="true" />
@@ -23,18 +25,18 @@ export function HomeSearch() {
             type="search"
             value={query}
             onChange={event => setQuery(event.target.value)}
-            placeholder="What can we help you find?"
+            placeholder={t('What can we help you find?')}
           />
-          <button type="submit" aria-label="Search">
+          <button type="submit" aria-label={t('Search')}>
             <ArrowRight size={22} aria-hidden="true" />
           </button>
         </div>
       </form>
       <div className="search-shortcuts">
-        <span>Start with:</span>
-        <Link to="/services/business-permit">Business permit guide</Link>
-        <Link to="/services/civil-registry">Birth & civil records</Link>
-        <Link to="/services/working-permit">Working permit</Link>
+        <span>{t('Start with:')}</span>
+        <Link to="/services/business-permit">{t('Business permit guide')}</Link>
+        <Link to="/services/civil-registry">{t('Birth & civil records')}</Link>
+        <Link to="/services/working-permit">{t('Working permit')}</Link>
       </div>
     </div>
   );

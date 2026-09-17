@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -84,6 +85,7 @@ const topics = [
 ];
 
 export function Home() {
+  useLanguage();
   const featured = [
     'bacoor-one-stop-shop',
     'bacoor-barangay-directory',
@@ -95,30 +97,34 @@ export function Home() {
   return (
     <>
       <PageMeta
-        title="BetterBacoor"
-        description="Your community guide to Bacoor. Find government services, local offices, useful resources, and public records in one place."
+        title={t('BetterBacoor')}
+        description={t(
+          'Your community guide to Bacoor. Find government services, local offices, useful resources, and public records in one place.'
+        )}
       />
       <section className="home-hero">
         <div className="page-shell hero-grid">
           <div className="hero-copy">
             <p className="hero-eyebrow">
-              BACOOR, CAVITE · BUILT FOR THE COMMUNITY
+              {t('BACOOR, CAVITE · BUILT FOR THE COMMUNITY')}
             </p>
             <h1>
-              Bacoor,
+              {t('Bacoor,')}
               <br />
-              made <span>easier.</span>
+              {t('made ')}
+              <span>{t('easier.')}</span>
             </h1>
             <p className="hero-description">
-              A little less paperwork. A little more living. Clear guides,
-              useful contacts, and everyday help for our community.
+              {t(
+                'A little less paperwork. A little more living. Clear guides, useful contacts, and everyday help for our community.'
+              )}
             </p>
             <HomeSearch />
           </div>
           <section className="quick-panel" aria-labelledby="quick-title">
             <div className="quick-panel-heading">
-              <span className="eyebrow">LET’S GET YOU STARTED</span>
-              <h2 id="quick-title">What brings you here?</h2>
+              <span className="eyebrow">{t('LET’S GET YOU STARTED')}</span>
+              <h2 id="quick-title">{t('What brings you here?')}</h2>
             </div>
             {quickTasks.map(({ label, detail, to, icon: Icon }) => (
               <Link className="quick-task" to={to} key={to}>
@@ -126,29 +132,30 @@ export function Home() {
                   <Icon size={21} aria-hidden="true" />
                 </span>
                 <span>
-                  <strong>{label}</strong>
-                  <small>{detail}</small>
+                  <strong>{t(label)}</strong>
+                  <small>{t(detail)}</small>
                 </span>
                 <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
             ))}
             <Link to="/services" className="quick-panel-footer">
-              Explore all services <ArrowRight size={16} aria-hidden="true" />
+              {t('Explore all services ')}
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </section>
         </div>
         <div className="hero-baseline">
           <div className="page-shell">
             <span>
-              <ShieldCheck size={16} aria-hidden="true" /> Clear guides.
-              Official sources.
+              <ShieldCheck size={16} aria-hidden="true" />
+              {t(' Clear guides. Official sources.')}
             </span>
             <span>
-              <Users size={16} aria-hidden="true" /> Community-run. Free for
-              everyone.
+              <Users size={16} aria-hidden="true" />
+              {t(' Community-run. Free for everyone.')}
             </span>
             <Link to="/about">
-              Get to know BetterBacoor{' '}
+              {t('Get to know BetterBacoor')}{' '}
               <ArrowRight size={15} aria-hidden="true" />
             </Link>
           </div>
@@ -160,15 +167,17 @@ export function Home() {
       >
         <div className="section-heading">
           <div>
-            <p className="eyebrow">LET’S MAKE IT SIMPLE</p>
-            <h2 id="guides-title">Know what to do. Before you go.</h2>
+            <p className="eyebrow">{t('LET’S MAKE IT SIMPLE')}</p>
+            <h2 id="guides-title">{t('Know what to do. Before you go.')}</h2>
             <p>
-              Read the steps, prepare your documents, and keep your own
-              checklist.
+              {t(
+                'Read the steps, prepare your documents, and keep your own checklist.'
+              )}
             </p>
           </div>
           <Link className="text-link" to="/services">
-            All service guides <ArrowRight size={17} aria-hidden="true" />
+            {t('All service guides ')}
+            <ArrowRight size={17} aria-hidden="true" />
           </Link>
         </div>
         <GuideCards />
@@ -179,11 +188,12 @@ export function Home() {
       >
         <div className="section-heading">
           <div>
-            <p className="eyebrow">YOUR CITY, WITHIN REACH</p>
-            <h2 id="topics-title">A little help for everyday life.</h2>
+            <p className="eyebrow">{t('YOUR CITY, WITHIN REACH')}</p>
+            <h2 id="topics-title">{t('A little help for everyday life.')}</h2>
           </div>
           <Link className="text-link" to="/search">
-            Browse all resources <ArrowRight size={17} aria-hidden="true" />
+            {t('Browse all resources ')}
+            <ArrowRight size={17} aria-hidden="true" />
           </Link>
         </div>
         <div className="topic-grid">
@@ -197,8 +207,8 @@ export function Home() {
                 <Icon size={23} strokeWidth={1.6} aria-hidden="true" />
               </span>
               <span>
-                <h3>{title}</h3>
-                <p>{description}</p>
+                <h3>{t(title)}</h3>
+                <p>{t(description)}</p>
               </span>
               <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
@@ -211,15 +221,19 @@ export function Home() {
             <BookOpen size={30} strokeWidth={1.5} aria-hidden="true" />
           </span>
           <div>
-            <p className="eyebrow">BEFORE YOU VISIT CITY HALL</p>
-            <h2 id="charter-title">A clearer path through the paperwork.</h2>
+            <p className="eyebrow">{t('BEFORE YOU VISIT CITY HALL')}</p>
+            <h2 id="charter-title">
+              {t('A clearer path through the paperwork.')}
+            </h2>
             <p>
-              Find service requirements, steps, and office information in
-              Bacoor’s 2026 Citizen’s Charter.
+              {t(
+                'Find service requirements, steps, and office information in Bacoor’s 2026 Citizen’s Charter.'
+              )}
             </p>
           </div>
           <Link to="/charter" className="button-primary">
-            Read the charter here <ArrowRight size={17} aria-hidden="true" />
+            {t('Read the charter here ')}
+            <ArrowRight size={17} aria-hidden="true" />
           </Link>
         </div>
       </section>
@@ -229,13 +243,16 @@ export function Home() {
       >
         <div className="section-heading">
           <div>
-            <p className="eyebrow">GOOD PLACES TO START</p>
-            <h2 id="resources-title">Useful links, all in one place.</h2>
-            <p>Go straight to the office or official service you need.</p>
+            <p className="eyebrow">{t('GOOD PLACES TO START')}</p>
+            <h2 id="resources-title">{t('Useful links, all in one place.')}</h2>
+            <p>
+              {t('Go straight to the office or official service you need.')}
+            </p>
           </div>
           <Link className="text-link" to="/search">
-            View all {resources.length} resources{' '}
-            <ArrowRight size={17} aria-hidden="true" />
+            {t('View all ')}
+            {resources.length}
+            {t(' resources')} <ArrowRight size={17} aria-hidden="true" />
           </Link>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
@@ -253,27 +270,32 @@ export function Home() {
             <figure className="community-art">
               <img
                 src="/images/community-life.png"
-                alt="Illustration of neighbors, a small shop, and a jeepney in a Filipino community"
+                alt={t(
+                  'Illustration of neighbors, a small shop, and a jeepney in a Filipino community'
+                )}
                 width="1536"
                 height="1024"
                 loading="lazy"
               />
               <figcaption>
-                A community illustration, created for BetterBacoor.
+                {t('A community illustration, created for BetterBacoor.')}
               </figcaption>
             </figure>
             <div>
-              <p className="eyebrow">BY THE COMMUNITY. FOR THE COMMUNITY.</p>
+              <p className="eyebrow">
+                {t('BY THE COMMUNITY. FOR THE COMMUNITY.')}
+              </p>
               <h2 id="community-story-title">
-                A better Bacoor starts with all of us.
+                {t('A better Bacoor starts with all of us.')}
               </h2>
               <p>
-                Local guides, useful tools, and information we can trust. Built
-                for our neighbors in Bacoor, alongside a wider community working
-                to make public information better for everyone.
+                {t(
+                  'Local guides, useful tools, and information we can trust. Built for our neighbors in Bacoor, alongside a wider community working to make public information better for everyone.'
+                )}
               </p>
               <Link className="text-link" to="/about">
-                Our story <ArrowRight size={18} aria-hidden="true" />
+                {t('Our story ')}
+                <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </div>
           </section>

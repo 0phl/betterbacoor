@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import { Search, X } from 'lucide-react';
 import { useEffect, useId, useMemo, useState } from 'react';
 import { categoryLabels, filterResources, resources } from '../data/resources';
@@ -17,6 +18,7 @@ export function ResourceExplorer({
   initialQuery = '',
   onQueryChange,
 }: ResourceExplorerProps) {
+  useLanguage();
   const [query, setQuery] = useState(initialQuery);
   const [selectedCategory, setSelectedCategory] = useState<
     ResourceCategory | 'all'
@@ -48,7 +50,7 @@ export function ResourceExplorer({
   }
 
   return (
-    <section aria-label={label}>
+    <section aria-label={t(label)}>
       <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -56,10 +58,10 @@ export function ResourceExplorer({
               htmlFor={inputId}
               className="text-sm font-semibold text-slate-950"
             >
-              {label}
+              {t(label)}
             </label>
             <p className="mt-1 text-sm text-slate-600">
-              Try a service, office, or something you need help with.
+              {t('Try a service, office, or something you need help with.')}
             </p>
           </div>
           <p
@@ -68,7 +70,8 @@ export function ResourceExplorer({
             aria-live="polite"
           >
             {filteredResources.length}{' '}
-            {filteredResources.length === 1 ? 'resource' : 'resources'} found
+            {filteredResources.length === 1 ? t('resource') : t('resources')}
+            {t(' found')}
           </p>
         </div>
 
@@ -83,14 +86,14 @@ export function ResourceExplorer({
             value={query}
             onChange={event => updateQuery(event.target.value)}
             aria-describedby={resultCountId}
-            placeholder="Try permits, hospital, barangay, or procurement"
+            placeholder={t('Try permits, hospital, barangay, or procurement')}
             className="min-h-14 w-full rounded-xl border border-slate-300 bg-white py-3 pl-12 pr-12 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-civic-500 focus:ring-4 focus:ring-civic-100"
           />
           {query && (
             <button
               type="button"
               onClick={() => updateQuery('')}
-              aria-label="Clear search"
+              aria-label={t('Clear search')}
               className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
             >
               <X aria-hidden="true" className="h-5 w-5" />
@@ -102,7 +105,7 @@ export function ResourceExplorer({
       <div
         className="filter-chips"
         role="group"
-        aria-label="Filter by resource type"
+        aria-label={t('Filter by resource type')}
       >
         <button
           type="button"
@@ -112,7 +115,7 @@ export function ResourceExplorer({
           }
           onClick={() => setSelectedCategory('all')}
         >
-          All resources
+          {t('All resources')}
         </button>
         {allowedCategories.length > 1 &&
           allowedCategories.map(category => (
@@ -122,7 +125,7 @@ export function ResourceExplorer({
               aria-pressed={selectedCategory === category}
               onClick={() => setSelectedCategory(category)}
             >
-              {categoryLabels[category]}
+              {t(categoryLabels[category])}
             </button>
           ))}
       </div>
@@ -140,11 +143,12 @@ export function ResourceExplorer({
       ) : (
         <div className="mt-7 rounded-2xl border border-dashed border-slate-300 bg-white p-9 text-center">
           <h2 className="text-xl font-bold text-slate-950">
-            No matching resource
+            {t('No matching resource')}
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-600">
-            Try a shorter term such as “permit” or “office”, select All
-            resources, or clear your search to browse the available links.
+            {t(
+              'Try a shorter term such as “permit” or “office”, select All resources, or clear your search to browse the available links.'
+            )}
           </p>
         </div>
       )}

@@ -1,4 +1,5 @@
 import data from '../../content/local-directory.json';
+import { bilingualSearch } from './search';
 
 export const directory = data;
 export type DirectoryEntry = (typeof data.entries)[number];
@@ -25,7 +26,7 @@ export function normalizeDirectoryQuery(value: string) {
     vii: '7',
     viii: '8',
   };
-  return value
+  return bilingualSearch(value)
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')

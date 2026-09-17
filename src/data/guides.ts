@@ -1,3 +1,6 @@
+import { bilingualSearch } from './search';
+import { translate } from '../i18n';
+
 export interface GuideVariant {
   id: string;
   label: string;
@@ -222,12 +225,12 @@ export const guides: ServiceGuide[] = [
 ];
 
 export function findGuides(query: string) {
-  const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const words = bilingualSearch(query).split(/\s+/).filter(Boolean);
   return guides.filter(guide =>
     words.every(word =>
-      `${guide.title} ${guide.summary} ${guide.keywords}`
-        .toLowerCase()
-        .includes(word)
+      bilingualSearch(
+        `${guide.title} ${guide.summary} ${guide.keywords} ${translate(guide.title, 'fil')} ${translate(guide.summary, 'fil')}`
+      ).includes(word)
     )
   );
 }

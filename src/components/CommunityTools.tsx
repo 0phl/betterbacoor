@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import { ArrowUpRight, Database, FileSearch, Landmark } from 'lucide-react';
 const tools = [
   {
@@ -23,19 +24,23 @@ const tools = [
   },
 ];
 export function CommunityTools({ compact = false }: { compact?: boolean }) {
+  useLanguage();
   return (
     <section aria-labelledby="community-tools-title">
       <div className="section-heading">
         <div>
-          {!compact && <p className="eyebrow">PART OF A BIGGER MOVEMENT</p>}
+          {!compact && (
+            <p className="eyebrow">{t('PART OF A BIGGER MOVEMENT')}</p>
+          )}
           <h2 id="community-tools-title">
             {compact
-              ? 'More help from the BetterGov community.'
-              : 'Better tools. More informed communities.'}
+              ? t('More help from the BetterGov community.')
+              : t('Better tools. More informed communities.')}
           </h2>
           <p>
-            Independent, community-built tools from BetterGov. These open on a
-            separate website.
+            {t(
+              'Independent, community-built tools from BetterGov. These open on a separate website.'
+            )}
           </p>
         </div>
         <a
@@ -44,7 +49,8 @@ export function CommunityTools({ compact = false }: { compact?: boolean }) {
           target="_blank"
           rel="noreferrer"
         >
-          All BetterGov projects <ArrowUpRight size={17} aria-hidden="true" />
+          {t('All BetterGov projects ')}
+          <ArrowUpRight size={17} aria-hidden="true" />
         </a>
       </div>
       <div
@@ -62,9 +68,9 @@ export function CommunityTools({ compact = false }: { compact?: boolean }) {
               <Icon size={25} strokeWidth={1.5} aria-hidden="true" />
               <ArrowUpRight size={18} aria-hidden="true" />
             </div>
-            <h3>{name}</h3>
-            <p>{description}</p>
-            <span>BETTERGOV.PH</span>
+            <h3>{t(name)}</h3>
+            <p>{t(description)}</p>
+            <span>{t('BETTERGOV.PH')}</span>
           </a>
         ))}
       </div>

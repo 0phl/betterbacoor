@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import {
   ArrowRight,
   ExternalLink,
@@ -12,6 +13,7 @@ import {
 import { useLayoutEffect, useRef, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { BrandMark } from './BrandMark';
+import { LanguageSwitch } from './LanguageSwitch';
 
 const navigation = [
   { to: '/', label: 'Home', end: true },
@@ -42,6 +44,7 @@ function RouteChangeManager() {
 }
 
 export function Layout() {
+  useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -55,7 +58,7 @@ export function Layout() {
         href="#main-content"
         className="sr-only z-[100] rounded-lg bg-white px-4 py-3 font-semibold text-civic-800 shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
       >
-        Skip to content
+        {t('Skip to content')}
       </a>
 
       <header className="relative z-40">
@@ -67,9 +70,11 @@ export function Layout() {
                 className="h-3.5 w-3.5 shrink-0 text-civic-600"
               />
               <span>
-                <strong>Unofficial and community-run.</strong>{' '}
-                <span className="hidden xl:inline">
-                  Not operated by or endorsed by the City Government of Bacoor.
+                <strong>{t('Unofficial and community-run.')}</strong>{' '}
+                <span className="hidden 2xl:inline">
+                  {t(
+                    'Not operated by or endorsed by the City Government of Bacoor.'
+                  )}
                 </span>
               </span>
             </p>
@@ -80,24 +85,26 @@ export function Layout() {
                 rel="noreferrer"
                 className="utility-city-link"
               >
-                Official city portal
+                {t('Official city portal')}
                 <ExternalLink aria-hidden="true" className="h-3 w-3" />
               </a>
               <a
                 className="utility-emergency-call"
                 href="tel:161"
-                aria-label="Call 161 — Bacoor emergency hotline"
+                aria-label={t('Call 161 — Bacoor emergency hotline')}
               >
                 <Phone size={13} aria-hidden="true" />
-                <span className="utility-emergency-label">Emergency?</span>
-                <strong>Call 161</strong>
+                <span className="utility-emergency-label">
+                  {t('Emergency?')}
+                </span>
+                <strong>{t('Call 161')}</strong>
               </a>
             </div>
           </div>
         </div>
 
         <div className="modern-navbar">
-          <div className="page-shell flex min-h-[6rem] flex-wrap items-center justify-between gap-x-2 py-2.5 sm:min-h-[6.75rem] xl:gap-x-5">
+          <div className="page-shell flex min-h-[6rem] flex-wrap items-center justify-between gap-x-2 py-2.5 sm:min-h-[6.75rem] 2xl:gap-x-5">
             <NavLink
               to="/"
               className="navbar-brand inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-4"
@@ -105,21 +112,21 @@ export function Layout() {
               <BrandMark className="h-16 w-16 shrink-0 sm:h-20 sm:w-20" />
               <span>
                 <span className="block text-lg font-bold tracking-[-0.035em] text-slate-950 sm:text-xl">
-                  BetterBacoor.org
+                  {t('BetterBacoor.org')}
                 </span>
                 <span className="mt-1 block text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-slate-500">
-                  Civic guide
+                  {t('Civic guide')}
                 </span>
               </span>
             </NavLink>
 
             <button
               type="button"
-              aria-controls="primary-navigation"
+              aria-controls="primary-navigation header-language"
               aria-expanded={menuOpen}
-              aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+              aria-label={t(menuOpen ? 'Close navigation' : 'Open navigation')}
               onClick={() => setMenuOpen(open => !open)}
-              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 xl:hidden"
+              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 2xl:hidden"
             >
               {menuOpen ? (
                 <X aria-hidden="true" className="h-5 w-5" />
@@ -130,38 +137,44 @@ export function Layout() {
 
             <nav
               id="primary-navigation"
-              aria-label="Primary navigation"
-              className={`${menuOpen ? 'block' : 'hidden'} w-full border-t border-slate-200 pt-3 xl:block xl:w-auto xl:border-0 xl:pt-0`}
+              aria-label={t('Primary navigation')}
+              className={`${menuOpen ? 'block' : 'hidden'} w-full border-t border-slate-200 pt-3 2xl:ml-auto 2xl:block 2xl:w-auto 2xl:border-0 2xl:pt-0`}
             >
-              <ul className="nav-links flex flex-col gap-1 xl:flex-row xl:items-center xl:gap-0.5">
+              <ul className="nav-links flex flex-col gap-1 2xl:flex-row 2xl:items-center 2xl:gap-0.5">
                 {navigation.map(item => (
                   <li key={item.to}>
                     <NavLink
                       to={item.to}
                       end={item.end}
                       className={({ isActive }) =>
-                        `inline-flex min-h-10 w-full items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 xl:w-auto ${
+                        `inline-flex min-h-10 w-full items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 2xl:w-auto ${
                           isActive
                             ? 'bg-civic-50 text-civic-800'
                             : 'text-slate-600 hover:bg-slate-50 hover:text-slate-950'
                         }`
                       }
                     >
-                      {item.label}
+                      {t(item.label)}
                     </NavLink>
                   </li>
                 ))}
-                <li className="xl:ml-2">
+                <li className="2xl:ml-2">
                   <NavLink
                     to="/search"
-                    className="inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full bg-civic-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2 xl:w-auto"
+                    className="inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full bg-civic-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600 focus-visible:ring-offset-2 2xl:w-auto"
                   >
                     <Search aria-hidden="true" className="h-4 w-4" />
-                    Search
+                    {t('Search')}
                   </NavLink>
                 </li>
               </ul>
             </nav>
+            <div
+              id="header-language"
+              className={`header-language ${menuOpen ? 'block' : 'hidden'} w-full 2xl:block 2xl:w-auto`}
+            >
+              <LanguageSwitch />
+            </div>
           </div>
         </div>
       </header>
@@ -177,36 +190,36 @@ export function Layout() {
             <div className="flex items-center gap-2.5">
               <BrandMark className="footer-logo" />
               <div>
-                <p className="footer-brand-name">BetterBacoor</p>
+                <p className="footer-brand-name">{t('BetterBacoor')}</p>
                 <p className="text-xs text-slate-500">
-                  Built for our community
+                  {t('Built for our community')}
                 </p>
               </div>
             </div>
             <p className="mt-5 max-w-lg text-sm leading-6 text-slate-600">
-              A community-built home for clearer information and easier everyday
-              life in Bacoor. Learn and prepare here; submit applications and
-              payments through the official city systems.
+              {t(
+                'A community-built home for clearer information and easier everyday life in Bacoor. Learn and prepare here; submit applications and payments through the official city systems.'
+              )}
             </p>
             <div className="footer-socials">
               <a
                 href="https://github.com/0phl"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Visit the creator on GitHub"
+                aria-label={t('Visit the creator on GitHub')}
               >
                 <Github size={20} aria-hidden="true" />
-                <span>GitHub</span>
+                <span>{t('GitHub')}</span>
                 <ExternalLink size={13} aria-hidden="true" />
               </a>
               <a
                 href="https://www.facebook.com/people/BetterBacoororg/61594400221717/"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="BetterBacoor on Facebook"
+                aria-label={t('BetterBacoor on Facebook')}
               >
                 <Facebook size={20} aria-hidden="true" />
-                <span>Facebook</span>
+                <span>{t('Facebook')}</span>
                 <ExternalLink size={13} aria-hidden="true" />
               </a>
             </div>
@@ -214,7 +227,7 @@ export function Layout() {
 
           <div>
             <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
-              Explore
+              {t('Explore')}
             </h2>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
               {navigation.slice(1).map(item => (
@@ -223,7 +236,7 @@ export function Layout() {
                     to={item.to}
                     className="rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
                   >
-                    {item.label}
+                    {t(item.label)}
                   </NavLink>
                 </li>
               ))}
@@ -232,7 +245,7 @@ export function Layout() {
                   to="/search"
                   className="rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
                 >
-                  Search all resources
+                  {t('Search all resources')}
                 </NavLink>
               </li>
             </ul>
@@ -240,7 +253,7 @@ export function Layout() {
 
           <div>
             <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
-              Community
+              {t('Community')}
             </h2>
             <div className="mt-4 flex flex-col items-start gap-3 text-sm text-slate-600">
               <a
@@ -249,7 +262,7 @@ export function Layout() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
-                Explore Better LGUs
+                {t('Explore Better LGUs')}
                 <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
               </a>
               <a
@@ -258,7 +271,7 @@ export function Layout() {
                 rel="noreferrer"
                 className="rounded leading-6 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
-                BetterGov projects
+                {t('BetterGov projects')}
               </a>
             </div>
           </div>
@@ -267,23 +280,23 @@ export function Layout() {
         <div className="border-t border-slate-200">
           <div className="page-shell flex flex-col gap-3 py-5 text-xs leading-5 text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              Based on the{' '}
+              {t('Based on the')}{' '}
               <a
                 href="https://github.com/iyanski/betterlocalgov"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded underline underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
-                BetterLocalGov starter
+                {t('BetterLocalGov starter')}
               </a>{' '}
-              and inspired by the{' '}
+              {t('and inspired by the')}{' '}
               <a
                 href="https://bettergov.ph/"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded underline underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
-                BetterGov.ph community
+                {t('BetterGov.ph community')}
               </a>
               .
             </p>
@@ -291,7 +304,7 @@ export function Layout() {
               to="/about"
               className="inline-flex items-center gap-1.5 rounded font-semibold text-slate-700 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
             >
-              How this guide works
+              {t('How this guide works')}
               <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
             </NavLink>
           </div>

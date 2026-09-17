@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { t, useLanguage } from '../i18n';
 
 interface PageMetaProps {
   title: string;
@@ -9,8 +10,10 @@ const defaultDescription =
   'BetterBacoor is an unofficial, community-run guide to verified Bacoor services, directories, systems, and public records.';
 
 export function PageMeta({ title, description }: PageMetaProps) {
+  const language = useLanguage();
   useEffect(() => {
-    document.title = `${title} | Community-civic Guide to Bacoor`;
+    document.title = `${t(title)} | ${language === 'fil' ? 'Gabay ng Komunidad sa Bacoor' : 'Community-civic Guide to Bacoor'}`;
+    document.documentElement.lang = language;
 
     let meta = document.querySelector<HTMLMetaElement>(
       'meta[name="description"]'
@@ -20,8 +23,8 @@ export function PageMeta({ title, description }: PageMetaProps) {
       meta.name = 'description';
       document.head.append(meta);
     }
-    meta.content = description || defaultDescription;
-  }, [description, title]);
+    meta.content = t(description || defaultDescription);
+  }, [description, title, language]);
 
   return null;
 }

@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import {
   ArrowUpRight,
   BookOpen,
@@ -8,16 +9,21 @@ import { PageIntro } from '../components/PageIntro';
 import { PageMeta } from '../components/PageMeta';
 
 export function About() {
+  useLanguage();
   return (
     <div className="page-shell py-12 sm:py-16 lg:py-20">
       <PageMeta
-        title="About"
-        description="Built by the community, for the community. Learn how BetterBacoor makes useful public information easier to find."
+        title={t('About')}
+        description={t(
+          'Built by the community, for the community. Learn how BetterBacoor makes useful public information easier to find.'
+        )}
       />
       <PageIntro
-        eyebrow="A little more connected. A little better informed."
-        title="For Bacoor. For all of us."
-        description="Finding a service or getting a simple answer should be easy. BetterBacoor brings useful public information together so our community can spend less time searching and more time getting things done."
+        eyebrow={t('A little more connected. A little better informed.')}
+        title={t('For Bacoor. For all of us.')}
+        description={t(
+          'Finding a service or getting a simple answer should be easy. BetterBacoor brings useful public information together so our community can spend less time searching and more time getting things done.'
+        )}
       />
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {[
@@ -39,21 +45,20 @@ export function About() {
         ].map(({ icon: Icon, title, text }) => (
           <section className="resource-card" key={title}>
             <Icon size={27} className="text-civic-700" aria-hidden="true" />
-            <h2>{title}</h2>
-            <p className="resource-summary">{text}</p>
+            <h2>{t(title)}</h2>
+            <p className="resource-summary">{t(text)}</p>
           </section>
         ))}
       </div>
       <section className="mt-10 rounded-xl border border-civic-200 bg-civic-50 p-7 sm:p-9">
-        <p className="eyebrow">THE BETTERGOV COMMUNITY</p>
+        <p className="eyebrow">{t('THE BETTERGOV COMMUNITY')}</p>
         <h2 className="mt-3 text-2xl font-bold tracking-tight">
-          Better public information is something we can build together.
+          {t('Better public information is something we can build together.')}
         </h2>
         <p className="mt-4 max-w-3xl leading-7 text-slate-600">
-          BetterBacoor is inspired by BetterGov.ph and the independent Better
-          LGU projects across the Philippines. We share a belief that open
-          information and thoughtful technology can make everyday life easier
-          for our communities.
+          {t(
+            'BetterBacoor is inspired by BetterGov.ph and the independent Better LGU projects across the Philippines. We share a belief that open information and thoughtful technology can make everyday life easier for our communities.'
+          )}
         </p>
         <div className="mt-5 flex flex-wrap gap-x-7 gap-y-2">
           <a
@@ -62,7 +67,7 @@ export function About() {
             rel="noreferrer"
             className="text-link"
           >
-            Meet the Better LGU community{' '}
+            {t('Meet the Better LGU community')}{' '}
             <ArrowUpRight size={17} aria-hidden="true" />
           </a>
           <a
@@ -71,36 +76,34 @@ export function About() {
             rel="noreferrer"
             className="text-link"
           >
-            Explore BetterGov projects{' '}
+            {t('Explore BetterGov projects')}{' '}
             <ArrowUpRight size={17} aria-hidden="true" />
           </a>
         </div>
       </section>
       <section className="mt-10 max-w-3xl">
         <h2 className="text-xl font-bold tracking-tight">
-          Your checklist stays with you
+          {t('Your checklist stays with you')}
         </h2>
         <p className="mt-4 leading-7 text-slate-600">
-          Service checklists save only the items you tick in this browser. They
-          are not sent to a server or shared across devices. Use Reset checklist
-          to remove your saved progress. No account, personal details, or
-          document uploads are needed.
+          {t(
+            'Service checklists save only the items you tick in this browser. They are not sent to a server or shared across devices. Use Reset checklist to remove your saved progress. No account, personal details, or document uploads are needed.'
+          )}
         </p>
       </section>
       <section className="mt-10 max-w-3xl">
         <h2 className="text-xl font-bold tracking-tight">
-          Independent and community-run
+          {t('Independent and community-run')}
         </h2>
         <p className="mt-4 leading-7 text-slate-600">
-          BetterBacoor is not operated by or endorsed by the City Government of
-          Bacoor. Applications, payments, and submissions take place on the
-          linked government websites. We do not collect IDs, application
-          documents, or payment details.
+          {t(
+            'BetterBacoor is not operated by or endorsed by the City Government of Bacoor. Applications, payments, and submissions take place on the linked government websites. We do not collect IDs, application documents, or payment details.'
+          )}
         </p>
         <p className="mt-4 leading-7 text-slate-600">
-          Government pages can change. For a question about a service or your
-          application, use the office directories to reach the responsible
-          agency.
+          {t(
+            'Government pages can change. For a question about a service or your application, use the office directories to reach the responsible agency.'
+          )}
         </p>
       </section>
     </div>

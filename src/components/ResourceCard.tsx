@@ -1,3 +1,4 @@
+import { t, useLanguage } from '../i18n';
 import { ArrowUpRight, FileText, Globe, Landmark, Users } from 'lucide-react';
 import { categoryLabels, getReviewStatus } from '../data/resources';
 import type { CivicResource } from '../types';
@@ -15,6 +16,7 @@ export function ResourceCard({
   resource,
   headingLevel = 3,
 }: ResourceCardProps) {
+  useLanguage();
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const Icon = icons[resource.category];
   const { overdue } = getReviewStatus(resource);
@@ -23,17 +25,19 @@ export function ResourceCard({
       <div className="resource-topline">
         <span className="resource-type">
           <Icon size={16} aria-hidden="true" />
-          {categoryLabels[resource.category]}
+          {t(categoryLabels[resource.category])}
         </span>
         <span className="source-domain">
           {new URL(resource.official_url).hostname}
         </span>
       </div>
-      <Heading>{resource.title}</Heading>
-      <p className="resource-summary">{resource.summary}</p>
+      <Heading>{t(resource.title)}</Heading>
+      <p className="resource-summary">{t(resource.summary)}</p>
       {overdue && (
         <p className="resource-notice">
-          Details may have changed. Confirm with the linked government office.
+          {t(
+            'Details may have changed. Confirm with the linked government office.'
+          )}
         </p>
       )}
       <div className="resource-bottom">
@@ -42,17 +46,18 @@ export function ResourceCard({
           target="_blank"
           rel="noreferrer"
           className="text-link"
-          aria-label={`Open official page: ${resource.title}`}
+          aria-label={`${t('Open official page')}: ${t(resource.title)}`}
         >
-          Open official page <ArrowUpRight size={17} aria-hidden="true" />
+          {t('Open official page ')}
+          <ArrowUpRight size={17} aria-hidden="true" />
         </a>
         <details className="source-details">
-          <summary>Source</summary>
+          <summary>{t('Source')}</summary>
           <div>
             <a href={resource.source_url} target="_blank" rel="noreferrer">
-              {resource.source_title}
+              <span lang="en">{resource.source_title}</span>
             </a>
-            <p>{resource.source_page}</p>
+            <p lang="en">{resource.source_page}</p>
           </div>
         </details>
       </div>

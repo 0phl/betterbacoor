@@ -44,12 +44,12 @@ function worker() {
     Headers,
     AbortSignal,
   });
-  async function message(type) {
+  async function message(type, language = 'en') {
     let result;
     let pending;
     listeners.message({
       source: { url: 'https://example.test/emergency' },
-      data: { type },
+      data: { type, language },
       ports: [
         {
           postMessage: value => {
@@ -78,6 +78,27 @@ function worker() {
 }
 
 describe('Emergency offline lifecycle', () => {
+  it('saves Filipino content, preserved sources and phone numbers, and the selected-language label', async () => {
+    const localized = renderOfflineEmergency(data, 'PHN2Zy8+', 'fil');
+    expect(localized).toContain('<html lang="fil">');
+    expect(localized).toContain('Gabay sa emergency.');
+    expect(localized).toContain('Lumabas at manatili sa labas.');
+    for (const contact of data.contacts)
+      expect(localized).toContain(`tel:${contact.dial}`);
+    for (const source of data.sources)
+      expect(localized).toContain(source.url.replace(/&/g, '&amp;'));
+    const test = worker();
+    test.network.mockResolvedValueOnce(
+      new Response(localized, { headers: { 'Content-Type': 'text/html' } })
+    );
+    const result = await test.message('SAVE_EMERGENCY', 'fil');
+    expect(result.snapshot.language).toBe('fil');
+    expect(test.network.mock.calls[0][0]).toBe('/offline/emergency-fil.html');
+    test.network.mockRejectedValue(new Error('Offline'));
+    const response = await test.navigate('/emergency');
+    expect(response.headers.get('X-BB-Language')).toBe('fil');
+    expect(await response.text()).toContain('Na-save sa browser na ito');
+  });
   it('builds a self-contained guide from the same verified contacts and every situation', () => {
     for (const contact of data.contacts)
       expect(html).toContain(`href="tel:${contact.dial}"`);
