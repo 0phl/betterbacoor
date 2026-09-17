@@ -50,6 +50,7 @@ for (const file of files(path.join(root, 'src'))) {
         'timing',
         'note',
         'actionLabel',
+        'eligibility',
       ].includes(node.name.getText(ast)) &&
       ts.isStringLiteral(node.initializer)
     )
@@ -62,6 +63,23 @@ for (const file of files(path.join(root, 'src'))) {
       node.initializer.elements.forEach(item => {
         if (ts.isStringLiteral(item)) check(item.text);
       });
+    if (
+      ts.isVariableDeclaration(node) &&
+      node.name.getText(ast) === 'requirements' &&
+      node.initializer &&
+      ts.isArrayLiteralExpression(node.initializer)
+    ) {
+      node.initializer.elements.forEach(item => {
+        if (ts.isStringLiteral(item)) check(item.text);
+      });
+    }
+    if (
+      ts.isVariableDeclaration(node) &&
+      node.name.getText(ast) === 'note' &&
+      node.initializer &&
+      ts.isStringLiteral(node.initializer)
+    )
+      check(node.initializer.text);
     ts.forEachChild(node, visit);
   }
   visit(ast);

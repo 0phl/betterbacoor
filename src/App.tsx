@@ -8,6 +8,7 @@ import { ResourcesPage } from './pages/ResourcesPage';
 import { ServiceGuide } from './pages/ServiceGuide';
 import { CharterReader } from './pages/CharterReader';
 import { Emergency } from './pages/Emergency';
+import { ServiceFinder } from './pages/ServiceFinder';
 
 export default function App() {
   useLanguage();
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="services/find" element={<ServiceFinder />} />
           <Route path="services/:slug" element={<ServiceGuide />} />
           <Route path="charter" element={<CharterReader />} />
           <Route path="emergency" element={<Emergency />} />

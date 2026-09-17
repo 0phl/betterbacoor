@@ -12,6 +12,7 @@ const chapters = [
   { page: 163, name: 'Business renewal · 6.3' },
   { page: 171, name: 'Online business application · 6.11' },
   { page: 318, name: 'Civil record copies · 9.26' },
+  { page: 657, name: 'Senior Citizen ID · 28.2' },
 ];
 export function CharterReader() {
   useLanguage();

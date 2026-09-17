@@ -7,6 +7,7 @@ const icons = {
   'business-permit': BriefcaseBusiness,
   'civil-registry': FileText,
   'working-permit': Users,
+  'senior-citizen-id': Users,
 };
 
 export function GuideCards({ query = '' }: { query?: string }) {

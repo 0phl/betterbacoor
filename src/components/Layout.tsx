@@ -203,10 +203,10 @@ export function Layout() {
             </p>
             <div className="footer-socials">
               <a
-                href="https://github.com/0phl"
+                href="https://github.com/0phl/betterbacoor"
                 target="_blank"
                 rel="noreferrer"
-                aria-label={t('Visit the creator on GitHub')}
+                aria-label={t('View BetterBacoor on GitHub')}
               >
                 <Github size={20} aria-hidden="true" />
                 <span>{t('GitHub')}</span>

@@ -114,10 +114,12 @@ describe('Resident service guides', () => {
     );
   });
 
-  it('shows creator attribution only in the footer and links the configured Facebook page', () => {
+  it('links the project repository in the footer and the configured Facebook page', () => {
     const { container } = render(<App />);
     expect(
-      container.querySelector('footer a[href="https://github.com/0phl"]')
+      container.querySelector(
+        'footer a[href="https://github.com/0phl/betterbacoor"]'
+      )
     ).not.toBeNull();
     expect(container.querySelector('main a[href*="github.com"]')).toBeNull();
     expect(

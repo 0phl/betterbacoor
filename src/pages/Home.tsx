@@ -138,8 +138,8 @@ export function Home() {
                 <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
             ))}
-            <Link to="/services" className="quick-panel-footer">
-              {t('Explore all services ')}
+            <Link to="/services/find" className="quick-panel-footer">
+              {t('Help me find the right service')}
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </section>

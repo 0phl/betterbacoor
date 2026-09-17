@@ -44,6 +44,19 @@ export function ResourcesPage({
     <div className="page-shell py-12 sm:py-16 lg:py-20">
       <PageMeta title={title} description={description} />
       <PageIntro eyebrow={eyebrow} title={title} description={description} />
+      {categories?.includes('service') && (
+        <Link className="finder-entry" to="/services/find">
+          <span>
+            <strong>{t('Not sure where to start?')}</strong>
+            <span>
+              {t(
+                'Answer a few questions and get a checklist for your situation.'
+              )}
+            </span>
+          </span>
+          <span>{t('Find my service')} →</span>
+        </Link>
+      )}
       {!categories &&
         (!query.trim() ||
           /emergency|hotline|flood|fire|rescue|disaster|police|ambulance|typhoon|earthquake|tsunami|baha|sunog|saklolo|lindol|bagyo|pulis|ambulansiya|sakuna|911|161/i.test(

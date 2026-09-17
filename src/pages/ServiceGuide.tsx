@@ -136,11 +136,18 @@ function Checklist({
   );
 }
 
-function GuideContent({ guide }: { guide: Guide }) {
+export function GuideContent({
+  guide,
+  fixedVariantId,
+}: {
+  guide: Guide;
+  fixedVariantId?: string;
+}) {
   useLanguage();
   const [variantId, setVariantId] = useState(guide.variants[0].id);
   const variant =
-    guide.variants.find(item => item.id === variantId) ?? guide.variants[0];
+    guide.variants.find(item => item.id === (fixedVariantId ?? variantId)) ??
+    guide.variants[0];
   const overdue =
     Date.now() - new Date(`${guide.verified}T00:00:00Z`).getTime() >
     90 * 86400000;
@@ -149,17 +156,29 @@ function GuideContent({ guide }: { guide: Guide }) {
       <PageMeta title={guide.title} description={guide.summary} />
       <div className="guide-intro">
         <div className="page-shell">
-          <Link className="back-link" to="/services">
-            <ArrowLeft size={16} aria-hidden="true" />
-            {t(' All service guides')}
-          </Link>
+          {!fixedVariantId && (
+            <Link className="back-link" to="/services">
+              <ArrowLeft size={16} aria-hidden="true" />
+              {t(' All service guides')}
+            </Link>
+          )}
           <p className="eyebrow">{t(guide.category)}</p>
-          <h1>{t(guide.title)}</h1>
+          <h1 id="guide-title" tabIndex={-1}>
+            {t(guide.title)}
+          </h1>
           <p>{t(guide.summary)}</p>
           <span className="guide-source-badge">
             <BookOpen size={15} aria-hidden="true" />
             {t(' A BetterBacoor guide based on official city information')}
           </span>
+          {(fixedVariantId || guide.variants.length > 1) && (
+            <p className="finder-selection">
+              {t('Your selection:')} <strong>{t(variant.label)}</strong>
+            </p>
+          )}
+          {guide.eligibility && (
+            <p className="guide-eligibility">{t(guide.eligibility)}</p>
+          )}
         </div>
       </div>
       <div className="page-shell guide-layout">
@@ -171,7 +190,7 @@ function GuideContent({ guide }: { guide: Guide }) {
               )}
             </p>
           )}
-          {guide.variants.length > 1 && (
+          {!fixedVariantId && guide.variants.length > 1 && (
             <fieldset className="guide-options">
               <legend>{t('What are you applying for?')}</legend>
               <div>
@@ -220,30 +239,45 @@ function GuideContent({ guide }: { guide: Guide }) {
               <dt>{t('Processing')}</dt>
               <dd>{t(guide.timing)}</dd>
             </dl>
-            <a className="contact-link" href={`mailto:${guide.email}`}>
-              <Mail size={16} aria-hidden="true" /> {guide.email}
-            </a>
+            <div className="guide-links guide-contact-links">
+              <a className="contact-link" href={`mailto:${guide.email}`}>
+                <Mail size={16} aria-hidden="true" /> <span>{guide.email}</span>
+              </a>
+              {guide.contactSourceUrl && (
+                <a
+                  className="text-link"
+                  href={guide.contactSourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t('Office contact source')}{' '}
+                  <ArrowUpRight size={15} aria-hidden="true" />
+                </a>
+              )}
+            </div>
           </section>
           <section className="guide-source">
             <h2>{t('Go to the source')}</h2>
             <p lang="en">{guide.sourceLabel}</p>
-            {variant.sourcePage && (
-              <Link
-                className="text-link"
-                to={`/charter?page=${variant.sourcePage}`}
+            <div className="guide-links">
+              {variant.sourcePage && (
+                <Link
+                  className="text-link"
+                  to={`/charter?page=${variant.sourcePage}`}
+                >
+                  {t('Read these pages here')}{' '}
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
+              )}
+              <a
+                href={`${guide.sourceUrl}${variant.sourcePage ? `#page=${variant.sourcePage}` : ''}`}
+                target="_blank"
+                rel="noreferrer"
               >
-                {t('Read these pages here')}{' '}
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </Link>
-            )}
-            <a
-              href={`${guide.sourceUrl}${variant.sourcePage ? `#page=${variant.sourcePage}` : ''}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t('Original government source')}{' '}
-              <ArrowUpRight size={15} aria-hidden="true" />
-            </a>
+                {t('Original government source')}{' '}
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </a>
+            </div>
           </section>
           {guide.actionUrl && (
             <section className="guide-continue">

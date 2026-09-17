@@ -1674,7 +1674,7 @@
 }
 .guide-cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
 }
 .guide-card {
@@ -2004,7 +2004,9 @@
   margin-top: 0.45rem;
 }
 .guide-sidebar a {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
   align-items: center;
   gap: 0.5rem;
   min-height: 2.75rem;
@@ -2013,10 +2015,19 @@
   color: #00329e;
   overflow-wrap: anywhere;
 }
+.guide-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+}
+.guide-sidebar a > span {
+  min-width: 0;
+}
 .guide-sidebar a svg {
   flex-shrink: 0;
 }
-.guide-sidebar .contact-link {
+.guide-contact-links {
   margin-top: 1.2rem;
 }
 .guide-sidebar .guide-continue {
@@ -2332,5 +2343,236 @@
     content: ' (' attr(href) ')';
     font-weight: normal;
     overflow-wrap: anywhere;
+  }
+}
+
+/* Guided service finder */
+.finder-page {
+  max-width: 62rem;
+  padding-block: 3.5rem 4rem;
+}
+.finder-heading .eyebrow,
+.finder-result-toolbar .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.finder-stage {
+  margin: 1.75rem 0 0.75rem;
+  font-size: 0.8rem;
+  color: #526176;
+}
+.finder-heading h1 {
+  margin: 0;
+  max-width: 48rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  font-weight: 750;
+}
+.finder-heading h1:focus,
+#guide-title:focus {
+  outline: none;
+}
+.finder-heading h1 + p {
+  margin-top: 1.25rem;
+  max-width: 44rem;
+  color: #526176;
+  line-height: 1.8;
+}
+.finder-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.finder-choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #dce4ef;
+  border-radius: 1rem;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 150ms,
+    background-color 150ms;
+}
+.finder-choice:hover {
+  border-color: #8ca5d7;
+  background: #fafcff;
+}
+.finder-choice > svg {
+  flex-shrink: 0;
+  color: #00329e;
+}
+.finder-choice strong {
+  display: block;
+  color: #17202d;
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+.finder-choice span span {
+  display: block;
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #526176;
+}
+.finder-choice:focus-visible,
+.finder-controls button:focus-visible,
+.finder-controls a:focus-visible,
+.finder-entry:focus-visible {
+  outline: 2px solid #00329e;
+  outline-offset: 4px;
+}
+.finder-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.finder-controls button,
+.finder-controls a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  color: #00329e;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+.finder-controls button:hover,
+.finder-controls a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.finder-controls a {
+  margin-left: auto;
+}
+.finder-privacy {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #526176;
+  margin-top: 2rem;
+  max-width: 43rem;
+}
+.finder-help {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e5ec;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #526176;
+}
+.finder-help a {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: #00329e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.finder-trail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 1.5rem;
+  padding: 0;
+  list-style: none;
+  color: #526176;
+  font-size: 0.8rem;
+}
+.finder-trail li {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.finder-result-toolbar {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.finder-result-toolbar .finder-controls {
+  margin-top: 0.5rem;
+}
+.finder-selection {
+  margin-top: 1.5rem;
+  color: #00329e;
+  font-size: 0.9rem;
+}
+.guide-intro .guide-eligibility {
+  margin-top: 1.25rem;
+  max-width: 52rem;
+  color: #526176;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.finder-storage {
+  margin-top: 1rem;
+  color: #774b11;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.finder-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #dce4ef;
+  border-radius: 1rem;
+  background: white;
+  color: #00329e;
+}
+.finder-entry strong {
+  font-size: 1.05rem;
+}
+.finder-entry span span {
+  display: block;
+  color: #526176;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+.finder-entry > span:last-child {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .finder-page {
+    padding-block: 2rem 3rem;
+  }
+  .finder-choices {
+    grid-template-columns: 1fr;
+  }
+  .finder-choice {
+    padding: 1.25rem;
+  }
+  .finder-controls a {
+    margin-left: 0;
+  }
+  .finder-entry {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media print {
+  .finder-result-toolbar {
+    display: none !important;
+  }
+  .finder-selection {
+    color: black;
   }
 }
