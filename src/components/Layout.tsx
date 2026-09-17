@@ -1,6 +1,5 @@
 import { t, useLanguage } from '../i18n';
 import {
-  ArrowRight,
   ExternalLink,
   Github,
   Facebook,
@@ -198,7 +197,7 @@ export function Layout() {
             </div>
             <p className="mt-5 max-w-lg text-sm leading-6 text-slate-600">
               {t(
-                'A community-built home for clearer information and easier everyday life in Bacoor. Learn and prepare here; submit applications and payments through the official city systems.'
+                'A community-built guide to Bacoor. Making local services and public information easier to find, understand, and use.'
               )}
             </p>
             <div className="footer-socials">
@@ -206,11 +205,10 @@ export function Layout() {
                 href="https://github.com/0phl/betterbacoor"
                 target="_blank"
                 rel="noreferrer"
-                aria-label={t('View BetterBacoor on GitHub')}
+                className="footer-contribute"
               >
-                <Github size={20} aria-hidden="true" />
-                <span>{t('GitHub')}</span>
-                <ExternalLink size={13} aria-hidden="true" />
+                <Github size={16} aria-hidden="true" />
+                <span>{t('Contribute code with us')}</span>
               </a>
               <a
                 href="https://www.facebook.com/people/BetterBacoororg/61594400221717/"
@@ -264,6 +262,20 @@ export function Layout() {
               {t('Community')}
             </h2>
             <div className="mt-4 flex flex-col items-start gap-3 text-sm text-slate-600">
+              <p className="max-w-xs leading-6">
+                {t(
+                  'Open source and open to contributions. Help improve the code, guides, and public information.'
+                )}
+              </p>
+              <a
+                href="https://github.com/0phl/betterbacoor/blob/main/CONTRIBUTING.md"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
+              >
+                {t('Contribution guide')}
+                <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
+              </a>
               <a
                 href="https://lgu.bettergov.ph/"
                 target="_blank"
@@ -286,35 +298,51 @@ export function Layout() {
         </div>
 
         <div className="border-t border-slate-200">
-          <div className="page-shell flex flex-col gap-3 py-5 text-xs leading-5 text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>
+          <div className="page-shell footer-credits">
+            <p className="footer-copyright">
+              <span>
+                © {new Date().getFullYear()} {t('BetterBacoor.org')}
+              </span>
+              <span className="footer-credit-divider" aria-hidden="true">
+                ·
+              </span>
+              <a
+                href="https://github.com/0phl/betterbacoor/blob/main/docs/LICENSING.md#software-mit-for-new-contributions"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t('Code license: MIT')}
+              >
+                MIT
+              </a>
+              <span className="footer-credit-divider" aria-hidden="true">
+                ·
+              </span>
+              <a
+                href="https://github.com/0phl/betterbacoor/blob/main/docs/LICENSING.md#existing-cc0-material-stays-cc0"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t(
+                  'Earlier project material and original civic content: CC0 1.0'
+                )}
+              >
+                CC0 1.0
+              </a>
+            </p>
+            <p className="footer-attribution">
               {t('Based on the')}{' '}
               <a
                 href="https://github.com/iyanski/betterlocalgov"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded underline underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
               >
                 {t('BetterLocalGov starter')}
               </a>{' '}
               {t('and inspired by the')}{' '}
-              <a
-                href="https://bettergov.ph/"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded underline underline-offset-2 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
-              >
+              <a href="https://bettergov.ph/" target="_blank" rel="noreferrer">
                 {t('BetterGov.ph community')}
               </a>
               .
             </p>
-            <NavLink
-              to="/about"
-              className="inline-flex items-center gap-1.5 rounded font-semibold text-slate-700 hover:text-civic-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
-            >
-              {t('How this guide works')}
-              <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
-            </NavLink>
           </div>
         </div>
       </footer>

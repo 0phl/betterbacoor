@@ -184,7 +184,6 @@
   "Explore PhilGEPS procurement records from 2000–2025 through BetterGov’s searchable archive.": "Hanapin ang mga tala ng pagbili sa PhilGEPS mula 2000–2025 sa archive ng BetterGov.",
   "Find public datasets for your research, school project, or community initiative.": "Maghanap ng pampublikong datos para sa pananaliksik, proyekto sa paaralan, o gawain ng komunidad.",
   "Built for our community": "Para sa ating komunidad",
-  "A community-built home for clearer information and easier everyday life in Bacoor. Learn and prepare here; submit applications and payments through the official city systems.": "Gawa ng komunidad para sa mas malinaw na impormasyon at mas madaling buhay sa Bacoor. Matuto at maghanda rito; magsumite ng aplikasyon at bayad sa opisyal na sistema ng lungsod.",
   "View BetterBacoor on GitHub": "Tingnan ang BetterBacoor sa GitHub",
   "BetterBacoor on Facebook": "BetterBacoor sa Facebook",
   "Explore": "Tuklasin",
@@ -709,5 +708,11 @@
   "Start a checklist": "Magsimula ng checklist",
   "Local contacts & your saved checklists": "Mga lokal na contact at naka-save mong checklist",
   "Your neighborhood, within reach.": "Mas malapit ang iyong komunidad.",
-  "Keep your barangay contacts and saved checklists together.": "Pagsamahin ang mga contact ng iyong barangay at ang mga naka-save mong checklist."
+  "Keep your barangay contacts and saved checklists together.": "Pagsamahin ang mga contact ng iyong barangay at ang mga naka-save mong checklist.",
+  "A community-built guide to Bacoor. Making local services and public information easier to find, understand, and use.": "Gabay sa Bacoor na binuo ng komunidad. Para mas madaling mahanap, maunawaan, at magamit ang mga lokal na serbisyo at pampublikong impormasyon.",
+  "Contribute code with us": "Mag-ambag ng code kasama namin",
+  "Open source and open to contributions. Help improve the code, guides, and public information.": "Open source at bukas sa mga ambag ng lahat. Tumulong sa pagpapahusay ng code, mga gabay, at pampublikong impormasyon.",
+  "Contribution guide": "Gabay sa pag-aambag",
+  "Code license: MIT": "Lisensiya ng code: MIT",
+  "Earlier project material and original civic content: CC0 1.0": "Naunang materyal ng proyekto at orihinal na nilalamang pansibiko: CC0 1.0"
 }
