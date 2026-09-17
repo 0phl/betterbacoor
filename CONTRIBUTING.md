@@ -77,4 +77,4 @@ External contributors should target `main` with a focused pull request. CI must 
 
 ## Contribution licenses
 
-New original software contributions are accepted under [MIT](LICENSE-MIT). Original non-software civic guides and dataset contributions continue under [CC0](LICENSE-CC0), where the contributor holds the relevant rights. Existing CC0 releases keep their permissions. Preserve third-party terms and source notices; contribute only material you have the right to offer under the applicable terms. See [licensing scope](docs/LICENSING.md).
+New original software contributions are accepted under [MIT](LICENSE). Original non-software civic guides and dataset contributions continue under [CC0](LICENSE-CC0), where the contributor holds the relevant rights. Existing CC0 releases keep their permissions. Preserve third-party terms and source notices; contribute only material you have the right to offer under the applicable terms. See [licensing scope](docs/LICENSING.md).
