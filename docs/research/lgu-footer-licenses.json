@@ -1,0 +1,1183 @@
+{
+  "checked": "2026-09-17",
+  "directory": "https://lgu.bettergov.ph/",
+  "method": "All six-column LGU entries in the deployed directory. Read-only HTTP checks of listed public homepage HTML, not a rendered-browser or repository-wide legal audit. Missing labels do not establish absence of a license. Also checked the root LICENSE file of every linked GitHub repository at its explicit branch or HEAD; missing root files and unrecognized text remain unresolved. No claim of full file-by-file license compliance.",
+  "entries": [
+    {
+      "name": "Solano, Nueva Vizcaya",
+      "website": "https://bettersolano.org",
+      "repository": "https://github.com/BetterSolano/bettersolano",
+      "status": 200,
+      "final_url": "https://bettersolano.org/",
+      "signals": [
+        "I DTI Portal Cost to the People of Solano = ₱0 Volunteer with us Contribute code with us © 2026 BetterSolano.org MIT | CC BY 4.0 All public information sourced from official govern"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano. Quick Links Solano Quiz Sitemap Citizen's Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official LGU Solano Portal Sangguniang Bayan LGU Solano Facebook BLGF Portal CMCI DTI Portal Cost to the People of Solano = ₱0 Volunteer with us Contribute code with us © 2026 BetterSolano.org MIT | CC BY 4.0 All public information sourced from official government portals. Ver. 1.1.19",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterSolano/bettersolano/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Bacolod City, Negros Occidental",
+      "website": "https://betterbacolod.org",
+      "repository": "https://github.com/betterbacolod/betterbacolod",
+      "status": 200,
+      "final_url": "https://betterbacolod.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/betterbacolod/betterbacolod/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Calauan, Laguna",
+      "website": "https://bettercalauan.org",
+      "repository": "https://github.com/bettercalauan/bettercalauan/tree/react-typescript",
+      "status": 200,
+      "final_url": "https://bettercalauan.org/",
+      "signals": [
+        " DTI Portal Cost to the People of Calauan = ₱0 Volunteer with us Contribute code with us © 2026 Better Calauan . MIT | CC BY 4.0 All public information sourced from official govern"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering the people of Calauan with transparent access to the services, programs, and public funds of LGU Calauan. Quick Links Sitemap Citizen&#x27;s Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official LGU Calauan Portal Sangguniang Bayan LGU Calauan Facebook BLGF Portal CMCI DTI Portal Cost to the People of Calauan = ₱0 Volunteer with us Contribute code with us © 2026 Better Calauan . MIT | CC BY 4.0 All public information sourced from official government portals. Ver. 1.1.12",
+      "repository_license_url": "https://raw.githubusercontent.com/bettercalauan/bettercalauan/react-typescript/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Pila, Laguna",
+      "website": null,
+      "repository": "https://github.com/Necookie/betterpila",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/Necookie/betterpila/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Ormoc City, Leyte",
+      "website": "https://www.betterormoc.org/en",
+      "repository": null,
+      "status": 200,
+      "final_url": "https://www.betterormoc.org/en",
+      "signals": [
+        "dom of Information Official LGU Ormoc Portal © 2026 BetterOrmoc. MIT | CC BY 4.0 All public information sourced from official government portals. Official Website: ormo"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "BetterOrmoc XOfficial Portal Empowering the people of Ormoc with transparent access to the services, programs, and public funds of LGU Ormoc. Quick Links Sitemap Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official LGU Ormoc Portal © 2026 BetterOrmoc. MIT | CC BY 4.0 All public information sourced from official government portals. Official Website: ormoc.gov.ph Cost to the People of Ormoc = ₱0 Built with for the people of Ormoc City"
+    },
+    {
+      "name": "Los Baños, Laguna",
+      "website": "https://betterlb.org",
+      "repository": "https://github.com/BetterLosBanos/betterlb",
+      "status": 200,
+      "final_url": "https://betterlb.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterLosBanos/betterlb/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Las Piñas City, Metro Manila",
+      "website": "https://betterlaspinas.org",
+      "repository": "https://github.com/betterlaspinas/betterlaspinas",
+      "status": 200,
+      "final_url": "https://betterlaspinas.org/",
+      "signals": [
+        "ation BLGF Portal CMCI DTI Portal Get Involved Volunteer with us Contribute code Cost to the People of Las Piñas: ₱0 . © 2026 BetterLasPinas.org v1.2.0 (+86) • 7fffa39 | MIT | CC B"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Better Las Piñas betterlaspinas.org Empowering the people of Las Piñas with transparent access to the services, programs, and public funds of LGU Las Piñas. Quick Links Sitemap Terms of Use Privacy Policy Accessibility FAQ Resources Citizen&#39;s Charter 2022 (1st Edition) Open Data Philippines Freedom of Information BLGF Portal CMCI DTI Portal Get Involved Volunteer with us Contribute code Cost to the People of Las Piñas: ₱0 . © 2026 BetterLasPinas.org v1.2.0 (+86) • 7fffa39 | MIT | CC BY 4.0 | All public information sourced from official government portals. Contribute on GitHub Sitemap",
+      "repository_license_url": "https://raw.githubusercontent.com/betterlaspinas/betterlaspinas/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Cainta, Rizal",
+      "website": "https://bettercainta.org",
+      "repository": null,
+      "status": 200,
+      "final_url": "https://bettercainta.org/",
+      "signals": [
+        "I DTI Portal Cost to the People of Cainta = ₱0 Volunteer with us Contribute code with us © 2026 BetterCainta MIT | CC BY 4.0 All public information sourced from official government"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering the people of Cainta with transparent access to the services, programs, and public funds of LGU Cainta. Quick Links Cainta Quiz Sitemap Citizen's Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official LGU Cainta Portal Sangguniang Bayan LGU Cainta Facebook BLGF Portal CMCI DTI Portal Cost to the People of Cainta = ₱0 Volunteer with us Contribute code with us © 2026 BetterCainta MIT | CC BY 4.0 All public information sourced from official government portals. Powered by ProjectLigtas Developed with by DevWithZach Ver. 1.1.14"
+    },
+    {
+      "name": "Tagaytay City, Cavite",
+      "website": "https://www.bettertagaytay.org/",
+      "repository": "https://github.com/Arlovzki/bettertagaytay",
+      "status": 200,
+      "final_url": "https://www.bettertagaytay.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/Arlovzki/bettertagaytay/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Indang, Cavite",
+      "website": "https://betterindang.org",
+      "repository": "https://github.com/michaustriaqa/betterindang",
+      "status": 200,
+      "final_url": "https://betterindang.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/michaustriaqa/betterindang/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "General Santos City, South Cotabato",
+      "website": "https://bettergensan.org",
+      "repository": "https://github.com/psalmcatulpos/bettergensan",
+      "status": 200,
+      "final_url": "https://bettergensan.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/psalmcatulpos/bettergensan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Koronadal City, South Cotabato",
+      "website": "https://betterkoronadal.org",
+      "repository": "https://github.com/janineooak/betterkoronadal",
+      "status": 200,
+      "final_url": "https://betterkoronadal.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/janineooak/betterkoronadal/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Dasmariñas City, Cavite",
+      "website": "https://betterdasmarinas.org",
+      "repository": "https://github.com/Shuashuaa/BetterDasmarinas",
+      "status": 200,
+      "final_url": "https://www.betterdasmarinas.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/Shuashuaa/BetterDasmarinas/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "General Trias, Cavite",
+      "website": "https://www.bettergeneraltrias.org/",
+      "repository": "https://github.com/kenhehe/betterGeneraltrias",
+      "status": 200,
+      "final_url": "https://www.bettergeneraltrias.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/kenhehe/betterGeneraltrias/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Tanza, Cavite",
+      "website": null,
+      "repository": "https://github.com/manalilib/betterTanza",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/manalilib/betterTanza/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "San Pedro, Laguna",
+      "website": null,
+      "repository": "https://github.com/sechipeanut/BetterSanPedro",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/sechipeanut/BetterSanPedro/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Cabuyao City, Laguna",
+      "website": "https://bettercabuyao.org/",
+      "repository": "https://github.com/johnrommeloctaviano/better-cabuyao",
+      "status": 200,
+      "final_url": "https://bettercabuyao.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/johnrommeloctaviano/better-cabuyao/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Tuguegarao, Cagayan Valley",
+      "website": null,
+      "repository": "https://github.com/JDgayagoy/BetterTuguegarao",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/JDgayagoy/BetterTuguegarao/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Davao City, Davao Del Sur",
+      "website": null,
+      "repository": "https://github.com/johnloydlao/betterdavao",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/johnloydlao/betterdavao/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Allen, Northern Samar",
+      "website": "https://betterallen.org",
+      "repository": "https://github.com/xandreiAThome/betterallen",
+      "status": 200,
+      "final_url": "https://betterallen.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/xandreiAThome/betterallen/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Aparri, Cagayan Valley",
+      "website": "https://betteraparri.org/",
+      "repository": "https://github.com/egiebk/betteraparri",
+      "status": 200,
+      "final_url": "https://betteraparri.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/egiebk/betteraparri/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "San Pablo, Laguna",
+      "website": "https://www.bettersanpablo.org/",
+      "repository": "https://github.com/ChristiannWick/bettersanpablo",
+      "status": 200,
+      "final_url": "https://www.bettersanpablo.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/ChristiannWick/bettersanpablo/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Binangonan, Rizal",
+      "website": null,
+      "repository": "https://github.com/betterbinangonan-devs/betterbinangonan",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/betterbinangonan-devs/betterbinangonan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Taytay, Rizal",
+      "website": null,
+      "repository": "https://github.com/zzelif/bettertaytay",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/zzelif/bettertaytay/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Olongapo City, Zambales",
+      "website": "https://betterolongapo.org/",
+      "repository": "https://github.com/eyronjohn/betterolongapo",
+      "status": 404,
+      "final_url": "https://betterolongapo.org/",
+      "result": "HTTP error",
+      "repository_license_url": "https://raw.githubusercontent.com/eyronjohn/betterolongapo/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Biñan, Laguna",
+      "website": null,
+      "repository": "https://github.com/Criflar/betterbinan",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/Criflar/betterbinan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Tanay, Rizal",
+      "website": "https://bettertanay.org",
+      "repository": "https://github.com/s4burieru/bettertanay",
+      "status": 200,
+      "final_url": "https://www.bettertanay.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/s4burieru/bettertanay/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Puerto Princesa City, Palawan",
+      "website": null,
+      "repository": "https://github.com/hmcldryl/betterpuertoprincesa",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/hmcldryl/betterpuertoprincesa/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Iligan City, Lanao del Norte",
+      "website": "https://betteriligancity.org/",
+      "repository": "https://github.com/KishonShrill/BetterIligan",
+      "status": 200,
+      "final_url": "https://betteriligancity.org/",
+      "signals": [],
+      "scope": "HTML footer",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "excerpt": "Open-source civic tech initiative making government information accessible for Iliganons. About About Us Open Data Privacy Policy Terms of Service Services All Services Disaster Preparedness Business and Trade Certificates and Vital Records Health Government City Officials Departments Barangays Transparency Official iligan.gov.ph BetterIliganCity © 2026 BetterIliganCity · Not an official government website Sitemap",
+      "repository_license_url": "https://raw.githubusercontent.com/KishonShrill/BetterIligan/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Hilongos, Leyte",
+      "website": null,
+      "repository": "https://github.com/rolpppp/betterhilongos",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/rolpppp/betterhilongos/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Limay, Bataan",
+      "website": "https://betterlimay.org/",
+      "repository": "https://github.com/AstroMC98/betterlimay",
+      "status": 200,
+      "final_url": "https://betterlimay.org/",
+      "signals": [
+        "y and Terms of Service apply. Copyright © 2026 betterlimay.org - All Rights Reserved. Powered by This website uses cookies. We use cookies to analyze website traffic and optimize your "
+      ],
+      "scope": "Homepage HTML text",
+      "result": "License/contribution wording observed",
+      "repository_license_url": "https://raw.githubusercontent.com/AstroMC98/betterlimay/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Balanga, Bataan",
+      "website": "https://betterbalanga.org/",
+      "repository": "https://github.com/AstroMC98/betterbalanga",
+      "status": 200,
+      "final_url": "https://betterbalanga.org/",
+      "signals": [
+        "and Terms of Service apply. Copyright © 2026 betterbalanga.org - All Rights Reserved. Powered by This website uses cookies. We use cookies to analyze website traffic and optimize your "
+      ],
+      "scope": "Homepage HTML text",
+      "result": "License/contribution wording observed",
+      "repository_license_url": "https://raw.githubusercontent.com/AstroMC98/betterbalanga/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Bulakan, Bulacan",
+      "website": "https://betterbulakan.vercel.app",
+      "repository": "https://github.com/kuyacarlo/betterbulakan",
+      "status": 404,
+      "final_url": "https://betterbulakan.vercel.app/",
+      "result": "HTTP error",
+      "repository_license_url": "https://raw.githubusercontent.com/kuyacarlo/betterbulakan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "San Jose, Antique",
+      "website": null,
+      "repository": "https://github.com/bonfire404/bettersanjose",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/bonfire404/bettersanjose/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Libmanan, Camarines Sur",
+      "website": "https://betterlibmanan.org",
+      "repository": "https://github.com/enzox0/betterlibmanan",
+      "status": 200,
+      "final_url": "https://betterlibmanan.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/enzox0/betterlibmanan/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "San Pascual, Masbate",
+      "website": null,
+      "repository": "https://github.com/marcuwynu23/bettersanpascualmasbate",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/marcuwynu23/bettersanpascualmasbate/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC-BY-4.0"
+    },
+    {
+      "name": "Teresa, Rizal",
+      "website": null,
+      "repository": "https://github.com/MewSeiren/betterteresa.org",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/MewSeiren/betterteresa.org/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT"
+    },
+    {
+      "name": "Atimonan, Quezon",
+      "website": null,
+      "repository": "https://github.com/EmsiPrds/betteratimonan",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/EmsiPrds/betteratimonan/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Dinalupihan, Bataan",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Calamba, Laguna",
+      "website": null,
+      "repository": "https://github.com/apajuan/bettercalamba",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/apajuan/bettercalamba/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Cabanatuan City, Nueva Ecija",
+      "website": "https://bettercabanatuan.org",
+      "repository": "https://github.com/BetterCabanatuan/bettercabanatuan",
+      "status": 200,
+      "final_url": "https://bettercabanatuan.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterCabanatuan/bettercabanatuan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Angeles City, Pampanga",
+      "website": null,
+      "repository": "https://github.com/ongods/betterangeles",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/ongods/betterangeles/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Cebu City, Cebu",
+      "website": null,
+      "repository": "https://github.com/kyrenmearr/bettercebucity",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/kyrenmearr/bettercebucity/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Piat, Cagayan Valley",
+      "website": null,
+      "repository": "https://github.com/JoScripty/betterpiat",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/JoScripty/betterpiat/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Alaminos City, Pangasinan",
+      "website": "https://betteralaminoscity.org",
+      "repository": "https://github.com/BetterAlaminosCity/betteralaminoscity",
+      "status": 200,
+      "final_url": "https://betteralaminoscity.org/",
+      "signals": [
+        " Portal Get Involved Cost to the People of Alaminos City : ₱0.00 Contribute Code With Us © 2026 BetterAlaminosCity.org · MIT Licensed BetterAlaminosCity.org is a volunteer-run civi"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "BetterAlaminosCity.org is a community-run guide to Alaminos City government services, home of the Hundred Islands National Park. Quick Links Sitemap Citizen&#x27;s Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official Alaminos City Website LGU Alaminos City Facebook BLGF Portal CMCI DTI Portal Get Involved Cost to the People of Alaminos City : ₱0.00 Contribute Code With Us © 2026 BetterAlaminosCity.org · MIT Licensed BetterAlaminosCity.org is a volunteer-run civic project. It is not an official website of the Alaminos City government.",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterAlaminosCity/betteralaminoscity/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT"
+    },
+    {
+      "name": "Santo Tomas, Pangasinan",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Legazpi, Albay",
+      "website": "https://www.betterlegazpi.org/",
+      "repository": "https://github.com/bpbelen/betterlegazpi",
+      "status": 200,
+      "final_url": "https://www.betterlegazpi.org/",
+      "signals": [
+        "ilities Map Cost to the People of Legazpi = ₱0 Volunteer with us Contribute code with us © 2026 BetterLegazpi.org MIT | CC BY 4.0 An independent civic tech project. A member of Bet"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering Legazpeños with transparent access to data, services, and public funds, bringing the fun and adventure closer to people. Quick Links Services Directory Fun & Adventure Sitemap Terms of Use Privacy Policy Accessibility About FAQ Resources Open Data Philippines Freedom of Information Official LGU Legazpi Portal LGU Legazpi Facebook BLGF Portal CMCI DTI Portal DOH Health Facilities Map Cost to the People of Legazpi = ₱0 Volunteer with us Contribute code with us © 2026 BetterLegazpi.org MIT | CC BY 4.0 An independent civic tech project. A member of BetterGov.ph. For official records, visit legazpi.gov.ph. Ver. 1.2.0",
+      "repository_license_url": "https://raw.githubusercontent.com/bpbelen/betterlegazpi/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Santa Barbara, Pangasinan",
+      "website": null,
+      "repository": "https://github.com/JericoGarcia21/better-santabarbara",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/JericoGarcia21/better-santabarbara/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Mapandan, Pangasinan",
+      "website": "https://www.bettermapandan.org/",
+      "repository": "https://github.com/jadolation/bettermapandan",
+      "status": 200,
+      "final_url": "https://bettermapandan.org/",
+      "signals": [],
+      "scope": "HTML footer",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "excerpt": "Better Mapandan An independent civic transparency portal for Mapandan, Pangasinan, built and maintained by volunteers under the BetterGov.ph initiative &mdash; not an official government website. Quick Links Home Services Government Legislative Statistics Transparency About Sitemap FAQ Resources Municipality of Mapandan Province of Pangasinan Commission on Audit DILG BLGF FOI PhilGEPS Philippine Statistics Authority Project Source Code (GitHub) BetterGov.ph Privacy Policy Terms of Use Accessibility Report Incorrect Info © 2026 BetterMapandan.org. Community-run, independent of the LGU. A BetterGov.ph Community Portal Cost to the People of Mapandan: &#8369;0",
+      "repository_license_url": "https://raw.githubusercontent.com/jadolation/bettermapandan/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Taguig City, Metro Manila",
+      "website": null,
+      "repository": "https://github.com/plvzfq-rit/bettertaguig",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/plvzfq-rit/bettertaguig/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Sara, Iloilo",
+      "website": null,
+      "repository": "https://github.com/SaraGugmaKo/bettersara",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/SaraGugmaKo/bettersara/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Bayawan, Negros Oriental",
+      "website": null,
+      "repository": "https://github.com/rodneydelacruz/betterbayawan",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/rodneydelacruz/betterbayawan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Bacoor City, Cavite",
+      "website": null,
+      "repository": "https://github.com/0phl/betterbacoor",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/0phl/betterbacoor/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Lucena City, Quezon",
+      "website": null,
+      "repository": "https://github.com/RyannKim327/BetterLucenaCity",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/RyannKim327/BetterLucenaCity/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Carigara, Leyte",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Claver, Surigao del Norte",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Agoo, La Union",
+      "website": "https://betteragoo.org/",
+      "repository": "https://github.com/glennmarkgarcia/betteragoo",
+      "status": 200,
+      "final_url": "https://betteragoo.org/",
+      "signals": [
+        "MCI DTI Portal Cost to the People of Agoo = ₱0 Volunteer with us Contribute code with us WKNDPRJKT © 2026 BetterAgoo.org MIT | CC BY 4.0 All public information sourced from officia"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering the people of Agoo with transparent access to the services, programs, and public funds of LGU Agoo. Quick Links Agoo Quiz Sitemap Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official LGU Agoo Portal LGU Agoo Facebook BLGF Portal CMCI DTI Portal Cost to the People of Agoo = ₱0 Volunteer with us Contribute code with us WKNDPRJKT © 2026 BetterAgoo.org MIT | CC BY 4.0 All public information sourced from official government portals. Ver. 1.9.1",
+      "repository_license_url": "https://raw.githubusercontent.com/glennmarkgarcia/betteragoo/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Aurora, Zamboanga del Sur",
+      "website": "https://betteraurora.org",
+      "repository": "https://github.com/Jayke770/betteraurora",
+      "status": 200,
+      "final_url": "https://www.betteraurora.org/",
+      "signals": [
+        "I DTI Portal Cost to the People of Aurora = ₱0 Volunteer with us Contribute code with us © 2026 BetterAurora.org MIT | CC BY 4.0 All public information sourced from official govern"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering the people of Aurora with transparent access to the services, programs, and public funds of the Municipality of Aurora, Zamboanga del Sur. Quick Links Sitemap Citizen&#x27;s Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official LGU Aurora Portal Sangguniang Bayan LGU Aurora Facebook BLGF Portal CMCI DTI Portal Cost to the People of Aurora = ₱0 Volunteer with us Contribute code with us © 2026 BetterAurora.org MIT | CC BY 4.0 All public information sourced from official government portals.",
+      "repository_license_url": "https://raw.githubusercontent.com/Jayke770/betteraurora/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Infanta, Quezon",
+      "website": "https://betterinfantaquezon.org/",
+      "repository": "https://github.com/davisolpruvnik/better-infanta",
+      "status": 200,
+      "final_url": "https://betterinfantaquezon.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/davisolpruvnik/better-infanta/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Bocaue, Bulacan",
+      "website": null,
+      "repository": "https://github.com/ericksondelacruz/betterbocaue",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/ericksondelacruz/betterbocaue/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "General Mariano Alvarez, Cavite",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Meycauayan, Bulacan",
+      "website": "https://bettermeycauayan.org",
+      "repository": "https://github.com/shnflrsc/bettermeycauayan",
+      "status": 200,
+      "final_url": "https://bettermeycauayan.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/shnflrsc/bettermeycauayan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Calapan, Oriental Mindoro",
+      "website": "https://bettercalapan.org",
+      "repository": "https://github.com/bettercalapan/portal",
+      "status": 200,
+      "final_url": "https://bettercalapan.org/",
+      "signals": [],
+      "scope": "HTML footer",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "excerpt": "BetterCalapan An open-source initiative providing transparent access to municipal services, local legislation, and public data for the people of Calapan. Services Certificates Business Government Officials Departments Barangays Apps Hazards Roadmap Others Report a website issue Terms of Use Privacy Policy Accessibility Sitemap",
+      "repository_license_url": "https://raw.githubusercontent.com/bettercalapan/portal/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "AGPL"
+    },
+    {
+      "name": "Midsayap, North Cotabato",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Tandag City, Surigao del Sur",
+      "website": null,
+      "repository": "https://github.com/BetterTandag/better-tandag",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterTandag/better-tandag/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Baler, Aurora",
+      "website": "https://betterbaler.org/",
+      "repository": "https://github.com/tekwicks/betterbaler",
+      "status": 200,
+      "final_url": "https://www.betterbaler.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/tekwicks/betterbaler/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "City of Manila, Metro Manila",
+      "website": "https://bettermanila.org",
+      "repository": "https://github.com/grgdlm/bettermanila",
+      "status": 200,
+      "final_url": "https://bettermanila.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/grgdlm/bettermanila/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Butuan City, Agusan del Norte",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Aborlan, Palawan",
+      "website": "https://betteraborlan.org",
+      "repository": "https://github.com/BetterAborlan/betteraborlan",
+      "status": 200,
+      "final_url": "https://betteraborlan.org/",
+      "signals": [
+        "es Freedom of Information BLGF Portal © 2026 BetterAborlan.org · MIT | CC BY 4.0 All public information sourced from official government portals. Ver. 1.8.0"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "BetterAborlan A community-run portal for Aborlan Empowering the people of Aborlan with transparent access to the services, programs, and public funds of LGU Aborlan. Changelog Quick Links About Sitemap Terms of Use Privacy Policy Accessibility FAQ Services Certificates & Vital Records Business & Trade Taxation & Payments Social Services Health & Wellness All Services Resources Aborlan Citizen&#x27;s Charter (PDF) Open Data Philippines Freedom of Information BLGF Portal © 2026 BetterAborlan.org · MIT | CC BY 4.0 All public information sourced from official government portals. Ver. 1.8.0",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterAborlan/betteraborlan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT"
+    },
+    {
+      "name": "Quezon City, Metro Manila",
+      "website": null,
+      "repository": "https://github.com/brixavengoza/betterquezoncity",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/brixavengoza/betterquezoncity/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Kabugao, Apayao",
+      "website": "https://betterkabugao.org",
+      "repository": "https://github.com/KuyaLoy/betterkabugao",
+      "status": 200,
+      "final_url": "https://betterkabugao.org/",
+      "signals": [
+        "ourced from official government portals. Built by Robin Tapiru · MIT · Content CC BY 4.0 · v 3.0.0"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "BetterKabugao is an independent, volunteer-run civic project for Kabugao, Apayao, and part of the BetterGov.ph volunteer network. It is neither affiliated with nor endorsed by the Municipality of Kabugao, and it is not the municipality&#x27;s official website. Find The 21 barangays Municipal officials Emergency hotlines About & sources Sitemap Network GitHub repository BetterGov.ph BetterLGU Directory Province of Apayao Published public information is sourced from official government portals. Built by Robin Tapiru · MIT · Content CC BY 4.0 · v 3.0.0",
+      "repository_license_url": "https://raw.githubusercontent.com/KuyaLoy/betterkabugao/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Tago, Surigao del Sur",
+      "website": "https://www.bettertago.org",
+      "repository": "https://github.com/BetterTago/better-tago",
+      "status": 200,
+      "final_url": "https://www.bettertago.org/en",
+      "signals": [
+        "go = ₱0 Volunteer with us ( opens another website in a new tab ) Contribute code with us ( opens another website in a new tab ) ( opens another website in a new tab ) © 2026 Better",
+        "Tago.org. All rights reserved. Source Code ( opens another website in a new tab ) Visits : 1 visits — Page loads, counted at most"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "ebsite in a new tab ) PhilGEPS ( opens another website in a new tab ) CMCI DTI Portal ( opens another website in a new tab ) BLGF Portal ( opens another website in a new tab ) Freedom of Information ( opens another website in a new tab ) Official Gov.PH ( opens another website in a new tab ) Contribute Cost to the People of Tago = ₱0 Volunteer with us ( opens another website in a new tab ) Contribute code with us ( opens another website in a new tab ) ( opens another website in a new tab ) © 2026 BetterTago.org. All rights reserved. Source Code ( opens another website in a new tab ) Visits : 1 visits — Page loads, counted at most once per browser per day. It cannot see readers with JavaScript off, and it is inflated by automated crawlers nobody can identify — it is not unique visitors, sessions, or pageviews. Portal version : 0.7.0 Footer",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterTago/better-tago/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "San Mariano, Isabela",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Pasig City, Metro Manila",
+      "website": null,
+      "repository": "https://github.com/ericvelasco-dev/betterpasig",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/ericvelasco-dev/betterpasig/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Cavite City, Cavite",
+      "website": "https://bettercavitecity.org",
+      "repository": null,
+      "status": 200,
+      "final_url": "https://www.bettercavitecity.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed"
+    },
+    {
+      "name": "Aklan Province",
+      "website": "https://betteraklan.org/",
+      "repository": "https://github.com/fr4nc1stein/betteraklan",
+      "status": 200,
+      "final_url": "https://betteraklan.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/fr4nc1stein/betteraklan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Bicol Region",
+      "website": "https://betterbicol.org",
+      "repository": "https://github.com/winclores/betterbicol",
+      "status": 200,
+      "final_url": "https://betterbicol.org/",
+      "signals": [
+        "on on Audit Sumbong sa Pangulo © 2026 BetterBicol. Content under CC BY 4.0. Government records remain public domain. Sitemap XML sitemap Data verified August 2026 · PSA PSGC "
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "ffices Ordinances and resolutions Executive issuances Barangay directory Salary grades Projects and money Flood control projects By province By city and municipality Contractors Bicol in the national budget National budget, 2020 to 2026 Budgets and spending Procurement and bids Audit reports and SALN About About us How to contribute News Contact us Corrections and takedowns Accessibility Privacy Sitemap BetterGov Network BetterGov.ph Transparency Portal Open Data Portal SALN Tracker PhilGEPS Browser Budget Analysis Data Visualisations Emergency Hotlines LGU Network directory Resources Region 5 DILG Freedom of Information Philippine Statistics Authority Commission on Audit Sumbong sa Pangulo © 2026 BetterBicol. Content under CC BY 4.0. Government records remain public domain. Sitemap XML sitemap Data verified August 2026 · PSA PSGC 2Q 2026",
+      "repository_license_url": "https://raw.githubusercontent.com/winclores/betterbicol/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "AGPL"
+    },
+    {
+      "name": "Dumaguete City, Negros Oriental",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Magsaysay, Davao del Sur",
+      "website": null,
+      "repository": "https://github.com/ianmuico/better-magsaysay",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/ianmuico/better-magsaysay/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Paombong, Bulacan",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "City of Mati, Davao Oriental",
+      "website": null,
+      "repository": "https://github.com/kaarlosasiang/bettermaticity",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/kaarlosasiang/bettermaticity/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Surallah, South Cotabato",
+      "website": "https://bettersurallah.org",
+      "repository": "https://github.com/average04/bettersurallah",
+      "status": 200,
+      "final_url": "https://bettersurallah.org/",
+      "signals": [],
+      "scope": "HTML footer",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "excerpt": "BetterSurallah is an independent, citizen-run initiative. It is not affiliated with the Municipal Government of Surallah. © 2026 BetterSurallah · A community initiative Surallah, South Cotabato, Philippines",
+      "repository_license_url": "https://raw.githubusercontent.com/average04/bettersurallah/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Malolos, Bulacan",
+      "website": "https://bettermalolos.org/",
+      "repository": "https://github.com/francisdiaz22/bettermalolos",
+      "status": 200,
+      "final_url": "https://bettermalolos.org/",
+      "signals": [
+        " DTI Portal Cost to the People of Malolos = ₱0 Volunteer with us Contribute code with us © 2026 BetterMalolos.org MIT | CC BY 4.0 All public information sourced from official gover"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Independent, community-built tools and information for everyday life in Malolos. Quick Links Malolos Quiz (coming soon) Sitemap Citizen's Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information CIO Malolos Facebook BLGF Portal CMCI DTI Portal Cost to the People of Malolos = ₱0 Volunteer with us Contribute code with us © 2026 BetterMalolos.org MIT | CC BY 4.0 All public information sourced from official government portals. Ver. 1.0.4",
+      "repository_license_url": "https://raw.githubusercontent.com/francisdiaz22/bettermalolos/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Maddela, Quirino",
+      "website": "https://bettermaddela.vercel.app/",
+      "repository": "https://github.com/Hendrizzzz/bettermaddela",
+      "status": 200,
+      "final_url": "https://bettermaddela.vercel.app/",
+      "signals": [
+        "ra. Attribution does not imply endorsement. © 2026 BetterMaddela MIT | CC BY 4.0 Independent community project, not an official government website."
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Independent, volunteer-maintained civic information for Maddela, Quirino. Quick Links Sitemap Terms of Use Privacy Policy Accessibility Security Frequently Asked Questions Resources Sources and verification Open Data Philippines Freedom of Information Cost to the people of Maddela ₱0 Contribute on GitHub BetterAurora Adapted from BetterAurora. Attribution does not imply endorsement. © 2026 BetterMaddela MIT | CC BY 4.0 Independent community project, not an official government website.",
+      "repository_license_url": "https://raw.githubusercontent.com/Hendrizzzz/bettermaddela/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Caloocan City, Metro Manila",
+      "website": "https://www.bettercaloocan.org/",
+      "repository": "https://github.com/angelicatanagras/bettercaloocan",
+      "status": 200,
+      "final_url": "https://www.bettercaloocan.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/angelicatanagras/bettercaloocan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Zamboanga City, Zamboanga del Sur",
+      "website": "https://betterzamboangacity.vercel.app",
+      "repository": "https://github.com/RALPH22222/betterzamboangacity",
+      "status": 200,
+      "final_url": "https://betterzamboangacity.vercel.app/",
+      "signals": [],
+      "scope": "HTML footer",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "excerpt": "Better Zamboanga City Asia's Latin City · Civic Portal A volunteer-driven, open-source civic tech initiative making city services, emergency directories, and public records accessible for all Zamboangueños. Bienvenidos! · Orgullo de Zamboanga About About Us Open Data Privacy Policy Terms of Service Services All Services Disaster Preparedness Business and Trade Certificates and Vital Records Health Government City Officials Departments Barangays Transparency Official Links zamboangacity.gov.ph Zamboanga City Map 98 Barangays Directory © 2026 Better Zamboanga · Community-run civic portal. Not an official government website. Sitemap",
+      "repository_license_url": "https://raw.githubusercontent.com/RALPH22222/betterzamboangacity/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Dagupan City, Pangasinan",
+      "website": null,
+      "repository": "https://github.com/jamesjmnz/better-dagupan",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/jamesjmnz/better-dagupan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Baguio City, Benguet",
+      "website": "https://betterbaguio.org",
+      "repository": "https://github.com/ashier/betterbaguio",
+      "status": 200,
+      "final_url": "https://betterbaguio.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/ashier/betterbaguio/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Trece Martires City, Cavite",
+      "website": "https://bettertrecemartires.org",
+      "repository": "https://github.com/hiroqt/bettertrece",
+      "status": 200,
+      "final_url": "https://bettertrecemartires.org/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/hiroqt/bettertrece/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Pagsanjan, Laguna",
+      "website": null,
+      "repository": "https://github.com/rswlljms/betterpagsanjan",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/rswlljms/betterpagsanjan/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Naic, Cavite",
+      "website": null,
+      "repository": "https://github.com/riecodes/betternaic",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/riecodes/betternaic/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT"
+    },
+    {
+      "name": "City of San Fernando, Pampanga",
+      "website": null,
+      "repository": "https://github.com/bettersanfernando/bettersanfernando",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/bettersanfernando/bettersanfernando/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Inabanga, Bohol",
+      "website": "https://betterinabanga.vercel.app",
+      "repository": "https://github.com/gerardosocias29/betterinabanga",
+      "status": 200,
+      "final_url": "https://betterinabanga.vercel.app/",
+      "signals": [
+        "Index Submit Public Inquiry / Report © 2026 BetterInabanga.org • MIT | CC BY 4.0 • All public information sourced from official government portals • Not an official gov"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "contacts, and 24/7 disaster hotlines. Municipal Hall, Poblacion, Inabanga, Bohol 6332 Hotline: (038) 510-8164 / (038) 512-9039 info@inabanga.gov.ph Citizen Services Civil Registry (Birth, Marriage) Business & Mayor&#x27;s Permit Real Property Tax (Amilyar) Social Welfare & AICS Aid Fisherfolk & Boat Licensing Rural Health Unit (RHU) Care Public Transparency Elected Officials (2025–2028) Annual Budget & IRA Allotment 20% Development Fund Projects Full Disclosure Board Records Directory of 50 Barangays eFOI Philippines Official Resources Province of Bohol Commission on Audit (COA) DILG Philippines Emergency Hotlines Index Submit Public Inquiry / Report © 2026 BetterInabanga.org • MIT | CC BY 4.0 • All public information sourced from official government portals • Not an official government website Municipality of Inabanga, Bohol, Philippines",
+      "repository_license_url": "https://raw.githubusercontent.com/gerardosocias29/betterinabanga/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Samal, Bataan",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Makati City, Metro Manila",
+      "website": null,
+      "repository": "https://github.com/migi-macati/bettermakati",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/migi-macati/bettermakati/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "San Carlos City, Pangasinan",
+      "website": "https://bettersancarlos.vercel.app/",
+      "repository": "https://github.com/edisonmalasan/bettersancarlos",
+      "status": 200,
+      "final_url": "https://bettersancarlos.vercel.app/",
+      "signals": [
+        "I Portal Cost to the People of San Carlos = ₱0 Volunteer with us Contribute code with us © 2026 Better San Carlos MIT | CC BY 4.0 All public information sourced from official gover"
+      ],
+      "scope": "HTML footer",
+      "result": "License/contribution wording observed",
+      "excerpt": "Empowering the people of San Carlos City with transparent access to the services, programs, and public funds of the City of San Carlos, Pangasinan. Official Channels sancarlospangasinan.gov.ph City Information Office (Facebook) eBPLS — Business Permits Online Quick Links Sitemap Citizen&#x27;s Charter Terms of Use Privacy Policy Accessibility FAQ Resources Open Data Philippines Freedom of Information Official San Carlos City Portal Sangguniang Bayan San Carlos City Facebook BLGF Portal CMCI DTI Portal Cost to the People of San Carlos = ₱0 Volunteer with us Contribute code with us © 2026 Better San Carlos MIT | CC BY 4.0 All public information sourced from official government portals.",
+      "repository_license_url": "https://raw.githubusercontent.com/edisonmalasan/bettersancarlos/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    },
+    {
+      "name": "Mandaue City, Cebu",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Santa Cruz, Laguna",
+      "website": null,
+      "repository": "https://github.com/BetterSantaCruz/betterstacruzlaguna",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterSantaCruz/betterstacruzlaguna/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Bauang, La Union",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Tabaco City, Albay",
+      "website": null,
+      "repository": "https://github.com/johnjoshualipio/bettertabaco",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/johnjoshualipio/bettertabaco/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Rizal, Nueva Ecija",
+      "website": null,
+      "repository": "https://github.com/njveneracion/betterrizalne",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/njveneracion/betterrizalne/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Liliw, Laguna",
+      "website": null,
+      "repository": "https://github.com/BetterLiliw/betterliliw",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/BetterLiliw/betterliliw/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Naguilian, La Union",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Minalabac, Camarines Sur",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "Maasin City, Southern Leyte",
+      "website": "https://bettermaasin.netlify.app",
+      "repository": "https://github.com/bettermaasin/BetterMaasin",
+      "status": 200,
+      "final_url": "https://bettermaasin.netlify.app/",
+      "signals": [],
+      "scope": "Homepage HTML text",
+      "result": "No license label in returned HTML; rendered UI not assessed",
+      "repository_license_url": "https://raw.githubusercontent.com/bettermaasin/BetterMaasin/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "CC0-1.0"
+    },
+    {
+      "name": "Tacloban City, Leyte",
+      "website": null,
+      "repository": null,
+      "result": "No public website listed"
+    },
+    {
+      "name": "City of Santa Rosa, Laguna",
+      "website": null,
+      "repository": "https://github.com/jericizon/bettersantarosacity",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/jericizon/bettersantarosacity/HEAD/LICENSE",
+      "repository_license_status": 404,
+      "repository_license": "Root LICENSE not readable; no conclusion about other license files"
+    },
+    {
+      "name": "Roxas City, Capiz",
+      "website": null,
+      "repository": "https://github.com/chariz1101/betterroxas",
+      "result": "No public website listed",
+      "repository_license_url": "https://raw.githubusercontent.com/chariz1101/betterroxas/HEAD/LICENSE",
+      "repository_license_status": 200,
+      "repository_license": "MIT + CC-BY-4.0"
+    }
+  ]
+}
