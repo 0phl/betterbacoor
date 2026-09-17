@@ -10,6 +10,7 @@ import { CharterReader } from './pages/CharterReader';
 import { Emergency } from './pages/Emergency';
 import { ServiceFinder } from './pages/ServiceFinder';
 import { MyBarangay } from './pages/MyBarangay';
+import { LocalServices } from './pages/LocalServices';
 
 export default function App() {
   useLanguage();
@@ -19,6 +20,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="my-barangay" element={<MyBarangay />} />
+          <Route path="local-services" element={<LocalServices />} />
           <Route path="services/find" element={<ServiceFinder />} />
           <Route path="services/:slug" element={<ServiceGuide />} />
           <Route path="charter" element={<CharterReader />} />

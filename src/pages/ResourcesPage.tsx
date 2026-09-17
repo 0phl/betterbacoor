@@ -6,10 +6,10 @@ import { ResourceExplorer } from '../components/ResourceExplorer';
 import { CommunityTools } from '../components/CommunityTools';
 import { OfficeContacts } from '../components/OfficeContacts';
 import { LocalDirectory } from '../components/LocalDirectory';
-import { findDirectoryEntries } from '../data/directory';
 import { GuideCards } from '../components/GuideCards';
 import { findGuides } from '../data/guides';
 import type { ResourceCategory } from '../types';
+import { LocalTopicLinks } from '../components/LocalTopicLinks';
 
 interface ResourcesPageProps {
   eyebrow: string;
@@ -57,6 +57,7 @@ export function ResourcesPage({
           <span>{t('My Barangay')} →</span>
         </Link>
       )}
+      {categories && <LocalTopicLinks categories={categories} />}
       {categories?.includes('service') && (
         <Link className="finder-entry" to="/services/find">
           <span>
@@ -70,56 +71,20 @@ export function ResourcesPage({
           <span>{t('Find my service')} →</span>
         </Link>
       )}
-      {!categories &&
-        (!query.trim() ||
-          /emergency|hotline|flood|fire|rescue|disaster|police|ambulance|typhoon|earthquake|tsunami|baha|sunog|saklolo|lindol|bagyo|pulis|ambulansiya|sakuna|911|161/i.test(
-            query
-          )) && (
-          <Link to="/emergency" className="search-emergency-result">
-            <span className="eyebrow">{t('ON BETTERBACOOR')}</span>
-            <strong>{t('Emergency help & hotlines')}</strong>
-            <span>
-              {t(
-                'Bacoor 161, national 911, local responders, and flood, fire, and disaster guidance.'
-              )}
-            </span>
-          </Link>
-        )}
-      {(!categories || categories.includes('service')) &&
-        findGuides(query).length > 0 && (
-          <section
-            className="mt-10"
-            aria-label={t('Guides you can use on BetterBacoor')}
-          >
-            <div className="section-heading">
-              <div>
-                <p className="eyebrow">{t('READ & PREPARE HERE')}</p>
-                <h2>{t('Guides for your next step')}</h2>
-              </div>
+      {categories?.includes('service') && findGuides(query).length > 0 && (
+        <section
+          className="mt-10"
+          aria-label={t('Guides you can use on BetterBacoor')}
+        >
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">{t('READ & PREPARE HERE')}</p>
+              <h2>{t('Guides for your next step')}</h2>
             </div>
-            <GuideCards query={query} />
-          </section>
-        )}
-      {!categories &&
-        query.trim() &&
-        findDirectoryEntries(query).length > 0 && (
-          <Link
-            to={`/directories?q=${encodeURIComponent(query)}`}
-            className="search-emergency-result"
-          >
-            <span className="eyebrow">{t('ON BETTERBACOOR')}</span>
-            <strong>
-              {t('Local places matching “')}
-              {query}”
-            </strong>
-            <span>
-              {findDirectoryEntries(query).length}
-              {t(
-                ' barangay, hospital, or health center matches. Read contact details here.'
-              )}
-            </span>
-          </Link>
-        )}
+          </div>
+          <GuideCards query={query} />
+        </section>
+      )}
       {categories?.includes('directory') && (
         <>
           <LocalDirectory />
@@ -128,6 +93,7 @@ export function ResourcesPage({
       )}
       <div className="mt-10 border-t border-slate-200 pt-8">
         <ResourceExplorer
+          includeLocal={!categories}
           categories={categories}
           label={searchLabel}
           initialQuery={categories?.includes('directory') ? '' : query}

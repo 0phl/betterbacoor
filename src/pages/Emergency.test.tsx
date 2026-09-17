@@ -111,7 +111,7 @@ describe('Emergency help', () => {
     window.history.replaceState({}, '', '/search?q=baha');
     render(<App />);
     fireEvent.click(
-      screen.getByRole('link', { name: /ON BETTERBACOOR Emergency help/ })
+      screen.getByRole('link', { name: /View on BetterBacoor: Emergency help/ })
     );
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       'Help when it matters.'

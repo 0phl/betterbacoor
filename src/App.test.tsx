@@ -76,7 +76,14 @@ describe('BetterBacoor application shell', () => {
         name: 'Search all verified Bacoor resources',
       })
     ).toBeInTheDocument();
-    expect(screen.getByText('1 resource found')).toBeInTheDocument();
+    expect(
+      Number.parseInt(
+        screen.getByText(/^\d+ resources found$/).textContent ?? ''
+      )
+    ).toBeGreaterThanOrEqual(48);
+    expect(
+      screen.getByRole('heading', { name: 'Barangay profiles' })
+    ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
         level: 2,

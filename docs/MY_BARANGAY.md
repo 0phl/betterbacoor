@@ -26,6 +26,14 @@ Rechecked Bacoor 161, BDRRMO (046) 417-0727, BFP (046) 417-6060, and PNP (046) 4
 
 Emergency contacts are explicitly citywide/national, not selected-barangay responders. Links to hospitals and health centers show the city directory, not proximity estimates. No unverified address, office hours, evacuation location, shelter availability, live hazard condition, or neighborhood-specific emergency number is added. Residents are directed to BDRRMO/their barangay for a current evacuation destination and safe route.
 
+## Citywide discovery
+
+The same researched datasets are available independently at `/local-services?section=schools`, `health`, `barangays`, `garbage` and `assistance`. Directories links to schools, healthcare and profiles; Services links to collection schedules and assistance centers. My Barangay continues to provide the personalized view.
+
+The main `/search` uses `src/data/local-discovery.ts` alongside the existing official resources. Its count, category filters, pagination and empty state include school records, health services, barangay profiles, available garbage tables, transcribed routes, action-center locations, on-site guides, directory contacts and emergency help. English and Filipino terms are supported. Original garbage images are not full-text indexed; only reviewed headings and transcribed rows are searchable.
+
+Search links carry a section plus a school query, health service, or barangay/route selection. Citywide browsing never writes the saved My Barangay selection. Unknown URL values fall back safely. The custom search clear button remains keyboard accessible and restores input focus; its input suppresses the browser's duplicate native cancel icon.
+
 ## Storage and checklists
 
 Only a validated directory entry ID is saved at `betterbacoor:my-barangay:v1`. No account, geolocation, or server submission is involved. Changing or clearing this selection does not clear checklists. Blocked storage has explicit feedback. Unknown IDs are ignored.

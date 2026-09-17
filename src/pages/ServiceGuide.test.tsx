@@ -86,7 +86,9 @@ describe('Resident service guides', () => {
     window.history.replaceState({}, '', '/search?q=business%20permits');
     render(<App />);
     expect(
-      screen.getByRole('link', { name: /ON BETTERBACOOR Business permits/ })
+      screen.getByRole('link', {
+        name: /View on BetterBacoor: Business permits/,
+      })
     ).toHaveAttribute('href', '/services/business-permit');
   });
 
