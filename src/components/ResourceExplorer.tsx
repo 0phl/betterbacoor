@@ -26,7 +26,9 @@ export function ResourceExplorer({
   useLanguage();
   const [query, setQuery] = useState(initialQuery);
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(12);
+  const [focusResultAt, setFocusResultAt] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<
     ResourceCategory | 'all'
   >('all');
@@ -71,6 +73,18 @@ export function ResourceExplorer({
     setQuery(initialQuery);
     setVisible(12);
   }, [initialQuery]);
+
+  useEffect(() => {
+    if (focusResultAt === null) return;
+    const result = resultsRef.current?.querySelectorAll(':scope > article')[
+      focusResultAt
+    ] as HTMLElement | undefined;
+    if (result) {
+      result.tabIndex = -1;
+      result.focus();
+    }
+    setFocusResultAt(null);
+  }, [focusResultAt, visible]);
 
   function updateQuery(value: string) {
     setQuery(value);
@@ -129,7 +143,7 @@ export function ResourceExplorer({
                 inputRef.current?.focus();
               }}
               aria-label={t('Clear search')}
-              className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
+              className="absolute right-2 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-civic-600"
             >
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
@@ -173,7 +187,7 @@ export function ResourceExplorer({
 
       {filteredResources.length + localResults.length > 0 ? (
         <>
-          <div className="mt-7 grid gap-4 md:grid-cols-2">
+          <div ref={resultsRef} className="mt-7 grid gap-4 md:grid-cols-2">
             {(includeLocal ? results.slice(0, visible) : results).map(result =>
               result.kind === 'official' ? (
                 <ResourceCard
@@ -212,7 +226,10 @@ export function ResourceExplorer({
               <button
                 className="local-info-more"
                 type="button"
-                onClick={() => setVisible(visible + 12)}
+                onClick={() => {
+                  setFocusResultAt(visible);
+                  setVisible(visible + 12);
+                }}
               >
                 {t('Show more')}
               </button>

@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { ResourceExplorer } from './ResourceExplorer';
 
@@ -40,7 +41,31 @@ describe('ResourceExplorer', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Clear search' }));
     expect(screen.getByRole('searchbox')).toHaveValue('');
+    expect(screen.getByRole('searchbox')).toHaveFocus();
     expect(screen.queryByText('No matching resource')).not.toBeInTheDocument();
+  });
+
+  it('focuses the first newly shown result after each batch, including the final batch', () => {
+    render(
+      <MemoryRouter>
+        <ResourceExplorer includeLocal initialQuery="school" />
+      </MemoryRouter>
+    );
+
+    const showMore = () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Show more' }));
+      return document.activeElement;
+    };
+    const resultCards = () => document.querySelectorAll('.resource-card');
+
+    expect(resultCards()).toHaveLength(12);
+    expect(showMore()).toBe(resultCards()[12]);
+    expect(resultCards()).toHaveLength(24);
+    expect(showMore()).toBe(resultCards()[24]);
+    expect(resultCards()).toHaveLength(36);
+    expect(showMore()).toBe(resultCards()[36]);
+    expect(resultCards()).toHaveLength(45);
+    expect(screen.queryByRole('button', { name: 'Show more' })).toBeNull();
   });
 
   it('starts from a query supplied by the route', () => {
