@@ -94,6 +94,14 @@ describe('researched barangay information', () => {
     expect(screen.getByText('6 of 13 listings shown')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Show more' }));
     expect(screen.getByText('12 of 13 listings shown')).toBeInTheDocument();
+    expect(document.activeElement).toBe(
+      document.querySelectorAll('.local-info-card')[6]
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Show more' }));
+    expect(screen.getByText('13 of 13 listings shown')).toBeInTheDocument();
+    expect(document.activeElement).toBe(
+      document.querySelectorAll('.local-info-card')[12]
+    );
     fireEvent.click(screen.getByRole('button', { name: 'Animal bite care' }));
     expect(screen.getByText('4 of 4 listings shown')).toBeInTheDocument();
     expect(

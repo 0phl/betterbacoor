@@ -48,6 +48,12 @@
     outline-offset: 4px;
   }
 
+  .resource-card[tabindex='-1']:focus,
+  .local-info-card[tabindex='-1']:focus {
+    outline: 3px solid #365fe8;
+    outline-offset: 4px;
+  }
+
   button,
   input {
     font: inherit;

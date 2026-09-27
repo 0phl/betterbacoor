@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowUpRight,
@@ -118,13 +118,31 @@ function Results({
   onMore: () => void;
   children: ReactNode;
 }) {
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const previousVisible = useRef(visible);
+
+  useEffect(() => {
+    const previous = previousVisible.current;
+    previousVisible.current = visible;
+    if (visible <= previous) return;
+    const firstNewCard = cardsRef.current?.querySelectorAll(':scope > article')[
+      previous
+    ] as HTMLElement | undefined;
+    if (firstNewCard) {
+      firstNewCard.tabIndex = -1;
+      firstNewCard.focus();
+    }
+  }, [visible]);
+
   return (
     <>
       <p className="local-info-count" role="status">
         {Math.min(total, visible)} {t('of')} {total} {t('listings shown')}
       </p>
       {total ? (
-        <div className="local-info-cards">{children}</div>
+        <div ref={cardsRef} className="local-info-cards">
+          {children}
+        </div>
       ) : (
         <p className="local-info-empty">
           {t('No listings match. Try another name or filter.')}
