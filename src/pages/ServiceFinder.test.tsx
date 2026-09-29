@@ -43,8 +43,9 @@ describe('Guided service finder', () => {
       }
     }
     visit('start', []);
-    expect(paths).toHaveLength(8);
+    expect(paths).toHaveLength(14);
     for (const path of paths) {
+      expect(path.length).toBeLessThanOrEqual(4);
       const result = resolveFinder(path);
       expect(result.question).toBeNull();
       expect(result.guide).toBeDefined();

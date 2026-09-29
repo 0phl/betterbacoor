@@ -17,7 +17,7 @@ export function GuideCards({ query = '' }: { query?: string }) {
   return (
     <div className="guide-cards">
       {matches.map(guide => {
-        const Icon = icons[guide.slug as keyof typeof icons];
+        const Icon = icons[guide.slug as keyof typeof icons] ?? FileText;
         return (
           <Link
             className="guide-card"

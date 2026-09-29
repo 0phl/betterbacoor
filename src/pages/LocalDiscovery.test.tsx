@@ -31,7 +31,7 @@ describe('citywide local-information discovery', () => {
 
   it('counts school records, paginates them and opens the exact school on-site', () => {
     render(<App />);
-    expect(screen.getByText('45 resources found')).toBeInTheDocument();
+    expect(screen.getByText('46 resources found')).toBeInTheDocument();
     expect(screen.queryByText('No matching resource')).not.toBeInTheDocument();
     expect(document.querySelectorAll('.resource-card')).toHaveLength(12);
     fireEvent.click(screen.getByRole('button', { name: 'Show more' }));
@@ -62,6 +62,11 @@ describe('citywide local-information discovery', () => {
     expect(screen.getByText('0 resources found')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Directory' }));
     expect(screen.getByText('45 resources found')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('link', {
+        name: /View on BetterBacoor: Prepare to ask about education support/,
+      })
+    ).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Clear search' }));
     expect(input).toHaveValue('');
     expect(input).toHaveFocus();
@@ -69,7 +74,16 @@ describe('citywide local-information discovery', () => {
   });
 
   it('finds Filipino terms, facility names, profiles and checked waste routes', () => {
-    expect(findLocalInformation('paaralan')).toHaveLength(45);
+    const schoolResults = findLocalInformation('paaralan');
+    expect(schoolResults).toHaveLength(46);
+    expect(
+      schoolResults.filter(item => item.id === 'guide-education-support')
+    ).toEqual([
+      expect.objectContaining({
+        href: '/services/education-support',
+        category: 'service',
+      }),
+    ]);
     expect(findLocalInformation('klinika')).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ id: 'health-yakap-1614' }),

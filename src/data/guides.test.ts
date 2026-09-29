@@ -13,7 +13,8 @@ describe('Guide publication integrity', () => {
       expect(age).toBeLessThanOrEqual(90);
       expect(new URL(guide.sourceUrl).protocol).toBe('https:');
       expect(new URL(guide.sourceUrl).hostname).toMatch(/\.gov\.ph$/);
-      expect(guide.email).toMatch(/@bacoor\.gov\.ph$/);
+      if (guide.email) expect(guide.email).toMatch(/@bacoor\.gov\.ph$/);
+      else expect(guide.contactSourceUrl || guide.actionUrl).toBeTruthy();
       expect(guide.sourceLabel.length).toBeGreaterThan(0);
       expect(new Set(guide.variants.map(variant => variant.id)).size).toBe(
         guide.variants.length
@@ -41,6 +42,9 @@ describe('Guide publication integrity', () => {
     expect(findGuides('working permit').map(guide => guide.slug)).toEqual([
       'working-permit',
     ]);
-    expect(findGuides('hospital')).toHaveLength(0);
+    expect(findGuides('hospital').map(guide => guide.slug)).toEqual([
+      'medical-assistance',
+    ]);
+    expect(findGuides('unrelated-nonsense')).toHaveLength(0);
   });
 });

@@ -14,7 +14,7 @@ Built for the community, with contributions welcome in code, research, design, a
 
 ## What you can do
 
-- **Read and prepare:** guides for business permits, civil registry copies, working permits, and Senior Citizen IDs, with saved checklists and printable instructions.
+- **Read and prepare:** guides for business permits, civil registry copies, working permits, Senior Citizen IDs, PWD and Solo Parent IDs, medical and burial assistance, education support, and PESO employment, with saved checklists and printable instructions.
 - **Find your service:** answer a few questions to find the relevant guide and application type.
 - **Explore your barangay:** save a barangay choice, view published contacts and dated census figures, and resume your preparation checklists.
 - **Browse local information:** schools, health services, garbage collection tables, and assistance-center locations are available through Directories, Services, and global search.
