@@ -1,6 +1,8 @@
 import { bilingualSearch } from './search';
 import { translate } from '../i18n';
 import { seniorGuide } from './senior-guide';
+import { communityGuides } from './community-guides';
+import { opportunityGuides } from './opportunity-guides';
 
 export interface GuideVariant {
   id: string;
@@ -18,7 +20,7 @@ export interface ServiceGuide {
   category: string;
   keywords: string;
   office: string;
-  email: string;
+  email?: string;
   contactSourceUrl?: string;
   eligibility?: string;
   fee: string;
@@ -226,6 +228,8 @@ export const guides: ServiceGuide[] = [
     ],
   },
   seniorGuide,
+  ...communityGuides,
+  ...opportunityGuides,
 ];
 
 export function findGuides(query: string) {

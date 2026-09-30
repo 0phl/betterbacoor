@@ -229,9 +229,12 @@ export function GuideContent({
               <dd>{t(guide.timing)}</dd>
             </dl>
             <div className="guide-links guide-contact-links">
-              <a className="contact-link" href={`mailto:${guide.email}`}>
-                <Mail size={16} aria-hidden="true" /> <span>{guide.email}</span>
-              </a>
+              {guide.email && (
+                <a className="contact-link" href={`mailto:${guide.email}`}>
+                  <Mail size={16} aria-hidden="true" />{' '}
+                  <span>{guide.email}</span>
+                </a>
+              )}
               {guide.contactSourceUrl && (
                 <a
                   className="text-link"
@@ -248,6 +251,10 @@ export function GuideContent({
           <section className="guide-source">
             <h2>{t('Go to the source')}</h2>
             <p lang="en">{guide.sourceLabel}</p>
+            <p>
+              {t('Source checked:')}{' '}
+              <time dateTime={guide.verified}>{guide.verified}</time>
+            </p>
             <div className="guide-links">
               {variant.sourcePage && (
                 <Link
@@ -270,10 +277,10 @@ export function GuideContent({
           </section>
           {guide.actionUrl && (
             <section className="guide-continue">
-              <h2>{t('Ready to apply?')}</h2>
+              <h2>{t('Continue with the responsible office')}</h2>
               <p>
                 {t(
-                  'Preparation happens here. Your official application, account, and payment stay with the city.'
+                  'Open the official service page for current instructions. Submit applications and documents only through the responsible office.'
                 )}
               </p>
               <a href={guide.actionUrl} target="_blank" rel="noreferrer">

@@ -2387,6 +2387,10 @@
   .checklist-items label {
     break-inside: avoid;
   }
+  .guide-steps .eyebrow,
+  .guide-steps h2 {
+    break-after: avoid;
+  }
   .guide-checklist progress {
     display: none;
   }

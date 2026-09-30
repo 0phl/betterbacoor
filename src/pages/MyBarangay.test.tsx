@@ -194,21 +194,20 @@ describe('My Barangay', () => {
     ).toBeChecked();
   });
 
-  it.each(['en', 'fil'] as const)(
-    'has accessible empty and selected views in %s',
-    async language => {
+  it.each([
+    ['en', ''],
+    ['en', 'molino-vi'],
+    ['fil', ''],
+    ['fil', 'molino-vi'],
+  ] as const)(
+    'has an accessible view in %s with barangay "%s"',
+    async (language, barangay) => {
       setLanguage(language);
       const { container } = render(<App />);
-      expect(
-        (
-          await axe.run(container, {
-            rules: { 'color-contrast': { enabled: false } },
-          })
-        ).violations
-      ).toEqual([]);
-      fireEvent.change(screen.getByRole('combobox'), {
-        target: { value: 'molino-vi' },
-      });
+      if (barangay)
+        fireEvent.change(screen.getByRole('combobox'), {
+          target: { value: barangay },
+        });
       expect(
         (
           await axe.run(container, {

@@ -64,7 +64,12 @@ describe('ResourceExplorer', () => {
     expect(showMore()).toBe(resultCards()[24]);
     expect(resultCards()).toHaveLength(36);
     expect(showMore()).toBe(resultCards()[36]);
-    expect(resultCards()).toHaveLength(45);
+    expect(resultCards()).toHaveLength(46);
+    const education = screen.getAllByRole('link', {
+      name: /View on BetterBacoor: Prepare to ask about education support/,
+    });
+    expect(education).toHaveLength(1);
+    expect(education[0]).toHaveAttribute('href', '/services/education-support');
     expect(screen.queryByRole('button', { name: 'Show more' })).toBeNull();
   });
 

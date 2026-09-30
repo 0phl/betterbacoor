@@ -46,6 +46,50 @@ export const finderQuestions: Record<string, FinderQuestion> = {
         detail: 'A first ID, a transfer to Bacoor, or a lost ID.',
         next: 'senior',
       },
+      {
+        id: 'pwd',
+        label: 'A PWD ID',
+        detail: 'Prepare for the city portal’s application or renewal.',
+        guide: 'pwd-id',
+        variant: 'prepare',
+      },
+      {
+        id: 'solo-parent',
+        label: 'A Solo Parent ID',
+        detail:
+          'Find the documents and assessment steps for your circumstances.',
+        guide: 'solo-parent-id',
+        variant: 'prepare',
+      },
+      {
+        id: 'medical-assistance',
+        label: 'Medical assistance',
+        detail: 'Prepare to ask social welfare about help with medical costs.',
+        guide: 'medical-assistance',
+        variant: 'prepare',
+      },
+      {
+        id: 'burial-assistance',
+        label: 'Burial assistance',
+        detail: 'Prepare to ask social welfare about funeral expenses.',
+        guide: 'burial-assistance',
+        variant: 'prepare',
+      },
+      {
+        id: 'education',
+        label: 'Education support',
+        detail:
+          'Find the right office and check current scholarship announcements.',
+        guide: 'education-support',
+        variant: 'prepare',
+      },
+      {
+        id: 'employment',
+        label: 'Help finding work',
+        detail: 'Prepare for jobseeker assistance from PESO.',
+        guide: 'peso-employment',
+        variant: 'prepare',
+      },
     ],
   },
   business: {

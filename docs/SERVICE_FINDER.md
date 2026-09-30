@@ -4,7 +4,7 @@
 guides for results. Entry links appear in the home page quick panel and the
 Services page. Both English and Filipino are supported.
 
-The eight result paths are new and renewal business permits, a local civil-record
+The original eight result paths are new and renewal business permits, a local civil-record
 copy, working-permit preparation, and four Senior Citizen ID cases: first ID,
 transfer with a cancellation certificate, transfer without one, and lost ID.
 Civil-record guidance explicitly distinguishes the local copy from a PSA-issued
@@ -54,3 +54,7 @@ progress. Keep option IDs stable unless the corresponding meaning changes.
 Tests exercise every reachable result, invalid persisted choices, storage failures,
 renewal selection, mutually exclusive transfer lists, lost-ID printing in Filipino,
 checklist persistence, source references, and accessibility. Run `npm run check`.
+
+## Service access expansion — 2026-09-29
+
+Six additional preparation results cover PWD ID, Solo Parent ID, medical assistance, burial assistance, education support, and PESO employment. Each is a direct starting choice; existing answer IDs and checklist keys are retained. Every path remains within four answers. Source coverage and limitations are recorded in [the source review](research/SERVICE_ACCESS_RESEARCH.md).
