@@ -88,10 +88,16 @@ describe('Emergency help', () => {
   });
 
   it('flags a stale snapshot without hiding emergency phone access', () => {
-    expect(emergencyNeedsReview(new Date('2026-09-16T00:00:00Z'))).toBe(false);
-    expect(emergencyNeedsReview(new Date('2026-10-17T00:00:00Z'))).toBe(true);
+    const reviewedAt = new Date(`${emergency.last_verified}T00:00:00Z`);
+    const dueAt = new Date(
+      reviewedAt.getTime() + emergency.review_interval_days * 86_400_000
+    );
+    const overdueAt = new Date(dueAt.getTime() + 1);
+    expect(emergencyNeedsReview(reviewedAt)).toBe(false);
+    expect(emergencyNeedsReview(dueAt)).toBe(false);
+    expect(emergencyNeedsReview(overdueAt)).toBe(true);
     vi.useFakeTimers();
-    vi.setSystemTime(new Date('2026-10-17T00:00:00Z'));
+    vi.setSystemTime(overdueAt);
     try {
       render(<App />);
       expect(screen.getByRole('status')).toHaveTextContent(

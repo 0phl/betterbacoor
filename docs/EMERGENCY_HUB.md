@@ -1,6 +1,6 @@
 # Emergency help and September UI refinements
 
-Research and source proofreading: September 16, 2026. This is a source-backed community reference, not a dispatch service or a live disaster dashboard. No emergency test calls were placed. The work remains local until deployment is requested.
+Research and source proofreading: September 16, 2026. The emergency sources were [re-reviewed on November 10, 2026](research/EMERGENCY_REVIEW_2026-11-10.md), with the existing contacts and guidance retained. This is a source-backed community reference, not a dispatch service or a live disaster dashboard. No emergency test calls were placed. The September implementation and verification notes below are historical.
 
 ## Contact evidence
 

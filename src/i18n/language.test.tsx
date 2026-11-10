@@ -109,7 +109,7 @@ describe('English and Filipino', () => {
       download.getAttribute('href')!.split(',')[1]
     );
     expect(text).toBe(emergencyCardText('fil'));
-    expect(text).toContain('Petsa ng impormasyon: 2026-09-16');
+    expect(text).toContain(`Petsa ng impormasyon: ${emergency.last_verified}`);
     for (const contact of emergency.contacts)
       expect(text).toContain(contact.number);
     for (const guide of guides)
