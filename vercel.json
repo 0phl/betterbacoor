@@ -39,6 +39,30 @@
       "destination": "/index.html"
     },
     {
+      "source": "/services/pwd-id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/solo-parent-id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/medical-assistance",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/burial-assistance",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/education-support",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/peso-employment",
+      "destination": "/index.html"
+    },
+    {
       "source": "/charter",
       "destination": "/index.html"
     },
