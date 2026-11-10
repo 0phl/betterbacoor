@@ -6,6 +6,12 @@
 /services/business-permit /index.html 200
 /services/civil-registry /index.html 200
 /services/working-permit /index.html 200
+/services/pwd-id /index.html 200
+/services/solo-parent-id /index.html 200
+/services/medical-assistance /index.html 200
+/services/burial-assistance /index.html 200
+/services/education-support /index.html 200
+/services/peso-employment /index.html 200
 /charter /index.html 200
 /emergency /index.html 200
 /search /index.html 200

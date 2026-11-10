@@ -21,7 +21,7 @@ The build validates content, generates both standalone emergency guides, and cop
 
 Serve real static assets as files. Page routes need an `index.html` fallback while preserving the query string. Check direct navigation and refresh for:
 
-- `/services`, `/services/find`, and all four guides: `/services/business-permit`, `/services/civil-registry`, `/services/working-permit`, `/services/senior-citizen-id`;
+- `/services`, `/services/find`, and every guide slug in `src/data/guides.ts`, such as `/services/business-permit`, `/services/senior-citizen-id`, and `/services/pwd-id` (`scripts/hosting-routes.test.mjs` checks that both rewrite files list each guide);
 - `/my-barangay` and `/local-services?section=schools`;
 - `/charter?page=657`, `/emergency`, and `/search?q=school`;
 - `/directories`, `/transparency`, and `/about`.
